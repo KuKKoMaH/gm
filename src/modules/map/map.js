@@ -36,7 +36,7 @@ const initMap = () => {
 };
 
 if ($map.length) {
-  var observer = new IntersectionObserver(() => {
+  var observer = new IntersectionObserver((entries) => {
     const entry = entries[0];
     if (entry.isIntersecting || entry.intersectionRatio > 0) {
       initMap();

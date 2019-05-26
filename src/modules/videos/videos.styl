@@ -6,35 +6,38 @@
   @media (max-width: $breakpoint-md - 1)
     padding: 57px 0 36px
 
-  &__image
+  &__image,
+  &__image2
     display: block
     position: absolute
-    left: 50%
-    margin-left: 66px;
-    top: -19px;
     z-index: 1
     pointer-events none
-    transform translateX(50px)
     anim(.25s)
 
     &.lazy--visible
       transform none
+
+  &__image
+    left: 50%
+    margin-left: 66px;
+    top: -19px;
+    transform translateX(50px)
     @media (max-width: $breakpoint-lg - 1)
       display: none
 
-
-  //  background-image: url(../../images/bust3.png);
-  //  width: 246px
-  //  height: 287px
-  //  margin-left: 108px;
-  //  top: -157px;
-  //@media (max-width: $breakpoint-md - 1)
-  //  left: auto
-  //  right: 13px
-  //  background-size: contain
-  //  height: 190px
-  //  width: 170px
-  //  top: -100px
+  &__image2
+    display: none
+    left: 50%
+    margin-left: 108px;
+    top: -157px;
+    transform translateX(30px) rotate(15deg)
+    @media (max-width: $breakpoint-lg - 1)
+      display: block
+    @media (max-width: $breakpoint-md - 1)
+      left: auto
+      right: 13px
+      width: 160px
+      top: -90px
 
   .c
     position: relative

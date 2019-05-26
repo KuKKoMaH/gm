@@ -103,27 +103,38 @@
       @media (max-width: $breakpoint-lg - 1)
         display: none
 
+  &__image,
+  &__image2
+    position: absolute
+    pointer-events none
+    z-index: 2
+    anim(.3s)
+
+    &.lazy--visible
+      transform: none
+
   &__image
     //display: none
     position: absolute
     bottom: -50px
     left: 50%
     margin-left: -45px
-    z-index: 2
-    pointer-events none
     transform: translateX(50px)
-    anim(.3s)
-    &.lazy--visible
-      transform: none
+
     @media (max-width: $breakpoint-lg - 1)
-      background-image: url(../../images/bust.png);
-      width: 278px
-      height: 348px
-      margin-left: 100px;
-      bottom: -200px
+      display: none
+
+  &__image2
+    display: none
+    position: absolute
+    margin-left: 100px;
+    left: 50%
+    bottom: -200px
+    transform: translateX(30px) rotate(15deg)
+    @media (max-width: $breakpoint-lg - 1)
+      display: block
     @media (max-width: $breakpoint-md - 1)
       width: 200px
-      height: 240px
       margin-left: 20px;
-      bottom: -100px
+      bottom: -110px
 

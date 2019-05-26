@@ -23,9 +23,9 @@ header.header
       svg.header__contacts-icon: use(xlink:href="#2lines")
       | контакты
 
-  .menu: .menu__inner
+  .menu.lines: .menu__inner
     button.menu__close
-      |ЗАКРЫТЬ
+      | ЗАКРЫТЬ
       .menu__close-icon
     .menu__title: .menu__title-inner #[span М]ЕНЮ
 
@@ -52,3 +52,5 @@ header.header
         li: a(href='#') Наши кейсы
         li: a(href='#') Партнерская программа
         li: a(href='#') Контакты
+
+    img.menu__image.lazy(data-src='images/horse.png')
