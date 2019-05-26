@@ -5,6 +5,7 @@ import LazyLoad from "vanilla-lazyload";
 new LazyLoad({
   elements_selector: '.lazy',
   callback_loaded:   (el) => {
+    el.target.dataset.loaded = 'true';
     showImage(el);
   },
 });
@@ -25,8 +26,8 @@ var observer = new IntersectionObserver(callback, { threshold: .5 });
 $('.lazy').each((i, el) => observer.observe(el));
 
 function showImage(el) {
-  const { wasProcessed, viewed } = el.dataset;
-  if (wasProcessed && viewed) {
+  const { loaded, viewed } = el.dataset;
+  if (loaded && viewed) {
     el.classList.add('lazy--visible');
   }
 }
