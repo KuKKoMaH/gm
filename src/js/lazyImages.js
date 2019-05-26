@@ -5,7 +5,7 @@ import LazyLoad from "vanilla-lazyload";
 new LazyLoad({
   elements_selector: '.lazy',
   callback_loaded:   (el) => {
-    el.target.dataset.loaded = 'true';
+    el.dataset.loaded = 'true';
     showImage(el);
   },
 });
