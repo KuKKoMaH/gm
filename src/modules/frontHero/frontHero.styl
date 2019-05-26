@@ -104,17 +104,17 @@
         display: none
 
   &__image
-    background-image: url(../../images/horse.png);
-    background-size: contain
-    background-position: 50% 50%;
-    width: 746px
-    height: 795px
+    //display: none
     position: absolute
     bottom: -50px
     left: 50%
     margin-left: -45px
     z-index: 2
     pointer-events none
+    transform: translateX(50px)
+    anim(.3s)
+    &.lazy--visible
+      transform: none
     @media (max-width: $breakpoint-lg - 1)
       background-image: url(../../images/bust.png);
       width: 278px

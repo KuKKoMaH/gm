@@ -7,18 +7,21 @@
   @media (max-width: $breakpoint-md - 1)
     padding: 56px 0 65px
 
-  &:before
-    content: ''
+  &__image
     display: block
     position: absolute
     background-image: url(../../images/bust3.png);
-    width: 246px
-    height: 287px
     left: 50%
     margin-left: -651px;
     bottom: -125px;
     pointer-events: none;
     z-index: 2;
+    transform translateX(-30px) rotate(-15deg)
+    anim(.3s)
+
+    &.lazy--visible
+      transform none
+
     @media (max-width: $breakpoint-lg - 1)
       display: none
       background-image: none;

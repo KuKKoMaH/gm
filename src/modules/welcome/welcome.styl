@@ -9,18 +9,18 @@
   @media (max-width: $breakpoint-md - 1)
     text-align: center
 
-  &:before
-    content: ''
+  &__image
     display: block
     position: absolute
-    background: url(../../images/chevron.png);
-    width: 172px
-    height: 207px
     bottom: -105px
     left: 50%
     margin-left: 380px
     pointer-events none
     z-index: 2
+    transform translate(20px) rotate(15deg)
+    anim(.3s)
+    &.lazy--visible
+      transform none
     @media (max-width: $breakpoint-lg - 1)
       display: none
 

@@ -2,10 +2,10 @@ import 'jquery';
 import 'magnific-popup/dist/jquery.magnific-popup.js';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 import 'selectize';
-// import 'slick-carousel';
 import SmoothScroll from 'smooth-scroll';
 
 import './js/init';
+import './js/lazyImages';
 import './modules/header/header';
 import './modules/frontHero/frontHero';
 import './modules/team/team';
@@ -32,3 +32,4 @@ $('.popup__opener').on('click', (e) => {
 });
 
 window.smoothscroll = new SmoothScroll('a[href*="#"]', { header: '.header__container', });
+

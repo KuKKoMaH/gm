@@ -2,17 +2,18 @@
   background: url(../../images/noise.jpg)
   padding: 120px 0 150px
 
-  &:before
-    content: ''
+  &__image
     position: absolute
     display: block
     left: 50%
     margin-left: 230px
     bottom: 0
-    background: url(../../images/sculpture.png)
-    width: 364px
-    height: 675px
     z-index: 1
+    anim(.3s)
+    transform translateX(30px)
+    &.lazy--visible
+      transform none
+
     @media (max-width: $breakpoint-lg - 1)
       background-image: none;
       display: none

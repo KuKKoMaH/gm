@@ -137,7 +137,10 @@
     position: absolute
     left: 50%
     top: 10px
-    transform translate(-50%, -50%)
+    transform translate(-50%, calc(-50% + 10px))
+    anim()
+    &.lazy--visible
+      transform translate(-50%, -50%)
 
   &__name
     font-size: 30px

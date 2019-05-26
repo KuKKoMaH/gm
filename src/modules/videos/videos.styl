@@ -6,31 +6,35 @@
   @media (max-width: $breakpoint-md - 1)
     padding: 57px 0 36px
 
-  &:before
-    content: ''
+  &__image
     display: block
     position: absolute
-    background: url(../../images/cannon.png) 50% 50% no-repeat;
-    width: 706px
-    height: 381px
     left: 50%
     margin-left: 66px;
     top: -19px;
     z-index: 1
     pointer-events none
+    transform translateX(50px)
+    anim(.25s)
+
+    &.lazy--visible
+      transform none
     @media (max-width: $breakpoint-lg - 1)
-      background-image: url(../../images/bust3.png);
-      width: 246px
-      height: 287px
-      margin-left: 108px;
-      top: -157px;
-    @media (max-width: $breakpoint-md - 1)
-      left: auto
-      right: 13px
-      background-size: contain
-      height: 190px
-      width: 170px
-      top: -100px
+      display: none
+
+
+  //  background-image: url(../../images/bust3.png);
+  //  width: 246px
+  //  height: 287px
+  //  margin-left: 108px;
+  //  top: -157px;
+  //@media (max-width: $breakpoint-md - 1)
+  //  left: auto
+  //  right: 13px
+  //  background-size: contain
+  //  height: 190px
+  //  width: 170px
+  //  top: -100px
 
   .c
     position: relative
@@ -89,13 +93,13 @@
       margin-top: 33px
 
   &__nav
+    display: flex
     position: absolute
     left: 50%
     top: 145px
     z-index: 2
     @media (max-width: $breakpoint-md - 1)
       position: static
-      display: flex
 
     &--prev
       margin-left: -363px

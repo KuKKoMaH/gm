@@ -5,17 +5,16 @@
   @media (max-width: $breakpoint-lg - 1)
     padding: 70px 0 80px
 
-  &:before
-    content: ''
+  &__image
     position: absolute
-    display: block
     left: 50%
     margin-left: -640px
     bottom: -130px
-    background: url(../../images/bust2.png)
-    width: 263px
-    height: 289px
     z-index: 1
+    transform translateX(-50px) rotate(-15deg)
+    anim(.3s)
+    &.lazy--visible
+      transform none
     @media (max-width: $breakpoint-lg - 1)
       display: none
 
@@ -93,12 +92,17 @@
       height: 201px
       border: 15px solid $blue
 
-  &__image
+  &__photo
+    width: 175px
+    height: 220px
     position: absolute
     top: -19px
     left: 0
     filter: grayscale(100%)
+    transform translateY(10px)
     anim()
+    &.lazy--visible
+      transform none
 
   &__position
     background: $black

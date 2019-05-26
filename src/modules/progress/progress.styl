@@ -9,18 +9,20 @@
   @media (max-width: $breakpoint-md - 1)
     padding: 60px 0 75px
 
-  &:after
-    content: ''
+  &__image
     display: block
     position: absolute
-    background-image: url(../../images/bust.png);
-    width: 278px
-    height: 348px
     left: 50%
     margin-left: 346px;
     bottom: -188px;
     pointer-events none
     z-index: 1
+    anim(.3s)
+    transform translateX(30px) rotate(15deg)
+
+    &.lazy--visible
+      transform none
+
     @media (max-width: $breakpoint-lg - 1)
       display: none
       background-image: none;
@@ -31,6 +33,7 @@
     line-height: 48px
     @media (max-width: $breakpoint-md - 1)
       font-size: 30px
+
   &__title
     text-align: center
     font-size: 48px
@@ -90,6 +93,7 @@
 
   &__inner
     position: relative
+
     &:before
       content: ''
       display: block

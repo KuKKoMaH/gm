@@ -34,6 +34,19 @@ b
   @media (max-width: $breakpoint-md - 1)
     max-width: 100%
 
+.lazy
+  visibility: hidden
+  opacity: 0
+  &.lazy--visible
+    visibility: visible
+    opacity: 1
+    //transform none
+
+img[data-src],
+img[data-srcset]
+  //display: block;
+  min-height: 1px;
+
 .hidden
   display: none
 

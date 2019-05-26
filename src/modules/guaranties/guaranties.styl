@@ -7,19 +7,45 @@
   @media (max-width: $breakpoint-md - 1)
     padding: 45px 0 66px
 
-  &:before
-    content: ''
+  &__image
     display: block
     position: absolute
-    background: url(../../images/bust4.png);
-    width: 252px
-    height: 310px
     left: 50%
     margin-left: 397px;
     top: -99px;
     z-index: 1
     pointer-events none
+    transform translateX(30px) rotate(15deg)
+    transform-origin 50% 50%
+    anim(.25s)
+
+    &.lazy--visible
+      transform none
     @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+  &__image2
+    display: block
+    position: absolute
+    bottom: 100%
+    margin-bottom: 16px
+    left: 0
+    margin-left: -31px
+    transform translateX(30px)
+    anim(.25s)
+
+    &.lazy--visible
+      transform none
+    @media (max-width: $breakpoint-lg - 1)
+      bottom auto
+      top: 150px
+      left: auto
+      margin: 0
+      right: 17px
+      width: 300px
+      height: 300px
+    @media (max-width: $breakpoint-md - 1)
+      background-image: none;
       display: none
 
   .c
@@ -75,6 +101,7 @@
     @media (max-width: $breakpoint-md - 1)
       max-width none
       text-align: center
+
     &:before, &:after
       content: ''
       display: block
@@ -114,27 +141,4 @@
       margin-top: 57px
     @media (max-width: $breakpoint-md - 1)
       margin-top: 65px
-    &:before
-      content:''
-      display: block
-      position: absolute
-      background: url(../../images/document.png) 50% 50% no-repeat
-      background-size: contain
-      width: 515px
-      height: 434px
-      bottom: 100%
-      margin-bottom: 16px
-      left: 0
-      margin-left: -31px
-      @media (max-width: $breakpoint-lg - 1)
-        bottom auto
-        top: 150px
-        left: auto
-        margin: 0
-        right: 17px
-        width: 300px
-        height: 300px
-      @media (max-width: $breakpoint-md - 1)
-        background-image: none;
-        display: none
 
