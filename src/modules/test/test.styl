@@ -1,0 +1,157 @@
+.test
+  background: url(./test-bg.jpg) calc(50% - 500px) 100% no-repeat;
+  padding: 88px 0 76px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 58px 0 28px
+    background: none;
+  @media (max-width: $breakpoint-md - 1)
+    padding: 59px 0 27px
+
+  .c
+    position: relative
+    z-index: 1
+
+  &__title
+    text-align: center
+    max-width 960px
+    margin: 0 auto 42px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 12px;
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 23px;
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 50%
+      margin-left: -1px
+      @media (max-width: $breakpoint-lg - 1)
+        top: auto
+        bottom: 0
+
+    &:before
+      width: 7px
+      height: 7px
+      background: $blue
+      margin-top: 186px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-bottom: -38px
+      @media (max-width: $breakpoint-md - 1)
+        margin-bottom: -46px
+
+    &:after
+      width: 1px
+      height: 7px
+      background: $black
+      margin-top: 179px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-bottom: -31px
+      @media (max-width: $breakpoint-md - 1)
+        margin-bottom: -39px
+
+  &__sub
+    text-align: center
+    font-size: 24px
+    margin-bottom: 42px
+
+  &__container
+    @media (max-width: $breakpoint-lg - 1)
+      max-width none
+      padding: 0
+      position: relative
+      overflow: hidden
+
+  &__buttons
+    display: none
+    align-items center
+    justify-content center
+    margin-top: 28px
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex
+
+  &__nav
+    margin: 0 22px
+    display: flex
+
+  &__items
+    display: flex
+
+  &__item
+    flex: 1
+    padding-top: 100px
+    display: flex
+    flex-direction column
+
+    &:after
+      content: ''
+      display: block
+      width: 220px
+      height: 20px
+      background: $blue
+      margin: auto auto 0
+      @media (max-width: $breakpoint-lg - 1)
+        width: 430px
+
+    @media (max-width: $breakpoint-lg - 1)
+      flex: none
+      padding-top: 120px
+
+  //padding: 0
+
+  &__inner
+    position: relative
+    text-align: center
+    max-width: 350px
+    margin: 0 auto
+    flex: 1
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 20px
+      height: 10px
+      background: $blue
+      bottom: 0
+      left: 50%
+
+    &:before
+      margin-left: -110px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: -215px
+
+    &:after
+      margin-left: 90px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: 195px
+
+    @media (max-width: $breakpoint-lg - 1)
+      max-width 580px
+
+    @media (max-width: $breakpoint-md - 1)
+      max-width 480px
+
+  &__image
+    position: absolute
+    left: 50%
+    top: 10px
+    transform translate(-50%, -50%)
+
+  &__name
+    font-size: 30px
+    border: 20px solid $blue
+    border-bottom: 0
+    width: 220px
+    margin: 0 auto 12px
+    padding: 50px 0 12px
+    @media (max-width: $breakpoint-lg - 1)
+      width: 430px
+
+  &__text
+    font-size: 18px
+    line-height: 36px
+    margin: 0 auto 20px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 33px

@@ -1,0 +1,179 @@
+.header
+  position: absolute
+  padding-top: 44px
+  top: 0
+  left: 0
+  width: 100%
+  font-size: 16px
+
+  &__container
+    position: relative
+    z-index: 2
+
+  &__container,
+  &__aside,
+  &__mail,
+  &__address,
+  &__phone
+    display: flex
+    align-items center
+
+  &__aside
+    margin-left: auto
+    @media (max-width: $breakpoint-md - 1)
+      display: none
+
+  &__mail-icon,
+  &__address-icon,
+  &__phone-icon
+    fill: $black
+    display: block
+    margin-right: 15px
+
+  &__address
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+  &__address-icon,
+  &__phone-icon
+    margin-left: 75px
+
+  &__mail-icon
+    width: 18px
+    height: 14px
+
+  &__address-icon
+    width: 17px
+    height: 25px
+
+  &__phone-icon
+    width: 22px
+    height: 22px
+
+
+  &__phone
+    font-size: 14px
+    text-align: right
+
+  &__phone-tel
+    display: block
+    font-size: 19px
+    font-weight: bold
+    margin-bottom: 2px
+
+    span
+      color: $blue
+
+  &__button
+    position: fixed
+    font-weight: bold
+    display: flex
+    align-items center
+    justify-content center
+    color: #ffffff
+    background: $blue
+    z-index: 10
+    cursor: pointer
+
+    &--menu
+      left: 73px
+      width: 220px
+      height: 73px
+      transform rotate(-90deg)
+      transform-origin 0 100%
+      bottom: 340px
+      letter-spacing 2px
+      @media (max-width: $breakpoint-lg - 1)
+        left: 70px
+        height: 70px
+      @media (max-width: $breakpoint-md - 1)
+        position: static
+        transform: none
+        margin-left: auto
+        background-color: transparent
+        color: $black
+
+    &--contacts
+      bottom: 0
+      left: 73px
+      width: 186px
+      height: 66px
+      letter-spacing: 1px
+      @media (max-width: $breakpoint-lg - 1)
+        left: 70px
+        width: 66px
+        font-size: 0
+        &:after
+          content ''
+          display: block
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          background: url(../../images/sprite-contacts.png);
+      //@media (max-width: $breakpoint-md - 1)
+      //  display: none
+      //  &:after
+      //    background: none
+
+  &__button-icon
+    position: relative
+    width: 36px
+    height: 1px
+    background: #ffffff
+    margin-left: 6px
+    @media (max-width: $breakpoint-md - 1)
+      background: $blue
+
+    &:before, &:after
+      content ''
+      display: block
+      position: absolute
+      width: 53px
+      height: 1px
+      background: #ffffff
+      left: -27px
+      @media (max-width: $breakpoint-md - 1)
+        background: $blue
+
+    &:before
+      top: -10px
+      @media (max-width: $breakpoint-lg - 1)
+        top: -13px
+
+    &:after
+      top: 10px
+
+  &__scroll
+    position: fixed
+    height: 340px
+    width: 73px
+    background: $black
+    left: 0
+    bottom: 0
+    z-index: 10
+    @media (max-width: $breakpoint-lg - 1)
+      width: 70px
+    @media (max-width: $breakpoint-md - 1)
+      height: 66px
+
+  &__scroll-icon
+    fill: #fff
+    width: 15px
+    height: 26px
+    position: absolute
+    bottom: 37px
+    left: 50%
+    transform: translateX(-50%)
+    @media (max-width: $breakpoint-md - 1)
+      top: 50%
+      transform: translate(-50%, -50%)
+
+  &__contacts-icon
+    width: 28px
+    height: 13px
+    fill: #ffffff
+    display: block
+    margin-right: 28px
+    @media (max-width: $breakpoint-lg - 1)
+      display: none

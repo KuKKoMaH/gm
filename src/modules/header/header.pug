@@ -1,0 +1,54 @@
+header.header
+  .c.header__container
+    img(src='images/logo.png')
+    .header__aside
+      .header__mail
+        svg.header__mail-icon: use(xlink:href="#mail")
+        | mail@gen-marketing.ru
+      .header__address
+        svg.header__address-icon: use(xlink:href="#geo")
+        | Санкт-Петербург, Вторая линия#[br]
+        | ВО, дом 37
+      .header__phone
+        svg.header__phone-icon: use(xlink:href="#phone")
+        div
+          a.header__phone-tel(href='tel:79999999999') #[span +7] (999) 999-99-99
+          | Ежедневно с 8:00 до 22:00
+
+    button.header__button.header__button--menu
+      | MENU
+      .header__button-icon
+    .header__scroll: svg.header__scroll-icon: use(xlink:href="#mouse")
+    a.header__button.header__button--contacts
+      svg.header__contacts-icon: use(xlink:href="#2lines")
+      | контакты
+
+  .menu: .menu__inner
+    button.menu__close
+      |ЗАКРЫТЬ
+      .menu__close-icon
+    .menu__title: .menu__title-inner #[span М]ЕНЮ
+
+    .menu__head
+      .menu__mail
+        svg.menu__mail-icon: use(xlink:href="#mail")
+        | mail@gen-marketing.ru
+      .menu__address
+        svg.menu__address-icon: use(xlink:href="#geo")
+        | Санкт-Петербург, Вторая линия#[br]
+        | ВО, дом 37
+      .menu__phone
+        svg.menu__phone-icon: use(xlink:href="#phone")
+        div
+          a.menu__phone-tel(href='tel:79999999999') #[span +7] (999) 999-99-99
+          | Ежедневно с 8:00 до 22:00
+
+    .menu__items
+      ul
+        li: a(href='#') Главная
+        li: a(href='#') Создание сайтов и SEO
+        li: a(href='#') Контекстная реклама
+        li: a(href='#') SMM
+        li: a(href='#') Наши кейсы
+        li: a(href='#') Партнерская программа
+        li: a(href='#') Контакты

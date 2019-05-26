@@ -1,0 +1,131 @@
+.progress
+  background: url(./progress-bg.jpg) 50% 50%;
+  height: 796px
+  position: relative
+  @media (max-width: $breakpoint-lg - 1)
+    height: auto
+    background: url(./progress-bg-sm.jpg) 50% 50%;
+    padding: 85px 0 97px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 60px 0 75px
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    background-image: url(../../images/bust.png);
+    width: 278px
+    height: 348px
+    left: 50%
+    margin-left: 346px;
+    bottom: -188px;
+    pointer-events none
+    z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+      background-image: none;
+
+  &__sup
+    text-align: center
+    font-size: 36px
+    line-height: 48px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 30px
+  &__title
+    text-align: center
+    font-size: 48px
+    line-height: 60px
+    font-weight: bold
+    color: $blue
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 30px
+      line-height: 48px
+
+  &__container
+    @media (max-width: $breakpoint-lg - 1)
+      overflow: hidden
+      height: auto
+
+  &__items
+    position: relative
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex
+      margin-top: 45px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 40px
+
+  &__item
+    position: absolute
+    font-size: 18px
+    line-height: 30px
+    flex-shrink: 0
+    @media (max-width: $breakpoint-lg - 1)
+      position: static
+      padding-top: 30px
+      padding-left: 63px
+
+    b
+      font-weight: bold
+
+    &:before
+      content: ''
+      display: block
+      width: 29px
+      height: 29px
+      background: #ffffff
+      border: 9px solid $blue
+      border-radius: 50%
+
+    &--1
+      top: 370px
+
+    &--2
+      top: 300px
+      left: 310px
+
+    &--3
+      top: 200px
+      left: 620px
+
+    &--4
+      top: 100px
+      left: 910px
+
+  &__inner
+    position: relative
+    &:before
+      content: ''
+      display: block
+      width: 2px
+      height: 9px
+      background: $blue
+      margin: 12px 0 8px 13px
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: -70px
+      left: -63px
+      background: url(../../images/sprite-star.png)
+
+  &__scrollbar
+    display: none
+    height: 9px
+    border-radius: 4px;
+    background: $blue
+    margin: 8px 0
+    @media (max-width: $breakpoint-lg - 1)
+      display: block
+
+
+  &__drag
+    position: absolute
+    width: 25px
+    height: 25px
+    min-width 25px
+    background: $blue
+    border: 9px solid #e7e8e9
+    border-radius: 50%
+    margin-top: -8px
+    box-shadow: 0 0 10px rgba($black, .4)

@@ -1,0 +1,69 @@
+/*!!
+ * Theme Name: SRG
+ */
+
+@import "destyle.css/destyle.css"
+@import "magnific-popup/dist/magnific-popup.css";
+//@import "slick-carousel/slick/slick.css";
+//@import "swiper/dist/css/swiper.css";
+
+@import "stylus/_fonts.styl";
+@import "stylus/_vars.styl";
+@import "stylus/_mixins.styl";
+
+html
+  font-family: 'PT Sans', sans-serif;
+  color: $black
+  font-size: 16px
+
+body
+  overflow-x: hidden
+
+.c
+  padding: 0 10px
+  margin-left: auto
+  margin-right: auto
+  max-width: $container-lg
+  width: 100%
+  @media (max-width: $breakpoint-lg - 1)
+    max-width: $container-md
+    padding: 0 20px
+  @media (max-width: $breakpoint-md - 1)
+    max-width: 100%
+
+.hidden
+  display: none
+
+#sprites
+  position: absolute
+  width: 0
+  height: 0
+  top: 0
+  left: 0
+
+@import "stylus/btn.styl";
+@import "stylus/lines.styl";
+@import "stylus/navBtn.styl";
+@import "stylus/videoFrame.styl";
+@import "stylus/title.styl";
+@import "stylus/input.styl";
+@import "stylus/wpcf7.styl";
+//@import "stylus/select.styl";
+
+@import "modules/header/header.styl"
+@import "modules/header/menu.styl"
+@import "modules/frontHero/frontHero.styl"
+@import "modules/welcome/welcome.styl"
+@import "modules/team/team.styl"
+@import "modules/problems/problems.styl"
+@import "modules/progress/progress.styl"
+@import "modules/clients/clients.styl"
+@import "modules/services/services.styl"
+@import "modules/videos/videos.styl"
+@import "modules/guaranties/guaranties.styl"
+@import "modules/test/test.styl"
+@import "modules/map/map.styl"
+@import "modules/footer/footer.styl"
+
+@import "modules/photoswipe/photoswipe.styl"
+@import "modules/photoswipe/default-skin.styl"

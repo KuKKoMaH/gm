@@ -1,0 +1,152 @@
+.videos
+  position: relative
+  padding: 69px 0 70px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 69px 0 91px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 57px 0 36px
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    background: url(../../images/cannon.png) 50% 50% no-repeat;
+    width: 706px
+    height: 381px
+    left: 50%
+    margin-left: 66px;
+    top: -19px;
+    z-index: 1
+    pointer-events none
+    @media (max-width: $breakpoint-lg - 1)
+      background-image: url(../../images/bust3.png);
+      width: 246px
+      height: 287px
+      margin-left: 108px;
+      top: -157px;
+    @media (max-width: $breakpoint-md - 1)
+      left: auto
+      right: 13px
+      background-size: contain
+      height: 190px
+      width: 170px
+      top: -100px
+
+  .c
+    position: relative
+    z-index: 1
+
+  &__title
+    text-align: center
+    margin-bottom: 123px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 98px;
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 86px;
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 100%
+      left: 50%
+
+    //@media (max-width: $breakpoint-lg - 1)
+
+    &:before
+      width: 11px
+      height: 11px
+      background: $blue
+      margin-top: 30px
+      margin-left: -6px
+
+    //@media (max-width: $breakpoint-lg - 1)
+    //  margin-top: 24px
+
+    &:after
+      width: 1px
+      height: 23px
+      background: $black
+      margin-top: 7px
+      margin-left: -1px
+
+  //@media (max-width: $breakpoint-lg - 1)
+  //  margin-top: 38px
+
+  &__container
+    @media (max-width: $breakpoint-lg - 1)
+      max-width none
+      padding: 0
+      position: relative
+      overflow: hidden
+
+  &__buttons
+    display: none
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex
+      align-items center
+      justify-content center
+      margin-top: 33px
+
+  &__nav
+    position: absolute
+    left: 50%
+    top: 145px
+    z-index: 2
+    @media (max-width: $breakpoint-md - 1)
+      position: static
+      display: flex
+
+    &--prev
+      margin-left: -363px
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: 0
+
+    &--next
+      margin-left: 305px
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: 20px
+
+  &__items
+    display: flex
+    margin: 0 -17px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0
+
+  &__item
+    flex: 1
+    padding: 0 17px
+    @media (max-width: $breakpoint-lg - 1)
+      flex: none
+      padding: 0
+
+  &__inner
+    @media (max-width: $breakpoint-lg - 1)
+      max-width 570px
+      margin: 0 auto
+      position: relative
+    @media (max-width: $breakpoint-md - 1)
+      max-width 480px
+
+  &__video
+    height: 290px
+    @media (max-width: $breakpoint-lg - 1)
+      height: 368px
+
+  &__name
+    font-size: 16px
+    line-height: 30px
+    margin-top: 15px
+    text-align: center
+    @media (max-width: $breakpoint-lg - 1)
+      position: absolute
+      bottom: 34px;
+      left: 36px;
+      color: #ffffff
+      text-align: left;
+      margin-top: 0
+
+    b
+      font-size: 18px
+      font-weight: bold
+      display: block

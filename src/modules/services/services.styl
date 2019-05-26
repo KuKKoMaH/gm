@@ -1,0 +1,212 @@
+.services
+  padding: 89px 0 60px
+  position: relative
+  @media (max-width: $breakpoint-lg - 1)
+    overflow: hidden
+    padding: 73px 0 74px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 60px 0 78px
+
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 536px
+    background: #f7f7f7 url('data:image/gif;base64,R0lGODlhFAAUAPABANTU1AAAACH5BAUAAAEALAAAAAAUABQAAAIVjI95AOrJnpy02ouz3rz7D4biSE4FADs=') 50% 50%;
+    z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      height: 656px
+    @media (max-width: $breakpoint-md - 1)
+      height: 633px
+
+  &__title
+    margin-left: -4px
+    position: relative
+    margin-bottom: 89px
+    @media (max-width: $breakpoint-lg - 1)
+      text-align: center
+      margin-bottom: 73px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 85px
+
+    &:before, &:after
+      content:''
+      display: block
+      position: absolute
+      top: 100%
+      left: 2px
+      @media (max-width: $breakpoint-lg - 1)
+        left: 50%
+
+    &:before
+      width: 14px
+      height: 14px
+      background: $blue
+      margin-top: 15px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-top: 24px
+
+    &:after
+      width: 1px
+      height: 26px
+      background: $black
+      margin-top: 29px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-top: 38px
+
+  &__aside
+    position: absolute
+    right: 10px
+    top: 8px
+    font-size: 16px
+    line-height: 30px
+    max-width 390px
+    @media (max-width: $breakpoint-lg - 1)
+      position: relative
+      text-align: center
+      max-width: 580px
+      margin: 0 auto 77px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 50px
+
+    svg
+      position: absolute
+      z-index: -1
+      width: 60px
+      height: 58px
+      left: -14px
+      top: -2px
+      @media (max-width: $breakpoint-lg - 1)
+        left: 50%
+        margin-left: -28px
+        top: 1px
+
+  .c
+    position: relative
+    z-index: 1
+
+  &__container
+    @media (max-width: $breakpoint-lg - 1)
+      max-width none
+      padding: 0
+      position: relative
+
+  &__nav
+    position: absolute
+    left: 50%
+    top: 52px
+    display: none
+    z-index: 2
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex
+    @media (max-width: $breakpoint-md - 1)
+      top: 70px
+
+    &--prev
+      margin-left: -317px
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: -250px
+
+
+    &--next
+      margin-left: 258px
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: 191px
+
+  &__items
+    display: flex
+    margin: 0 -15px
+    align-items stretch
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0
+
+  &__item
+    flex: 1
+    padding: 0 17px
+    @media (max-width: $breakpoint-lg - 1)
+      flex: none
+      padding: 0
+
+  &__inner
+    height: 100%
+    display: flex
+    flex-direction column
+    background: #ffffff
+    box-shadow 0 0 60px rgba(#0d1f36, .1)
+    text-align: center
+    @media (max-width: $breakpoint-lg - 1)
+      max-width: 363px
+      margin: 0 auto
+
+  &__icon
+    height: 132px
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+  &__name
+    font-size: 24px
+    line-height: 48px
+    font-weight: bold
+    margin-bottom: 16px
+    padding 0 10px
+
+  &__content
+    font-size: 16px
+    line-height: 24px
+    padding: 0 20px 29px
+
+    li
+      &:after
+        content: ''
+        display: block
+        margin: 10px auto 9px
+        width: 5px
+        height: 5px
+        background: $blue
+
+      &:last-child:after
+        display: none
+
+  &__footer
+    border-top: 1px dashed #e6e6e6
+    height: 101px
+    display: flex
+    align-items center
+    justify-content center
+    flex-direction column
+    text-align: left
+    margin: auto 7px 0
+
+  &__price
+    font-size: 24px
+    line-height: 1
+    font-weight: bold
+
+  &__oldprice
+    font-size: 16px
+    line-height: 1
+    margin-top: 9px
+    color: #636363
+    text-decoration line-through
+
+  &__button
+    height: 86px
+    display: flex
+    align-items: center
+    justify-content center
+    background: $blue
+    border: 2px solid $blue
+    width: 100%
+    color: #ffffff
+    font-size: 16px
+    font-weight: bold
+    anim()
+
+    &:hover
+      border-color: $black
+      background: #ffffff
+      color: $black

@@ -1,0 +1,193 @@
+.team
+  padding: 93px 0 85px
+  background: url(../../images/mountains.jpg) 50% 100% no-repeat
+
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 70px 0 80px
+
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    left: 50%
+    margin-left: -640px
+    bottom: -130px
+    background: url(../../images/bust2.png)
+    width: 263px
+    height: 289px
+    z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+  .c
+    position: relative
+    z-index: 1
+
+  &__title
+    font-size: 36px
+    line-height: 48px
+    text-align: center
+    max-width 1060px
+    margin: 0 auto 25px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 30px
+      margin-bottom: 0
+
+    span
+      color: $blue
+
+  &__sub
+    font-size: 16px
+    line-height: 30px
+    text-align: center
+    max-width 1060px
+    margin: 0 auto
+
+    &:after
+      content: ''
+      display: block
+      width: 195px
+      height: 12px
+      background: $blue
+      margin: 15px auto 20px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-top: 30px
+
+  &__container
+    overflow: hidden
+
+  &__items
+    display: flex
+    flex-wrap wrap
+    align-items flex-start
+    justify-content center
+    padding-left: 38px
+    @media (max-width: $breakpoint-lg - 1)
+      flex-wrap nowrap
+      align-items center
+      justify-content flex-start
+      padding-left: 0px
+      margin-top: 62px
+
+
+  &__item
+    width: 175px
+    margin: 55px 15px 0
+    position: relative
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 20px 0 10px
+      //margin-right: 35px
+      //&:last-child
+      //  margin-right: 0
+
+    &:hover
+      & ^[0]__image
+        filter: grayscale(0)
+
+    &:before
+      content ''
+      display: block
+      //position: absolute
+      width: 137px
+      height: 201px
+      border: 15px solid $blue
+
+  &__image
+    position: absolute
+    top: -19px
+    left: 0
+    filter: grayscale(100%)
+    anim()
+
+  &__position
+    background: $black
+    color: #ffffff
+    margin-top: -24px
+    margin-left: 9px
+    position: relative
+    z-index: 1
+    height: 50px
+    display: flex
+    align-items center
+    justify-content center
+    font-size: 14px
+    padding-left: 12px
+
+    span
+      font-weight: bold
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 10px
+      height: 20px
+      background: $blue
+      left: 6px
+      bottom: -4px
+
+  &__arrow
+    flex-shrink 0
+    display: none
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex
+
+  &__l
+    color: #e5e5e5
+    position: absolute
+    font-weight: bold
+    left: 50%
+    font-size: 67px
+    pointer-events none
+
+    &--1
+      top: 140px
+      margin-left: -605px
+      overflow: hidden
+      @media (max-width: $breakpoint-lg - 1)
+        display: none
+
+      span
+        display: block
+        margin-right: -10px
+    &--2
+      top: 253px
+      margin-left: -312px
+      @media (max-width: $breakpoint-lg - 1)
+        display: none
+    &--3
+      top: 279px
+      margin-left: -79px
+      @media (max-width: $breakpoint-lg - 1)
+        top: 290px
+        margin-left: -332px
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: -140px
+
+    &--4
+      top: 158px
+      margin-left: 16px
+      @media (max-width: $breakpoint-lg - 1)
+        top: 173px
+        margin-left: -238px
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: -45px
+
+    &--5
+      top: 274px
+      margin-left: 268px
+      @media (max-width: $breakpoint-lg - 1)
+        top: 289px
+        margin-left: 12px
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: 202px
+
+    &--6
+      top: 277px
+      margin-left: 574px
+      @media (max-width: $breakpoint-lg - 1)
+        top: 293px
+        margin-left: 320px
+      @media (max-width: $breakpoint-md - 1)
+        display: none

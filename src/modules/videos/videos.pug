@@ -1,0 +1,32 @@
+.videos.lines
+  .c
+    h2.title.videos__title
+      |Посмотрите несколько видеоотзывов
+      .big наших клиентов
+        
+  .videos__container.c
+    .videos__slider: .videos__items
+      .videos__item: .videos__inner
+        .videos__video: a.videoFrame(href='https://www.youtube.com/watch?v=T7wofidfrpc' target='_blank')
+          .videoFrame__preview(style='background-image: url(https://img.youtube.com/vi/T7wofidfrpc/maxresdefault.jpg)')
+          .videoFrame__play
+        .videos__name
+          b Благодарность отзыв №1
+          |Александр Анисимов
+      .videos__item: .videos__inner
+        .videos__video: a.videoFrame(href='https://www.youtube.com/watch?v=T7wofidfrpc' target='_blank')
+          .videoFrame__preview(style='background-image: url(https://img.youtube.com/vi/T7wofidfrpc/maxresdefault.jpg)')
+          .videoFrame__play
+        .videos__name
+          b Благодарность отзыв №1
+          |Александр Анисимов
+      .videos__item: .videos__inner
+        .videos__video: a.videoFrame(href='https://www.youtube.com/watch?v=T7wofidfrpc' target='_blank')
+          .videoFrame__preview(style='background-image: url(https://img.youtube.com/vi/T7wofidfrpc/maxresdefault.jpg)')
+          .videoFrame__play
+        .videos__name
+          b Благодарность отзыв №1
+          |Александр Анисимов
+    .videos__buttons
+      .navBtn.navBtn--prev.videos__nav.videos__nav--prev: svg: use(xlink:href="#arrow")
+      .navBtn.navBtn--next.videos__nav.videos__nav--next: svg: use(xlink:href="#arrow")

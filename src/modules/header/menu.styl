@@ -1,0 +1,240 @@
+.menu
+  position: fixed
+  visibility: hidden
+  opacity: 0
+  overflow-y: auto
+  overflow-x: hidden
+  z-index: 11
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background: url('data:image/gif;base64,R0lGODlhwAABAPABAOXl5QAAACH5BAUAAAEALAAAAADAAAEAAAINjI+py+0Po5y02htAAQA7') calc(50% - 94px) 100%,
+          url(../../images/mountains.jpg) 50% 100% repeat-x,
+          #ffffff
+  will-change transform
+  anim(.2s)
+
+  &--active
+    visibility: visible
+    opacity: 1
+    filter: none
+    transform: none;
+
+    & ^[0]__inner
+      &:after
+        transform: none;
+    & ^[0]__items
+        transform: none;
+    & ^[0]__title-inner
+      margin-right: -39px
+
+  &__inner
+    position: relative
+    width: 100%
+    min-height: 100%
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      background: url(../../images/horse.png);
+      //width: 746px
+      height: 795px - 70px
+      left: 50%
+      margin-left: 370px
+      right: 0
+      //bottom: -70px
+      bottom: 0
+      transform: translateX(70px)
+      anim(.2s)
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: 0
+        bottom auto
+        top: 100%
+        height: auto
+        bottom: 0
+        margin-top: -330px
+        right: 0px
+        left: auto
+        width: 620px
+
+  &__title
+    position: absolute
+    right: 50%
+    margin-right: 191px
+    overflow: hidden
+    top: 50%
+    transform translateY(-50%)
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+    &-inner
+      //margin-right: -39px
+      margin-right: 0
+      font-size: 150px
+      font-weight: bold
+      anim(.2s)
+
+      span
+        color: $blue
+
+  &__items
+    top: 0
+    height: 100%
+    position: absolute
+    left: 50%
+    transform: translateX(-40px)
+    anim(.2s)
+    @media (max-width: $breakpoint-lg - 1)
+      position: static
+      left: 0
+      text-align: center
+      width: 100%
+      //top: 151px
+      height: auto
+      padding-bottom: 330px
+
+    ul
+      height: 100%
+      display: flex
+      flex-direction column
+      justify-content space-around
+
+    a
+      display: inline-block
+      position: relative
+      font-size: 36px
+      font-weight: bold
+      cursor: pointer
+      anim()
+
+      @media (max-width: $breakpoint-lg - 1)
+        margin-top: 55px
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 100%
+        margin-top: 18px
+        width: 18px
+        height: 0
+        margin-left: -2px
+        background: $black
+        anim()
+        @media (max-width: $breakpoint-lg - 1)
+          left: 50%
+          margin-left: -9px
+
+      &:hover
+        color: $blue
+
+        &:after
+          height: 18px
+
+  &__close
+    position: absolute
+    font-weight: bold
+    display: flex
+    line-height: 1
+    align-items center
+    justify-content center
+    color: #ffffff
+    background: $blue
+    cursor: pointer
+    width: 220px
+    height: 71px
+    transform rotate(-90deg)
+    transform-origin 0 0
+    left: 0
+    top: 50%
+    margin-top: 110px
+    letter-spacing 2px
+    z-index: 1
+
+    &-icon
+      position: relative
+      width: 36px
+      height: 1px
+      background: #ffffff
+      margin-left: 15px
+      margin-top: 2px
+      margin-right: 27px
+
+      &:before, &:after
+        content ''
+        display: block
+        position: absolute
+        width: 53px
+        height: 1px
+        background: #ffffff
+        left: 10px
+
+      &:before
+        top: -10px
+
+      &:after
+        top: 10px
+
+
+  &__head
+    align-items center
+    justify-content center
+    height: 151px
+    border-bottom: 1px solid #e5e5e5
+    display: none
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex
+    @media (max-width: $breakpoint-md - 1)
+      height: 160px
+      align-items flex-start
+      padding-top: 40px
+
+  &__mail,
+  &__address,
+  &__phone
+    display: flex
+    align-items center
+    margin: 0 15px
+
+  &__address
+    @media (max-width: $breakpoint-md - 1)
+      position: absolute
+      top: 95px
+      left: 50%
+      margin-left: -214px
+
+  &__mail-icon,
+  &__address-icon,
+  &__phone-icon
+    fill: $black
+    display: block
+    margin-right: 15px
+    flex-shrink: 0
+
+  &__mail-icon
+    width: 18px
+    height: 14px
+
+  &__address-icon
+    width: 17px
+    height: 25px
+
+  &__phone-icon
+    width: 22px
+    height: 22px
+
+  &__phone
+    font-size: 14px
+    text-align: right
+
+  &__phone-tel
+    display: block
+    font-size: 19px
+    font-weight: bold
+    margin-bottom: 2px
+
+    span
+      color: $blue
+
+
