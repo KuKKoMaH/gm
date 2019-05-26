@@ -1,0 +1,32 @@
+.contacts.lines
+  .c
+    .contacts__left
+      .contacts__border-outer
+        .contacts__border-inner
+          .contacts__map(data-zoom=16 data-center="[59.944089, 30.284486]" data-marker='modules/contacts/marker.svg')
+
+    .contacts__right
+      .contacts__cols
+        .contacts__col
+          ul
+            li #[b Главный офис:] 8 (999) 999-99-99
+            li #[b Менеджер:] 8 (999) 999-99-99
+            li #[b Почта:] mail@mail.ru
+          b.sm Заявки принимаются круглосуточно.
+        .contacts__col
+          ul
+            li
+              b Адрес:#[br]
+              | 105710, Санкт-Петербург, 2-я линия ВО, д. 37 офис 402
+          ul
+            li
+              b Часы работы офиса:#[br]
+              | пн-пт: с 10:00 до 18:00#[br]
+              | сб-вс: выходной
+          ul.last
+            li: b Заявки принимаются круглосуточно.
+
+      .contacts__button
+        a.btn(href='#')
+          svg: use(xlink:href="#2lines")
+          | СКАЧАТЬ РЕКВИЗИТЫ!

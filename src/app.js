@@ -16,6 +16,7 @@ import './modules/services/services';
 import './modules/videos/videos';
 import './modules/test/test';
 import './modules/map/map';
+import './modules/contacts/contacts';
 
 $('select').selectize({
   maxItems: 1,
