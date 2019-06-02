@@ -1,0 +1,52 @@
+.sitesHero
+  &__title
+    font-size: 120px
+    line-height: 100px
+    font-weight: bold
+    margin-left: -8px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 0
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 78px
+      line-height: 78px
+
+  &__bg
+    background: url(../../images/textbg.jpg) 50% 50%;
+    background-size: cover
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+    @media (max-width: $breakpoint-lg - 1)
+      display: block
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 78px
+
+  &__sub
+    font-size: 48px
+    line-height: 1
+    font-weight: bold
+    color: $blue
+    margin-left: -4px
+    margin-top: 30px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 0
+      line-height: 60px
+      margin-top: 35px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 36px
+      line-height: 48px
+      margin-top: 25px
+
+  &__image
+    margin-left: 48px
+    transform: translateX(50px)
+
+  &__image2
+    margin-left: 101px;
+    margin-bottom: -119px
+    transform: translateX(30px) rotate(15deg) scaleX(-1)
+
+    &.lazy--visible
+      transform: scaleX(-1)
+    @media (max-width: $breakpoint-md - 1)
+      margin-left: 3px;
+      margin-bottom: -114px;

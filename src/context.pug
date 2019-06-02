@@ -1,0 +1,15 @@
+extends pug/_layout
+
+block body
+  - var HIDE_VIDEOS_IMAGE = true
+  - var GUARANTIES_NOISE = true
+  include modules/contextHero/contextHero
+  include modules/contextBullets/contextBullets
+  include modules/certificates/certificates
+  include modules/indicators/indicators
+  include modules/services/contextServices
+  include modules/contextPerson/contextPerson
+  include modules/cases/cases
+  include modules/videos/videos
+  include modules/guaranties/guaranties
+  include modules/map/map

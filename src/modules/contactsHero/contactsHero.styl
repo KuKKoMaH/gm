@@ -1,18 +1,4 @@
 .contactsHero
-  background: url(../../images/mountains.jpg) 50% 100% repeat-x;
-  @media (max-width: $breakpoint-lg - 1)
-    text-align: center
-  .c
-    display: flex
-    height 868px
-    position: relative
-    z-index: 2
-    align-items center
-    @media (max-width: $breakpoint-lg - 1)
-      height: 95vh
-      max-height 750px
-      justify-content center
-
   &__title
     font-size: 36px
     line-height: 48px
@@ -29,21 +15,12 @@
         margin-top: 63px
 
   &__image
-    background-image: url(../../images/horse2.png);
-    background-size: contain
-    background-position: 50% 50%;
-    width: 753px
-    height: 737px
-    position: absolute
-    bottom: 0px
-    left: 50%
     margin-left: -81px
-    z-index: 1
-    pointer-events none
+    transform: translateX(50px)
+
+  &__image2
+    transform: translateX(30px) rotate(15deg)
     @media (max-width: $breakpoint-lg - 1)
-      background-image: url(../../images/bust3.png);
-      width: 246px
-      height: 287px
       margin-left: 65px;
       bottom: -125px;
     @media (max-width: $breakpoint-md - 1)

@@ -1,0 +1,69 @@
+.images
+  padding: 50px 0 56px
+  background: url(../../images/noise.jpg);
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 50px 0 28px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 12px 0 30px
+
+  .c
+    position: relative
+    z-index: 1
+
+  &__slider
+    @media (max-width: $breakpoint-lg - 1)
+      overflow: hidden
+      margin: 0 -20px
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 auto
+      max-width 385px
+
+  &__items
+    display: flex
+    flex-wrap wrap
+    align-items center
+    justify-content center
+    @media (max-width: $breakpoint-lg - 1)
+      flex-wrap nowrap
+      justify-content flex-start
+
+  &__item
+    width: (100 / 6) %
+    padding: 0 10px
+    height: 70px
+    display: flex
+    align-items center
+    justify-content center
+    flex-shrink 0
+
+  &__buttons
+    display: none
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex
+      align-items center
+      justify-content center
+      margin-top: 25px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 15px
+
+  &__nav
+    margin: 0 35px
+    display: flex
+    @media (min-width: $breakpoint-md)
+      border: 0
+      width: auto
+      height: auto
+
+    svg
+      width: 30px
+      height: 11px
+
+    &--next
+      transform rotate(180deg)
+
+  &__image
+    max-width 100%
+    max-height 100%
+    display: block
+    margin: 0 auto
+    anim()

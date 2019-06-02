@@ -1,0 +1,117 @@
+.logotypes
+  padding: 90px 0 39px
+  background: url(../../images/noise.jpg);
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 69px 0 66px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 65px 0 32px
+
+  .c
+    position: relative
+    z-index: 1
+
+  &__title
+    margin-bottom: 121px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 115px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 114px
+
+  //&__container
+  //  @media (max-width: $breakpoint-md - 1)
+
+  &__items
+    display: flex
+    align-items center
+    flex-wrap wrap
+    margin: 0 -15px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 -8px
+    @media (max-width: $breakpoint-md - 1)
+      flex-wrap nowrap
+      margin: 0
+
+  &__item
+    width: 25%
+    flex-shrink 0
+    padding: 0 15px 36px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0 8px 16px
+      width: 33.3333%
+
+  &__inner
+    background: #ffffff
+    display: flex
+    flex-direction column
+    position: relative
+    height: 255px
+    box-shadow 0 0 24px 0 rgba(#000, .05)
+    @media (max-width: $breakpoint-lg - 1)
+      height: 212px
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      right: 0
+      bottom: 0
+      background: $blue
+
+    &:before
+      width: 10px
+      height: 6px
+
+    &:after
+      height: 10px
+      width: 6px
+
+  &__image
+    position: absolute
+    top: 100px
+    left: 50%
+    transform translate(-50%, -50%)
+    max-width 90%
+    max-height 120px
+    width: auto
+    height: auto
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      top: 80px
+      max-height 100px
+
+  &__name
+    position: absolute
+    top: 100%
+    margin-top: -55px
+    left: 50%
+    width: 100%
+    padding: 20px 0
+    transform translate(-50%, -50%)
+    text-align: center
+    font-size: 18px
+    line-height: 24px
+    font-weight: bold
+
+  &__buttons
+    display: none
+    @media (max-width: $breakpoint-md - 1)
+      display: flex
+      align-items center
+      justify-content center
+      margin-top: 10px
+
+  &__nav
+    margin: 0 19px
+    display: flex
+    @media (min-width: $breakpoint-md)
+      border: 0
+      width: auto
+      height: auto
+
+    svg
+      width: 30px
+      height: 11px
+
+    &--next
+      transform rotate(180deg)
+

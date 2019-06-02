@@ -1,0 +1,20 @@
+.presentations.lines
+  .c
+    h2.title.presentations__title Создание презентационных видео
+
+    .presentations__slider: .presentations__items
+      each val in [1,2]
+        .presentations__item: .presentations__inner
+          .presentations__video
+            a.videoFrame.videoFrame--gray(href='https://www.youtube.com/watch?v=T7wofidfrpc' target='_blank')
+              .videoFrame__preview.lazyBg(data-bg='url(https://img.youtube.com/vi/T7wofidfrpc/maxresdefault.jpg)')
+              .videoFrame__play
+          .presentations__name
+            b Благодарность отзыв №1
+            | Александр Анисимов
+
+    .presentations__buttons
+      .navBtn.navBtn--prev.presentations__nav.presentations__nav--prev: svg: use(xlink:href="#arrow")
+      .navBtn.navBtn--next.presentations__nav.presentations__nav--next: svg: use(xlink:href="#arrow")
+
+  img.presentations__image.lazy(data-src='images/bust9.png' width=252 height=310)

@@ -1,0 +1,160 @@
+.siteForm
+  &__content
+    max-width 562px
+    padding: 88px 0 91px
+    margin-left: -2px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 0
+      text-align: center
+      max-width none
+      padding: 69px 0 84px
+    @media (max-width: $breakpoint-md - 1)
+      padding: 64px 0 89px
+
+  &__title
+    &:after
+      content: ''
+      display: block
+      width: 14px
+      height: 40px
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTAgMGgxNHYxNGgtMTR6IiBmaWxsPSIjMDA2ZGZlIi8+PHBhdGggZD0ibTAgMTRoMXYyNmgtMXoiIGZpbGw9IiMyMDIwMjAiLz48L3N2Zz4=');
+      margin: 15px 0 26px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: calc(50% - 1px)
+        margin-bottom: 28px
+      @media (max-width: $breakpoint-md - 1)
+        margin-top: 30px
+        margin-bottom: 30px
+
+  &__text
+    font-size: 16px
+    line-height: 30px
+    margin-bottom: 41px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 38px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 40px
+
+  &__form
+    position: relative
+    border: 20px solid $blue
+    border-bottom: 0
+    padding: 28px 40px 45px
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      height: 20px
+      background: $blue
+
+    &:before
+      left: 0
+      width: 104px
+
+    &:after
+      right: 0
+      width: 35px
+
+    @media (max-width: $breakpoint-lg - 1)
+      max-width: 562px
+    @media (max-width: $breakpoint-md - 1)
+      max-width none
+      &:before
+        width: 14px
+
+      &:after
+        width: 14px
+
+  &__input
+    margin-bottom: 21px
+
+  &__button
+    display: block
+    position: absolute
+    border: 2px solid $blue
+    left: 131px
+    width: 329px
+    height: 71px
+    bottom: -31px
+    font-weight: bold
+    anim()
+    @media (max-width: $breakpoint-md - 1)
+      left: 50%
+      margin-left: -164px
+
+    &:hover
+      background: $blue
+      color: #ffffff
+
+  &__image,
+  &__image2,
+  &__image3
+    position: absolute
+    left: 50%
+    bottom: 0
+    z-index: 1
+    anim(.3s)
+
+    &.lazy--visible
+      transform none
+
+  &__image
+    margin-left: 77px
+    transform translateX(50px)
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+  &__image2
+    margin-left: 110px
+    display: none
+    z-index: 2
+    transform translateX(30px)
+    @media (max-width: $breakpoint-lg - 1)
+      display: block
+    @media (max-width: $breakpoint-md - 1)
+      display: none
+
+  &__image3
+    margin-left: -616px;
+    margin-bottom: -99px;
+    transform translateX(-30px) rotate(-15deg)
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+  &__info
+    position: absolute
+    left: 50%
+    margin-left: 105px
+    bottom: 140px
+    max-width 340px
+    z-index: 2
+    line-height: 30px
+    @media (max-width: $breakpoint-lg - 1)
+      position: relative
+      margin-left: 336px
+      bottom: auto
+      left: auto
+      padding-bottom: 59px
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 auto
+      padding-bottom: 55px
+
+    svg
+      position: absolute
+      width: 84px
+      height: 82px
+      left: -46px;
+      top: -6px;
+      fill: $blue
+
+    p
+      font-style italic
+
+  &__inner
+    position: relative
+    z-index: 1
+
+  &__name
+    font-size: 24px

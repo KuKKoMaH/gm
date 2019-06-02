@@ -16,7 +16,7 @@ html
   color: $black
   font-size: 16px
 
-body
+html, body
   overflow-x: hidden
 
 b
@@ -34,13 +34,18 @@ b
   @media (max-width: $breakpoint-md - 1)
     max-width: 100%
 
+.noise
+  background: url(images/noise.jpg);
+
 .lazy
   visibility: hidden
   opacity: 0
+
   &.lazy--visible
     visibility: visible
     opacity: 1
-    //transform none
+
+//transform none
 
 img[data-src],
 img[data-srcset]
@@ -57,18 +62,37 @@ img[data-srcset]
   top: 0
   left: 0
 
-@import "stylus/btn.styl";
-@import "stylus/lines.styl";
-@import "stylus/navBtn.styl";
-@import "stylus/videoFrame.styl";
-@import "stylus/title.styl";
-@import "stylus/input.styl";
-@import "stylus/wpcf7.styl";
+.icon-lines
+  width: 28px
+  height: 13px
+
+.icon-pdf
+  width: 40px
+  height: 37px
+  fill: $blue
+
+@import "stylus/blocks/hero.styl"
+@import "stylus/blocks/btn.styl";
+@import "stylus/blocks/btnGroup.styl";
+@import "stylus/blocks/btnSub.styl";
+@import "stylus/blocks/lines.styl";
+@import "stylus/blocks/navBtn.styl";
+@import "stylus/blocks/videoFrame.styl";
+@import "stylus/blocks/title.styl";
+@import "stylus/blocks/form.styl";
+@import "stylus/blocks/input.styl";
+@import "stylus/blocks/card.styl";
+@import "stylus/blocks/cardsList.styl";
+@import "stylus/blocks/wpcf7.styl";
 //@import "stylus/select.styl";
 
 @import "modules/header/header.styl"
 @import "modules/header/menu.styl"
 @import "modules/frontHero/frontHero.styl"
+@import "modules/contactsHero/contactsHero.styl"
+@import "modules/contextHero/contextHero.styl"
+@import "modules/portfolioHero/portfolioHero.styl"
+@import "modules/sitesHero/sitesHero.styl"
 @import "modules/welcome/welcome.styl"
 @import "modules/team/team.styl"
 @import "modules/problems/problems.styl"
@@ -80,8 +104,23 @@ img[data-srcset]
 @import "modules/test/test.styl"
 @import "modules/map/map.styl"
 @import "modules/footer/footer.styl"
-@import "modules/contactsHero/contactsHero.styl"
 @import "modules/contacts/contacts.styl"
+@import "modules/contextBullets/contextBullets.styl"
+@import "modules/certificates/certificates.styl"
+@import "modules/indicators/indicators.styl"
+@import "modules/contextPerson/contextPerson.styl"
+@import "modules/cases/cases.styl"
+@import "modules/images/images.styl"
+@import "modules/sites/sites.styl"
+@import "modules/logotypes/logotypes.styl"
+@import "modules/presentations/presentations.styl"
+@import "modules/context/context.styl"
+@import "modules/smm/smm.styl"
+@import "modules/siteTypes/siteTypes.styl"
+@import "modules/siteForm/siteForm.styl"
+@import "modules/sitesReason/sitesReason.styl"
+@import "modules/sitesSelect/sitesSelect.styl"
+@import "modules/sitesSteps/sitesSteps.styl"
 
 @import "modules/photoswipe/photoswipe.styl"
 @import "modules/photoswipe/default-skin.styl"

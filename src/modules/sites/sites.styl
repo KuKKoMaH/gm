@@ -1,0 +1,55 @@
+.sites
+  padding: 80px 0 80px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 72px 0 40px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 66px 0 48px
+
+  .c
+    position: relative
+    z-index: 1
+
+  &__title
+    margin-bottom: 123px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 115px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 110px
+
+  &__image,
+  &__image2,
+  &__image3
+    position: absolute
+    left: 50%
+    bottom: 0
+    z-index: 1
+    transform translateX(30px) rotate(15deg)
+    anim(.25s)
+    pointer-events none
+
+    &.lazy--visible
+      transform none
+
+  &__image
+    margin-left: 357px;
+    margin-bottom: -140px;
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+  &__image2
+    display: none
+    margin-left: 209px;
+    margin-bottom: -111px;
+    @media (max-width: $breakpoint-lg - 1)
+      display: block
+    @media (max-width: $breakpoint-md - 1)
+      margin-left: 110px;
+      margin-bottom: -100px;
+
+  &__image3
+    margin-left: 577px;
+    margin-bottom: 70px;
+    transform translateY(-30px)
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+

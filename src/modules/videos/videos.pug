@@ -1,4 +1,4 @@
-.videos.lines
+.videos.lines(class=VIDEOS_NOISE && 'noise')
   .c
     h2.title.videos__title
       |Посмотрите несколько видеоотзывов
@@ -8,21 +8,21 @@
     .videos__slider: .videos__items
       .videos__item: .videos__inner
         .videos__video: a.videoFrame(href='https://www.youtube.com/watch?v=T7wofidfrpc' target='_blank')
-          .videoFrame__preview: img.lazy(data-src='https://img.youtube.com/vi/T7wofidfrpc/maxresdefault.jpg')
+          .videoFrame__preview.lazyBg(data-bg='url(https://img.youtube.com/vi/T7wofidfrpc/maxresdefault.jpg)')
           .videoFrame__play
         .videos__name
           b Благодарность отзыв №1
           |Александр Анисимов
       .videos__item: .videos__inner
         .videos__video: a.videoFrame(href='https://www.youtube.com/watch?v=T7wofidfrpc' target='_blank')
-          .videoFrame__preview: img.lazy(data-src='https://img.youtube.com/vi/T7wofidfrpc/maxresdefault.jpg')
+          .videoFrame__preview.lazyBg(data-bg='url(https://img.youtube.com/vi/T7wofidfrpc/maxresdefault.jpg)')
           .videoFrame__play
         .videos__name
           b Благодарность отзыв №1
           |Александр Анисимов
       .videos__item: .videos__inner
         .videos__video: a.videoFrame(href='https://www.youtube.com/watch?v=T7wofidfrpc' target='_blank')
-          .videoFrame__preview: img.lazy(data-src='https://img.youtube.com/vi/T7wofidfrpc/maxresdefault.jpg')
+          .videoFrame__preview.lazyBg(data-bg='url(https://img.youtube.com/vi/T7wofidfrpc/maxresdefault.jpg)')
           .videoFrame__play
         .videos__name
           b Благодарность отзыв №1
@@ -32,4 +32,5 @@
       .navBtn.navBtn--next.videos__nav.videos__nav--next: svg: use(xlink:href="#arrow")
 
   img.videos__image.lazy(data-src='images/cannon.png')
-  img.videos__image2.lazy(data-src='images/bust3.png')
+  if(!HIDE_VIDEOS_IMAGE)
+    img.videos__image2.lazy(data-src='images/bust3.png')

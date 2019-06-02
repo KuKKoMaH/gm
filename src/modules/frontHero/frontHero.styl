@@ -1,16 +1,4 @@
 .frontHero
-  background: url(../../images/mountains.jpg) 50% 100% repeat-x;
-  padding: 180px 0 134px
-  @media (max-width: $breakpoint-lg - 1)
-    text-align: center
-    padding: 155px 0 88px
-  @media (max-width: $breakpoint-md - 1)
-    padding: 148px 0
-
-  .c
-    position: relative
-    z-index: 1
-
   &__sup
     font-size: 24px
     line-height: 30px
@@ -41,49 +29,49 @@
     @media (max-width: $breakpoint-md - 1)
       font-size: 78px
 
-    &--top
-      line-height: 118px
-      position: relative
-      margin-left: -17px
-      margin-bottom: -18px
-      @media (max-width: $breakpoint-lg - 1)
-        margin: 0 0 -2px
-        line-height: 90px
-      @media (max-width: $breakpoint-md - 1)
-        line-height: 70px
-        margin-bottom: -4px
+  &__top
+    line-height: 118px
+    position: relative
+    margin-left: -17px
+    margin-bottom: -18px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 0 -2px
+      line-height: 90px
+    @media (max-width: $breakpoint-md - 1)
+      line-height: 70px
+      margin-bottom: -4px
 
-    &--overflow
-      display: block
+  &__overflow
+    display: block
+    position: absolute
+    top: 111px
+    width: 50px
+    left: 226px
+    overflow: hidden
+    height: 20px
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+    &:before
+      content: attr(data-text)
       position: absolute
-      top: 111px
-      width: 50px
-      left: 226px
-      overflow: hidden
-      height: 20px
-      @media (max-width: $breakpoint-lg - 1)
-        display: none
+      top: -118px
+      left: -260px
+      padding-left: 17px
 
-      &:before
-        content: attr(data-text)
-        position: absolute
-        top: -118px
-        left: -260px
-        padding-left: 17px
-
-    &--bottom
-      line-height: 171px
-      display: inline-block
-      background-image: url(img/textbg.jpg);
-      background-size: cover
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent
-      margin-left: -34px
-      @media (max-width: $breakpoint-lg - 1)
-        margin: 0
-        line-height: 130px
-      @media (max-width: $breakpoint-md - 1)
-        line-height: 90px
+  &__bottom
+    line-height: 171px
+    display: inline-block
+    background-image: url(../../images/textbg.jpg);
+    background-size: cover
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+    margin-left: -34px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0
+      line-height: 130px
+    @media (max-width: $breakpoint-md - 1)
+      line-height: 90px
 
   &__sub
     font-size: 24px
@@ -103,36 +91,15 @@
       @media (max-width: $breakpoint-lg - 1)
         display: none
 
-  &__image,
-  &__image2
-    position: absolute
-    pointer-events none
-    z-index: 2
-    anim(.3s)
-
-    &.lazy--visible
-      transform: none
-
   &__image
-    //display: none
-    position: absolute
-    bottom: -50px
-    left: 50%
+    margin-bottom: -50px
     margin-left: -45px
     transform: translateX(50px)
 
-    @media (max-width: $breakpoint-lg - 1)
-      display: none
-
   &__image2
-    display: none
-    position: absolute
     margin-left: 100px;
-    left: 50%
-    bottom: -200px
+    margin-bottom: -200px
     transform: translateX(30px) rotate(15deg)
-    @media (max-width: $breakpoint-lg - 1)
-      display: block
     @media (max-width: $breakpoint-md - 1)
       width: 200px
       margin-left: 20px;

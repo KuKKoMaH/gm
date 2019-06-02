@@ -1,0 +1,102 @@
+.indicators
+  background: url(./indicators-bg.jpg) 50% 50%
+  background-size: cover
+  padding: 78px 0 108px
+  position: relative
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 59px 0 74px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 63px 0 16px
+    background-image: url(./indicators-bg-sm.jpg)
+
+  .c
+    position: relative
+    z-index: 1
+
+  &__title
+    position: relative
+    text-align: center
+    margin-bottom: 87px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 75px
+      margin-left: 0
+      font-size: 30px
+      .big
+        font-size: 30px
+        line-height: 48px
+        display: inline
+        color: $black
+        font-weight: normal
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 62px
+      br
+        display: none
+
+  &__items
+    //display: flex
+    //align-items flex-start
+    //justify-content space-around
+    //flex-wrap wrap
+    position: relative
+    height: 210px
+    @media (max-width: $breakpoint-lg - 1)
+      height: 350px
+    @media (max-width: $breakpoint-md - 1)
+      height: auto
+
+  &__item
+    position: absolute
+    left: 50%
+    padding: 72px 0 0 70px
+    font-size: 24px
+    line-height: 36px
+    @media (max-width: $breakpoint-md - 1)
+      position: relative
+      left: auto
+      margin-left: 0
+      text-align: center
+      margin-left: auto !important
+      margin-top: auto !important
+      padding-left: 0
+      margin-bottom: 47px
+    //@media (max-width: $breakpoint-lg - 1)
+    //  position: relative
+    //  margin-left: auto !important
+    //  left: auto
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+      left: 0
+      top: 0
+      @media (max-width: $breakpoint-md - 1)
+        left: 50%
+        transform translateX(-50%)
+
+    &--1
+      margin-left: -579px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: -364px
+      &:before
+        background-image: url(../../images/sprite-indicators-01.png)
+    &--2
+      margin-left: -273px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: -93px
+      &:before
+        background-image: url(../../images/sprite-indicators-02.png)
+    &--3
+      margin-left: -12px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: 140px
+      &:before
+        background-image: url(../../images/sprite-indicators-03.png)
+    &--4
+      margin-left: 260px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: -364px;
+        margin-top: 210px;
+      &:before
+        background-image: url(../../images/sprite-indicators-04.png)

@@ -1,0 +1,124 @@
+.presentations
+  padding: 69px 0 40px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 59px 0 55px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 50px 0 32px
+
+  &__title
+    text-align: center
+    margin-bottom: 121px
+    position: relative
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 103px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 102px
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMzQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTUgMGgxdjIzaC0xeiIvPjxwYXRoIGQ9Im0wIDIzaDExdjExaC0xMXoiIGZpbGw9IiMwMDZkZmUiLz48L3N2Zz4=')
+      width: 11px
+      height: 34px
+      left: 50%
+      margin-left: -6px
+      top: 100%
+      margin-top: 22px
+
+  &__slider
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 -20px
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content center
+    @media (max-width: $breakpoint-lg - 1)
+      flex-wrap nowrap
+      justify-content: flex-start
+
+  &__item
+    flex-shrink 0
+    width: 50%
+    padding: 0 14px 28px
+    @media (max-width: $breakpoint-md - 1)
+      padding: 0 20px
+
+
+  &__inner
+    @media (max-width: $breakpoint-lg - 1)
+      max-width 560px
+      margin: 0 auto
+
+  &__video
+    height: 290px
+
+  &__name
+    text-align: center
+    font-size: 16px
+    margin-top: 20px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-top: 35px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 25px
+    b
+      font-size: 18px
+      display: block
+      margin-bottom: 12px
+
+  &__buttons
+    display: none
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex
+      align-items center
+      justify-content center
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 24px
+
+  &__nav
+    display: flex
+    position: absolute
+    left: 50%
+    top: 50%
+    z-index: 2
+    @media (max-width: $breakpoint-md - 1)
+      position: static
+
+    &--prev
+      margin-left: -363px
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: 0
+
+    &--next
+      margin-left: 305px
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: 40px
+
+  &__image
+    display: block
+    position: absolute
+    left: 50%
+    margin-left: -643px;
+    bottom: -229px;
+    pointer-events: none;
+    z-index: 2;
+    transform translateX(-30px) rotate(-15deg)
+    anim(.3s)
+
+    &.lazy--visible
+      transform none
+
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: -345px;
+      bottom: -160px;
+      transform translateX(-30px) rotate(-15deg) scaleX(-1)
+
+      &.lazy--visible
+        transform scaleX(-1)
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: -245px;
+      bottom: -90px;
+      width: 165px
+

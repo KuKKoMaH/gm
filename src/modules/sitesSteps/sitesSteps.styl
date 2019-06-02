@@ -1,0 +1,148 @@
+.sitesSteps
+  padding: 78px 0 44px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 66px 0 78px
+    text-align: center
+  @media (max-width: $breakpoint-md - 1)
+    padding: 50px 0 74px
+
+  &__title
+    margin-left: -2px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 0
+
+    &:after
+      content: ''
+      display: block
+      width: 14px
+      height: 40px
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTAgMGgxNHYxNGgtMTR6IiBmaWxsPSIjMDA2ZGZlIi8+PHBhdGggZD0ibTAgMTRoMXYyNmgtMXoiIGZpbGw9IiMyMDIwMjAiLz48L3N2Zz4=');
+      margin: 15px 0 31px 0
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: calc(50% - 2px);
+        margin-top: 32px;
+        margin-bottom: 44px;
+      @media (max-width: $breakpoint-md - 1)
+        margin-top: 27px;
+        margin-bottom: 49px;
+
+  &__cols
+    display: flex
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+
+  &__left
+    padding-right: 105px
+    @media (max-width: $breakpoint-lg - 1)
+      padding-right: 0
+
+  &__right
+    width: 460px
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      width: auto
+
+  &__items
+    counter-reset: sitesSteps
+    margin-left: -2px
+
+  &__item
+    margin-bottom: 32px
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex
+      flex-direction column
+      align-items center
+      margin-bottom: 58px
+
+  &__name
+    font-size: 30px
+    margin-bottom: 17px
+    position: relative
+
+    svg
+      width: 34px
+      height: 32px
+      fill $blue
+
+    &:before
+      counter-increment: sitesSteps
+      content: '0' counter(sitesSteps)
+      -webkit-text-stroke: 1px black;
+      opacity: .43
+      color: transparent
+      font-size: 72px
+      font-weight: bold
+      position: absolute
+      left: 0
+      top: -20px
+
+  &__text
+    font-size: 16px
+    line-height: 30px
+
+    .big
+      display: block
+      font-size: 24px
+
+  &__form
+    padding-top: 67px
+    margin-bottom: 52px
+    margin-top: 15px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-top: 0
+      padding: 4px 10px 11px
+      margin-bottom: 28px
+
+    &:after
+      content: ''
+      display: block
+      width: 100%
+      height: 15px
+      background: $black
+      @media (max-width: $breakpoint-lg - 1)
+        display: none
+
+    .form
+      margin-bottom 50px
+      padding-bottom: 48px
+      @media (max-width: $breakpoint-lg - 1)
+        padding-bottom: 41px
+        margin-bottom: 0
+
+  &__cta
+    border: 15px solid $blue
+    padding: 20px
+    text-align: center
+    font-size: 24px
+    line-height: 40px
+    position: relative
+    @media (max-width: $breakpoint-lg - 1)
+      line-height: 42px
+      br
+        display: none
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 7px
+      left: 7px
+      width: 47px
+      height: 47px
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDcgNDciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGgxNXY0N0gweiIvPjxwYXRoIGQ9Ik0wIDBoNDd2MTVIMHoiLz48cGF0aCBkPSJNMCAwaDE1djE1SDB6IiBmaWxsPSIjMTI3NGZkIi8+PC9zdmc+');
+
+  &__price
+    font-size: 30px
+    font-weight: bold
+    color: $blue
+
+    span
+      color: $black
+
+  &__image
+    position: absolute
+    right: -76px;
+    top: -52px;
+    anim(.2s)
+    @media (max-width: $breakpoint-lg - 1)
+      display: none

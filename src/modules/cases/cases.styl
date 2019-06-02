@@ -1,0 +1,34 @@
+.cases
+  padding: 78px 0 150px
+  background-image: url(../../images/noise.jpg);
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 66px 0 71px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 59px 0 71px
+
+  .c
+    position: relative
+    z-index: 1
+
+  &__title
+    text-align: center
+    margin-bottom: 73px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 61px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 46px
+
+  &__image2
+    position: absolute
+    left: 50%
+    bottom: 0
+    margin-left: -652px;
+    margin-bottom: -187px;
+    z-index: 1
+    transform translateX(-30px) rotate(-15deg)
+    anim(.25s)
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+    &.lazy--visible
+      transform none

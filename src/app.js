@@ -6,8 +6,8 @@ import SmoothScroll from 'smooth-scroll';
 
 import './js/init';
 import './js/lazyImages';
+import './js/cartsList';
 import './modules/header/header';
-import './modules/frontHero/frontHero';
 import './modules/team/team';
 import './modules/problems/problems';
 import './modules/progress/progress';
@@ -17,6 +17,10 @@ import './modules/videos/videos';
 import './modules/test/test';
 import './modules/map/map';
 import './modules/contacts/contacts';
+import './modules/images/images';
+import './modules/logotypes/logotypes';
+import './modules/presentations/presentations';
+import './modules/siteTypes/siteTypes';
 
 $('select').selectize({
   maxItems: 1,

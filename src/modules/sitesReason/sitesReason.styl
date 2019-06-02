@@ -1,0 +1,109 @@
+.sitesReason
+  background: url(./bg.jpg) calc(50% + 700px) 50% no-repeat;
+  background-size: contain
+  padding: 73px 0 58px
+  @media (max-width: $breakpoint-lg - 1)
+    background: none
+    padding: 66px 0 81px
+    text-align: center
+  @media (max-width: $breakpoint-md - 1)
+    padding: 27px 0 52px
+
+  &__title
+    &:after
+      content: ''
+      display: block
+      width: 14px
+      height: 40px
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTAgMGgxNHYxNGgtMTR6IiBmaWxsPSIjMDA2ZGZlIi8+PHBhdGggZD0ibTAgMTRoMXYyNmgtMXoiIGZpbGw9IiMyMDIwMjAiLz48L3N2Zz4=');
+      margin: 15px 0 41px -2px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: calc(50% - 2px)
+        margin-top: 24px
+        margin-bottom: 52px
+      @media (max-width: $breakpoint-md - 1)
+        margin-top: 39px;
+        margin-bottom: 38px;
+
+  &__items
+    max-width 980px
+    display: flex
+    flex-wrap wrap
+    justify-content space-between
+    counter-reset: sitesReason
+    margin-bottom: -61px
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      align-items center
+
+  &__item
+    width: 440px
+    //padding-right: 115px
+    line-height: 30px
+    margin-bottom: 61px
+    @media (max-width: $breakpoint-lg - 1)
+      width: 640px
+      margin-bottom: 75px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 101px
+
+    &--big
+      width: 710px
+      @media (max-width: $breakpoint-lg - 1)
+        width: 640px
+
+    &:before
+      counter-increment: sitesReason
+      content: '0' counter(sitesReason)
+      display: block
+      position: absolute
+      font-size: 105px
+      font-weight: bold
+      color: $blue
+      z-index: -1
+      @media (max-width: $breakpoint-lg - 1)
+        left: 50%
+        margin-left: -218px;
+        margin-top: 5px;
+      @media (max-width: $breakpoint-md - 1)
+        margin-left: -208px;
+
+  &__name
+    font-size: 24px
+    margin-bottom: 12px
+    font-weight: bold
+
+  //&__text
+
+  &__image,
+  &__image2
+    position: absolute
+    left: 50%
+    bottom: 0
+    z-index: 1
+    anim(.3s)
+
+    &.lazy--visible
+      transform none
+
+  &__image
+    margin-left: 178px
+    transform translateX(50px)
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+  &__image2
+    display: none
+    z-index: 2
+    transform translateX(30px) rotate(15deg)
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 185px;
+      margin-bottom: -117px;
+      width: 175px;
+      display: block
+
+    @media (max-width: $breakpoint-md - 1)
+      margin-left: 98px;
+      margin-bottom: -91px;
+      width: 135px;
+

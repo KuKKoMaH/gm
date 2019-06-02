@@ -1,0 +1,33 @@
+.context.lines
+  .c
+    .context__title: h2(data-bg='Контекстная реклама').title.title--bg Контекстная реклама
+
+    .btnGroup
+      .btn Google Adwords
+      .btn Контекстная реклама
+
+  .cardsList
+    .c
+      .cardsList__slider: .cardsList__items
+        .navBtn.cardsList__slide.cardsList__arrow: svg: use(xlink:href="#arrow")
+        .cardsList__slide
+          .card
+            img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+            .card__name SMM продвижение Салона красоты
+
+        .cardsList__slide
+          .card
+            img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+            .card__name SMM продвижение Ремонт авто
+
+        .cardsList__slide
+          .card
+            img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+            .card__name SMM продвижение Бренда одежды
+
+  .btnSub
+    .btn
+      svg.icon-pdf: use(xlink:href="#pdf")
+      | Или скачайте PDF файл с кейсами
+
+  img.context__image.lazy(data-src='images/bust10.png')

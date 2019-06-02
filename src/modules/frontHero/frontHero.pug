@@ -1,17 +1,19 @@
-.frontHero.lines
+.hero.lines
+  img.hero__image.frontHero__image.lazy(data-src='images/horse.png')
+  img.hero__image2.frontHero__image2.lazy(data-src='images/bust.png')
+
   .c
     .frontHero__sup
       | Первое агентство#[br]
       | интернет маркетинга Санкт-Петербурга
     h1.frontHero__title
-      .frontHero__title--top General
-      .frontHero__title--overflow(data-text='General')
-      .frontHero__title--bottom Marketing
+      .frontHero__top General
+      .frontHero__overflow(data-text='General')
+      .frontHero__bottom Marketing
     .frontHero__sub
       | Мы помогаем Вам#[br]
       | добиться результата в интернет маркетинге
     a.btn(href='#')
-      svg: use(xlink:href="#2lines")
+      svg.icon-lines: use(xlink:href="#2lines")
       | получить консультацию
-  img.frontHero__image.lazy(data-src='images/horse.png')
-  img.frontHero__image2.lazy(data-src='images/bust.png')
+

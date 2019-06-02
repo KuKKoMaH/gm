@@ -1,0 +1,16 @@
+extends pug/_layout
+
+block body
+  - var HIDE_VIDEOS_IMAGE = true
+  - var VIDEOS_NOISE = true
+  - var GUARANTIES_NOISE = false
+  include modules/portfolioHero/portfolioHero
+  include modules/images/images
+  include modules/sites/sites
+  include modules/logotypes/logotypes
+  include modules/presentations/presentations
+  include modules/context/context
+  include modules/smm/smm
+  include modules/videos/videos
+  include modules/guaranties/guaranties
+  include modules/map/map
