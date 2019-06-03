@@ -1,0 +1,116 @@
+.smmBullets
+  @media (max-width: $breakpoint-md - 1)
+    padding-bottom: 38px
+
+  &__content
+    max-width 620px
+    padding: 66px 0 182px
+    margin-left: -2px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 0
+      max-width none
+      padding: 67px 0 96px
+    @media (max-width: $breakpoint-md - 1)
+      padding: 64px 0 30px
+
+  &__title
+    @media (max-width: $breakpoint-lg - 1)
+      text-align: center
+
+    &:after
+      content: ''
+      display: block
+      width: 14px
+      height: 35px
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMzUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTAgMGgxdjI2aC0xeiIgZmlsbD0iIzIwMjAyMCIvPjxwYXRoIGQ9Im0wIDIxaDE0djE0aC0xNHoiIGZpbGw9IiMwMDZkZmUiLz48L3N2Zz4=');
+      margin: 26px 0 63px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: calc(50% - 1px)
+        margin-bottom: 48px;
+        margin-top: 27px;
+      @media (max-width: $breakpoint-md - 1)
+        margin-top: 25px
+        margin-bottom: 65px
+
+  &__items
+    position: relative
+    counter-reset: smmBullets
+    @media (max-width: $breakpoint-lg - 1)
+      max-width 420px
+    @media (max-width: $breakpoint-md - 1)
+      text-align: center
+      max-width none
+  &__item
+    position: relative
+    font-size: 18px
+    line-height: 30px
+    margin-bottom: 30px
+    padding-left: 9px
+
+    &:before
+      counter-increment: smmBullets
+      content: '0' counter(smmBullets)
+      font-family: 'Arial', sans-serif
+      -webkit-text-stroke: 1px $blue;
+      color: transparent
+      font-size: 60px
+      font-weight: bold
+      position: absolute
+      left: 0
+      top: -5px
+      @media (max-width: $breakpoint-md - 1)
+        left: 50%
+        transform translateX(-50%)
+        top: 0
+
+  &__cta
+    font-size: 24px
+    font-weight: bold
+    padding-left: 9px
+    @media (max-width: $breakpoint-md - 1)
+      text-align: center
+
+  &__image,
+  &__image2,
+  &__image3
+    display: block
+    position: absolute
+    left: 50%
+    z-index: 2
+    anim(.3s)
+
+    &.lazy--visible
+      transform none
+
+  &__image
+    margin-left: 24px;
+    top: 45px;
+    transform translateX(50px)
+    @media (max-width: $breakpoint-lg - 1)
+      width: 350px;
+      height: auto
+      margin-top: 244px;
+    @media (max-width: $breakpoint-md - 1)
+      display: none
+  &__image2
+    bottom: -130px
+    margin-left: -614px;
+    transform translateX(-30px) rotate(-15deg)
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+  &__image3
+    display: none
+    bottom: -203px
+    margin-left: -363px;
+    transform translateX(-30px) rotate(-15deg)
+    @media (max-width: $breakpoint-lg - 1)
+      display: block
+    @media (max-width: $breakpoint-md - 1)
+      display: none
+
+  &__image4
+    display: none
+    margin: 0 auto
+    @media (max-width: $breakpoint-md - 1)
+      display: block

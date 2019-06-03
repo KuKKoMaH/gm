@@ -1,0 +1,14 @@
+extends pug/_layout
+
+block body
+  - var HIDE_VIDEOS_IMAGE = true
+  - var VIDEOS_NOISE = false
+  - var GUARANTIES_NOISE = true
+  include modules/smmHero/smmHero
+  include modules/services/smmServices
+  include modules/smmBullets/smmBullets
+  include modules/smmProcess/smmProcess
+  include modules/smmCases/smmCases
+  include modules/videos/videos
+  include modules/guaranties/guaranties
+  include modules/map/map
