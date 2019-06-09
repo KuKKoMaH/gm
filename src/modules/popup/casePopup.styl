@@ -49,6 +49,7 @@
     background: #c8dffa
     top: 0
     border-radius: 5px
+
   &__bar
     position: absolute
     background: $black
@@ -86,6 +87,33 @@
     &:after
       height: (15 + 9 + 4) px
       bottom: -15px
+
+  &__image-content
+    margin-top: 33px
+    border-top: 1px solid #c3c3c3
+    padding-top: 30px
+
+    p
+      font-size: 24px
+      line-height: 36px
+      margin-bottom: 20px
+
+  &__bullets
+    display: flex
+    align-items center
+    justify-content space-between
+    margin-bottom: 12px
+
+    *
+      //flex: 1
+      font-size: 18px
+
+    span
+      display: block
+      width: 4px
+      height: 4px
+      border-radius: 50%
+      background: $black
 
   &__block
     color: #ffffff
