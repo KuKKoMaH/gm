@@ -83,6 +83,7 @@
     padding-top: 100px
     display: flex
     flex-direction column
+    cursor: pointer
 
     &:after
       content: ''
@@ -93,6 +94,10 @@
       margin: auto auto 0
       @media (max-width: $breakpoint-lg - 1)
         width: 430px
+
+    &:hover
+      & ^[0]__image
+        transform translate(-50%, -50%) rotate(-15deg)
 
     @media (max-width: $breakpoint-lg - 1)
       flex: none

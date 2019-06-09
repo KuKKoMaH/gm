@@ -1,12 +1,12 @@
 .cases.lines.noise
   .c
     h2.title.cases__title Посмотрите наши кейсы по контекстной рекламе
-    
+
   .cardsList
     .c
       .cardsList__slider: .cardsList__items
         .navBtn.cardsList__slide.cardsList__arrow: svg: use(xlink:href="#arrow")
-        .cardsList__slide
+        .cardsList__slide.sitePopup__opener(data-url='https://vseporogi.com')
           .card
             img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
             .card__inner
@@ -21,7 +21,7 @@
                   .card__number 1212300 р
             .card__name Сайт по разработке металоштакетника
 
-        .cardsList__slide
+        .cardsList__slide.sitePopup__opener(data-url='https://vseporogi.com')
           .card
             img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
             .card__inner
@@ -36,7 +36,7 @@
                   .card__number 1212300 р
             .card__name Сайт по разработке металоштакетника
 
-        .cardsList__slide
+        .cardsList__slide.sitePopup__opener( data-url='https://vseporogi.com')
           .card
             img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
             .card__inner

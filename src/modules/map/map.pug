@@ -11,7 +11,7 @@
       .form
         .form__title Просто заполните форму!
         .form__text Расскажите нам о необходимой рекламной кампании и получите ответ с точным расчетом стоимости уже в течение 5 минут!
-        form
+        form(onsubmit='showThank()')
           .input.form__input: input.input__input(placeholder='Введите ваше имя:')
           .input.form__input: input.input__input(placeholder='Введите ваш номер телефона:')
           .input.form__input: textarea.input__input.input__input--textarea(placeholder='Расскажите подробнее о вашей задаче:')

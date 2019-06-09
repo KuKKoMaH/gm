@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.3.0",
+    "baron": "^3.0.3",
     "breakpoints-js": "^1.0.6",
     "countup.js": "^2.0.4",
     "destyle.css": "^1.0.5",

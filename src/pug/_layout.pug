@@ -7,20 +7,26 @@ html
     meta(http-equiv="content-type" content="text/html; charset=utf-8")
     meta#viewport(name="viewport" content="width=device-width")
     script.
-      if (screen.width <= 520) {
-        document.getElementById('viewport').setAttribute('content', 'width=520');
-      }
+      if (screen.width <= 520) document.getElementById('viewport').setAttribute('content', 'width=520')
     link(rel="stylesheet" media="all" href="style.css")
     //link(rel="shortcut icon" href="/favicon.ico")
 
   body(onunload="")
-    include ../modules/header/header
-    block body
-    include ../modules/footer/footer
+    div.page
+      include ../modules/header/header
+      block body
+      include ../modules/footer/footer
 
-    include ../modules/photoswipe/photoswipe
+      include ../modules/photoswipe/photoswipe
     .hidden
       include ../modules/popup/popup-callback
+      include ../modules/popup/popup-partnership
+      include ../modules/popup/popup-thank
+      include ../modules/popup/popup-abandon1
+      include ../modules/popup/popup-abandon2
+      include ../modules/popup/popup-abandon3
+      include ../modules/popup/popup-testPopup
+      include ../modules/popup/popup-casePopup
 
   script.
     var MAP_API_KEY = "AIzaSyAKCWqbAVy8AsekfYEuddPMtdb5xMpC9pk";
@@ -69,4 +75,8 @@ html
     </symbol>
     <symbol id="pdf" viewBox="0 0 40 37" >
         <path d="m9.66 27.41v-9.6a4 4 0 0 1 4-4.11h12.55v-2.7h-6.9a2.75 2.75 0 0 1 -2.76-2.74v-8.26h-13.79a2.76 2.76 0 0 0 -2.76 2.74v31.52a2.76 2.76 0 0 0 2.76 2.74h20.69a2.75 2.75 0 0 0 2.76-2.74v-2.74h-12.42a4 4 0 0 1 -4.13-4s0-.06 0-.11zm8.27-8.23h-2.76v2.75h2.76a1.38 1.38 0 0 0 0-2.75zm1.38-9.59h6.9l-8.28-9.59v8.22a1.38 1.38 0 0 0 1.38 1.37zm6.9 9.59h-2.76v6.82h2.76a1.3 1.3 0 0 0 1.38-1.37v-4.07a1.31 1.31 0 0 0 -1.23-1.38zm11-4.11h-23.42a2.77 2.77 0 0 0 -2.79 2.74v9.6a2.77 2.77 0 0 0 2.76 2.74h23.48a2.76 2.76 0 0 0 2.76-2.74v-9.6a2.76 2.76 0 0 0 -2.76-2.74zm-19.28 8.23h-2.76v4.11h-1.38v-9.6h4.14a2.74 2.74 0 0 1 .07 5.49h-.05zm11 1.37a2.77 2.77 0 0 1 -2.76 2.74h-4.1v-9.6h4.14a2.77 2.77 0 0 1 2.79 2.75zm8.27-5.49h-5.48v2.75h4.14v1.37h-4.14v4.11h-1.38v-9.6h6.9z"/>
+    </symbol>
+    <symbol id="close" viewBox="0 0 57 57">
+        <circle cx="28.5" cy="28.5" r="28.5"/>
+        <path d="m18.65 19.35.71-.71 20 20-.71.71zm20.71 0-.71-.71-20 20 .71.71z" fill="#fff"/>
     </symbol>

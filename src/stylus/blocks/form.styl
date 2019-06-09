@@ -3,9 +3,12 @@
   border-top: 0
   border-bottom: 0
   position: relative
+  display: inline-block
+  width: 100%
   @media (max-width: $breakpoint-lg - 1)
     border-width: 15px
     padding-bottom: 38px
+
 
   &:before, &:after
     content: ''
@@ -25,6 +28,16 @@
   &:after
     right: 0px
 
+  &--black-border
+    border-color: $black
+
+    &:before, &:after
+      background: $black
+
+    & ^[0]__title
+      &:before, &:after
+        background: $black
+
   &__title
     font-size: 24px
     line-height: 36px
@@ -32,8 +45,8 @@
     color: $blue
     text-align: center
     margin-bottom: 42px
-    padding: 0 30px
-    transform translateY(-6px)
+    //padding: 0 30px
+    margin-top: -6px
     @media (max-width: $breakpoint-lg - 1)
       padding-top: 39px
       margin-bottom: 9px
@@ -47,7 +60,7 @@
       width: 20px
       height: 20px
       background: $blue
-      top: 6px
+      top: 0
       @media (max-width: $breakpoint-lg - 1)
         width: 24px
         height: 15px
@@ -58,6 +71,11 @@
     &:after
       right: 0px
 
+    &--centered
+      //padding: 0
+      margin-top: -37px
+      margin-bottom: 24px
+
   &__text
     padding: 0 20px
     text-align: center
@@ -66,6 +84,11 @@
     margin-bottom: 44px
     @media (max-width: $breakpoint-lg - 1)
       margin-bottom: 1px
+
+    &--compact
+      font-size: 16px
+      line-height: 24px
+      margin-bottom: 36px
 
   &__input
     padding: 0 28px

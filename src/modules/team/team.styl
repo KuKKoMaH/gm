@@ -81,7 +81,7 @@
       //  margin-right: 0
 
     &:hover
-      & ^[0]__image
+      & ^[0]__photo
         filter: grayscale(0)
 
     &:before
@@ -103,6 +103,8 @@
     anim()
     &.lazy--visible
       transform none
+    @media (max-width: $breakpoint-lg - 1)
+      filter: grayscale(0)
 
   &__position
     background: $black

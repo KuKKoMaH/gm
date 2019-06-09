@@ -1,9 +1,10 @@
 /*!!
- * Theme Name: SRG
+ * Theme Name: GM
  */
 
 @import "destyle.css/destyle.css"
-@import "magnific-popup/dist/magnific-popup.css";
+@import "baron/baron.css";
+@import "baron/skins/styles.css";
 //@import "slick-carousel/slick/slick.css";
 //@import "swiper/dist/css/swiper.css";
 
@@ -33,6 +34,14 @@ b
     padding: 0 20px
   @media (max-width: $breakpoint-md - 1)
     max-width: 100%
+
+.page
+  //anim(.2s)
+  will-change filter
+  &.mfp-body-open
+    filter: blur(10px)
+    overflow: hidden
+
 
 .noise
   background: url(images/noise.jpg);
@@ -125,6 +134,12 @@ img[data-srcset]
 @import "modules/smmBullets/smmBullets.styl"
 @import "modules/smmProcess/smmProcess.styl"
 @import "modules/smmCases/smmCases.styl"
+@import "modules/popup/mfp.styl"
+@import "modules/popup/popup.styl"
+@import "modules/popup/thank.styl"
+@import "modules/popup/abandon.styl"
+@import "modules/popup/testPopup.styl"
+@import "modules/popup/casePopup.styl"
 
 @import "modules/photoswipe/photoswipe.styl"
 @import "modules/photoswipe/default-skin.styl"

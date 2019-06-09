@@ -7,6 +7,8 @@ import SmoothScroll from 'smooth-scroll';
 import './js/init';
 import './js/lazyImages';
 import './js/cartsList';
+import './js/initAbandonPopup';
+import './js/popups';
 import './modules/header/header';
 import './modules/team/team';
 import './modules/problems/problems';
@@ -28,12 +30,4 @@ $('select').selectize({
 
 $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
-$('.popup__opener').on('click', (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  $.magnificPopup.open({ type: 'inline', items: { src: $(e.delegateTarget).attr('href') } });
-  return false;
-});
-
 window.smoothscroll = new SmoothScroll('a[href*="#"]', { header: '.header__container', });
-
