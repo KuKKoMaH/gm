@@ -96,11 +96,12 @@
     margin-left: 34px;
     top: 177px;
     z-index: 1
-    transform translateX(40px) rotate(15deg)
-    anim(.25s)
+    img
+      transform translateX(40px) rotate(15deg)
+      anim(.25s)
 
-    &.lazy--visible
-      transform none
+      &.lazy--visible
+        transform none
 
     @media (max-width: $breakpoint-lg - 1)
       display: none

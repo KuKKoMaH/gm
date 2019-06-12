@@ -2,8 +2,11 @@
   .hero__bgText GENE#[span RAL]
   .hero__bgText.hero__bgText--small MARKETING
 
-  img.hero__image.contextHero__image.lazy(data-src='images/sculpture2.png')
-  img.hero__image2.contextHero__image2.lazy(data-src='images/bust3.png')
+  img.hero__image.contextHero__image.lazy(data-src='images/sculpture2.png' onload='contextHero()')
+  .contextHero__wave.contextHero__wave--1
+  .contextHero__wave.contextHero__wave--2
+  .contextHero__wave.contextHero__wave--3
+  .paroller.hero__image2.contextHero__image2: img.lazy(data-src='images/bust3.png' onload='paroller(event)')
 
   .c
     h1

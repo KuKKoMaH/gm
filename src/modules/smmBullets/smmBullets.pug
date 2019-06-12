@@ -14,6 +14,6 @@
     .smmBullets__cta У конкурента примерно 0 в день :)
 
   img.lazy.smmBullets__image(data-src='images/graphs.png' width=611 height=654)
-  img.lazy.smmBullets__image2(data-src='images/bust2.png' width=263 height=289)
-  img.lazy.smmBullets__image3(data-src='images/bust3.png' width=246 height=287)
+  .paroller.smmBullets__image2: img.lazy(data-src='images/bust2.png' width=263 height=289 onload='paroller(event)')
+  .paroller.smmBullets__image3: img.lazy(data-src='images/bust3.png' width=246 height=287 onload='paroller(event)')
   img.smmBullets__image4(src='images/graphs-sm.png')

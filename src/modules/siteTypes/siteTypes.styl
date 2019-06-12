@@ -148,11 +148,12 @@
     bottom: -194px;
     pointer-events: none;
     z-index: 2;
-    transform translateX(-30px) rotate(-15deg)
-    anim(.3s)
+    img
+      transform translateX(-30px) rotate(-15deg)
+      anim(.3s)
 
-    &.lazy--visible
-      transform none
+      &.lazy--visible
+        transform none
 
     @media (max-width: $breakpoint-lg - 1)
       display: none

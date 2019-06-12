@@ -22,16 +22,20 @@
     left: 50%
     bottom: 0
     z-index: 1
-    anim(.25s)
     pointer-events none
 
-    &.lazy--visible
-      transform none
-
   &__image
+
     margin-left: -672px;
     margin-bottom: -164px;
-    transform translateX(30px) rotate(15deg)
+
+    img
+      anim(.25s)
+      transform translateX(30px) rotate(15deg)
+
+      &.lazy--visible
+        transform none
+
     @media (max-width: $breakpoint-lg - 1)
       display: none
 
@@ -39,6 +43,10 @@
     margin-left: -629px;
     margin-bottom: 65px;
     transform translateY(-30px)
+
+    &.lazy--visible
+      transform none
+
     @media (max-width: $breakpoint-lg - 1)
       display: none
 

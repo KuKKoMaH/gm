@@ -1,6 +1,6 @@
 .hero.lines
   img.hero__image.frontHero__image.lazy(data-src='images/horse.png')
-  img.hero__image2.frontHero__image2.lazy(data-src='images/bust.png')
+  .paroller.hero__image2.frontHero__image2: img.lazy(data-src='images/bust.png' onload='paroller(event)')
 
   .c
     .frontHero__sup

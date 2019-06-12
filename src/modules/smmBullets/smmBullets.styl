@@ -40,6 +40,7 @@
     @media (max-width: $breakpoint-md - 1)
       text-align: center
       max-width none
+
   &__item
     position: relative
     font-size: 18px
@@ -77,6 +78,10 @@
     position: absolute
     left: 50%
     z-index: 2
+
+  &__image,
+  &__image2 img,
+  &__image3 img
     anim(.3s)
 
     &.lazy--visible
@@ -92,10 +97,13 @@
       margin-top: 244px;
     @media (max-width: $breakpoint-md - 1)
       display: none
+
   &__image2
     bottom: -130px
     margin-left: -614px;
-    transform translateX(-30px) rotate(-15deg)
+
+    img
+      transform translateX(-30px) rotate(-15deg)
     @media (max-width: $breakpoint-lg - 1)
       display: none
 
@@ -103,7 +111,9 @@
     display: none
     bottom: -203px
     margin-left: -363px;
-    transform translateX(-30px) rotate(-15deg)
+
+    img
+      transform translateX(-30px) rotate(-15deg)
     @media (max-width: $breakpoint-lg - 1)
       display: block
     @media (max-width: $breakpoint-md - 1)

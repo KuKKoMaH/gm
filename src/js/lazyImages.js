@@ -1,7 +1,5 @@
 import LazyLoad from "vanilla-lazyload";
 
-// let inViewport = [];
-// let loaded = [];
 new LazyLoad({
   elements_selector: '.lazy, .lazyBg',
   callback_loaded:   (el) => {

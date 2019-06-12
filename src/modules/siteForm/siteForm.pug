@@ -1,7 +1,7 @@
 .siteForm.lines.noise
   img.lazy.siteForm__image(data-src='images/dmitry.png')
   img.lazy.siteForm__image2(data-src='images/dmitry-sm.png')
-  img.lazy.siteForm__image3(data-src='images/bust6.png')
+  .paroller.siteForm__image3: img.lazy(data-src='images/bust6.png' onload='paroller(event)')
 
   .c: .siteForm__content
     h2.title.siteForm__title

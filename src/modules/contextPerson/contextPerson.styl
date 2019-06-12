@@ -44,13 +44,14 @@
     position: absolute
     right: -56px;
     bottom: -144px;
-    transform translateX(30px) rotate(15deg) scaleX(-1)
-    anim(.25s)
-    @media (max-width: $breakpoint-lg - 1)
-      display: none
+    img
+      transform translateX(30px) rotate(15deg) scaleX(-1)
+      anim(.25s)
+      @media (max-width: $breakpoint-lg - 1)
+        display: none
 
-    &.lazy--visible
-      transform scaleX(-1)
+      &.lazy--visible
+        transform scaleX(-1)
 
   &__image3
     display: none

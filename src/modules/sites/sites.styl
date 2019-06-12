@@ -23,12 +23,13 @@
     left: 50%
     bottom: 0
     z-index: 1
-    transform translateX(30px) rotate(15deg)
-    anim(.25s)
     pointer-events none
+    img
+      transform translateX(30px) rotate(15deg)
+      anim(.25s)
 
-    &.lazy--visible
-      transform none
+      &.lazy--visible
+        transform none
 
   &__image
     margin-left: 357px;

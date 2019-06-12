@@ -17,15 +17,15 @@
     bottom: -188px;
     pointer-events none
     z-index: 1
-    anim(.3s)
-    transform translateX(30px) rotate(15deg)
+    img
+      anim(.3s)
+      transform translateX(30px) rotate(15deg)
 
-    &.lazy--visible
-      transform none
+      &.lazy--visible
+        transform none
 
     @media (max-width: $breakpoint-lg - 1)
       display: none
-      background-image: none;
 
   &__sup
     text-align: center

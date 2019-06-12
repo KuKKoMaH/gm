@@ -24,10 +24,11 @@
     margin-left: -652px;
     margin-bottom: -187px;
     z-index: 1
-    transform translateX(-30px) rotate(-15deg)
-    anim(.25s)
-    @media (max-width: $breakpoint-lg - 1)
-      display: none
+    img
+      transform translateX(-30px) rotate(-15deg)
+      anim(.25s)
+      @media (max-width: $breakpoint-lg - 1)
+        display: none
 
-    &.lazy--visible
-      transform none
+      &.lazy--visible
+        transform none

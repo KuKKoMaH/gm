@@ -17,32 +17,20 @@
     @media (max-width: $breakpoint-md - 1)
       margin-bottom: 110px
 
-  &__image,
-  &__image2
+  &__image
     position: absolute
     left: 50%
     bottom: 0
     z-index: 1
-    transform translateX(30px) rotate(15deg)
-    anim(.25s)
-    pointer-events none
-
-    &.lazy--visible
-      transform none
-
-  &__image
     margin-left: 357px;
     margin-bottom: -140px;
+
+    img
+      transform translateX(30px) rotate(15deg)
+      anim(.25s)
+      pointer-events none
+
+      &.lazy--visible
+        transform none
     @media (max-width: $breakpoint-lg - 1)
       display: none
-
-  &__image2
-    display: none
-    margin-left: 209px;
-    margin-bottom: -111px;
-    @media (max-width: $breakpoint-lg - 1)
-      display: block
-    @media (max-width: $breakpoint-md - 1)
-      margin-left: 110px;
-      margin-bottom: -100px;
-

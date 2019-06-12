@@ -81,21 +81,31 @@
     left: 50%
     bottom: 0
     z-index: 1
+
+
+  &__image
+    margin-left: 178px
+    transform translateX(50px)
     anim(.3s)
 
     &.lazy--visible
       transform none
 
-  &__image
-    margin-left: 178px
-    transform translateX(50px)
     @media (max-width: $breakpoint-lg - 1)
       display: none
 
   &__image2
     display: none
     z-index: 2
-    transform translateX(30px) rotate(15deg)
+
+    img
+      max-width 100%
+      anim(.3s)
+      transform translateX(30px) rotate(15deg)
+
+      &.lazy--visible
+        transform none
+
     @media (max-width: $breakpoint-lg - 1)
       margin-left: 185px;
       margin-bottom: -117px;

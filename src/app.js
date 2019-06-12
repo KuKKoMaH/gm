@@ -1,14 +1,16 @@
 import 'jquery';
 import 'magnific-popup/dist/jquery.magnific-popup.js';
 import 'jquery.maskedinput/src/jquery.maskedinput';
-import 'selectize';
+// import 'selectize';
 import SmoothScroll from 'smooth-scroll';
 
 import './js/init';
 import './js/lazyImages';
 import './js/cartsList';
-import './js/initAbandonPopup';
+// import './js/initAbandonPopup';
 import './js/popups';
+import './js/paroller';
+import './js/smoke';
 import './modules/header/header';
 import './modules/team/team';
 import './modules/problems/problems';
@@ -23,11 +25,12 @@ import './modules/images/images';
 import './modules/logotypes/logotypes';
 import './modules/presentations/presentations';
 import './modules/siteTypes/siteTypes';
+import './modules/smmHero/smmHero';
+import './modules/contextHero/contextHero';
 
-$('select').selectize({
-  maxItems: 1,
-});
+// $('select').selectize({ maxItems: 1, });
 
 $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
 window.smoothscroll = new SmoothScroll('a[href*="#"]', { header: '.header__container', });
+

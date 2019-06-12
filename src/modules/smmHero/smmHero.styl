@@ -41,14 +41,67 @@
       margin-top: 25px
 
   &__image
-    margin-left: -223px;
+    margin-left: -45px;
     margin-bottom: -4px;
     transform: translateX(50px)
+
+  &__rocket
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    left: 50%;
+    bottom: 0;
+    &.lazy--visible
+      opacity: 0
+
+    &--1
+      margin-left: -223px;
+      margin-bottom: 454px;
+
+    &--2
+      margin-left: -48px;
+      margin-bottom: 324px;
+      width: 125px;
+
+
+    &--animate
+      animation-fill-mode both
+      &^[1]--1
+        animation: rocket1 1s both ease-in-out .3s;
+      &^[1]--2
+        animation: rocket2 1s both ease-in-out .3s;
+
+  @keyframes rocket1 {
+    0% {
+      transform: translate(300px, 240px)
+    }
+    30% {
+      opacity: 1
+    }
+    100%  {
+      opacity: 1
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes rocket2 {
+    0% {
+      transform: translate(140px, 120px)
+    }
+    30% {
+      opacity: 1
+    }
+    100%  {
+      opacity: 1
+      transform: translate(0, 0);
+    }
+  }
 
   &__image2
     margin-left: 90px;
     margin-bottom: -137px;
-    transform: translateX(30px) rotate(15deg)
+    z-index: 4
+    img
+      transform: translateX(30px) rotate(15deg)
     @media (max-width: $breakpoint-md - 1)
       width: 205px;
       margin-left: 18px;

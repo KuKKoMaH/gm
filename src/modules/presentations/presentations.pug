@@ -17,4 +17,4 @@
       .navBtn.navBtn--prev.presentations__nav.presentations__nav--prev: svg: use(xlink:href="#arrow")
       .navBtn.navBtn--next.presentations__nav.presentations__nav--next: svg: use(xlink:href="#arrow")
 
-  img.presentations__image.lazy(data-src='images/bust9.png' width=252 height=310)
+  .paroller.presentations__image: img.lazy(data-src='images/bust9.png' width=252 height=310 onload='paroller(event)')

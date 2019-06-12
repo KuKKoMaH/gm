@@ -2,8 +2,10 @@
   .hero__bgText GENERAL
   .hero__bgText.hero__bgText--small MARKETING
 
-  img.hero__image.smmHero__image.lazy(data-src='images/horse4.png')
-  img.hero__image2.smmHero__image2.lazy(data-src='images/bust.png')
+  img.smmHero__rocket.smmHero__rocket--1.lazy(data-src='images/rocket.png' onload='smmHero()')
+  img.smmHero__rocket.smmHero__rocket--2.lazy(data-src='images/rocket.png')
+  img.hero__image.smmHero__image.lazy(data-src='images/horse4.png' onload='smmHero()')
+  .paroller.hero__image2.smmHero__image2: img.lazy(data-src='images/bust.png' onload='paroller(event)')
 
   .c
     h1

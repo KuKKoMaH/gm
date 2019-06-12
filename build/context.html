@@ -87,7 +87,11 @@
       </header>
       <div class="hero lines">
         <div class="hero__bgText">GENE<span>RAL</span></div>
-        <div class="hero__bgText hero__bgText--small">MARKETING</div><img class="hero__image contextHero__image lazy" data-src="img/images-sculpture2.png"><img class="hero__image2 contextHero__image2 lazy" data-src="img/images-bust3.png">
+        <div class="hero__bgText hero__bgText--small">MARKETING</div><img class="hero__image contextHero__image lazy" data-src="img/images-sculpture2.png" onload="contextHero()">
+        <div class="contextHero__wave contextHero__wave--1"></div>
+        <div class="contextHero__wave contextHero__wave--2"></div>
+        <div class="contextHero__wave contextHero__wave--3"></div>
+        <div class="paroller hero__image2 contextHero__image2"><img class="lazy" data-src="img/images-bust3.png" onload="paroller(event)"></div>
         <div class="c">
           <h1>
             <div class="contextHero__title">
@@ -127,7 +131,8 @@
           </div>
         </div><img class="contextBullets__image lazy" data-src="img/images-sculpture3.png">
       </div>
-      <div class="certificates lines"><img class="certificates__image lazy" data-src="img/images-bust5.png">
+      <div class="certificates lines">
+        <div class="paroller certificates__image"><img class="lazy" data-src="img/images-bust5.png" onload="paroller(event)"></div>
         <div class="c">
           <h2 class="title certificates__title">Мы являемся сертифицированными специалистами
             <div class="big">Контекстной рекламы <br>Яндекса и Google</div>
@@ -242,7 +247,8 @@
         </div>
       </div>
       <div class="contextPerson lines">
-        <div class="c"><img class="lazy contextPerson__image" data-src="/images/mark.png"><img class="lazy contextPerson__image2" data-src="/images/bust2.png"><img class="lazy contextPerson__image3" data-src="/images/mark-sm.png" width="253" height="427">
+        <div class="c"><img class="lazy contextPerson__image" data-src="/images/mark.png" width="560" height="763">
+          <div class="paroller contextPerson__image2"><img class="lazy" data-src="/images/bust2.png" onload="paroller(event)"></div><img class="lazy contextPerson__image3" data-src="/images/mark-sm.png" width="253" height="427">
           <h2 class="title contextPerson__title">
             <div class="big">Поймите одно..</div>
           </h2>
@@ -373,7 +379,10 @@
               <use xlink:href="#pdf"></use>
             </svg>Или скачайте PDF файл с кейсами
           </div>
-        </div><img class="cases__image2 lazy" data-src="img/images-bust.png">
+        </div>
+        <div class="paroller cases__image2"><img class="lazy" data-src="img/images-bust.png" onload="paroller(event);smoke(event)">
+          <canvas class="smoke" data-src="img/images-smoke.png"></canvas>
+        </div>
       </div>
       <div class="videos lines">
         <div class="c">
@@ -436,7 +445,8 @@
               <svg class="icon-lines">
                 <use xlink:href="#2lines"></use>
               </svg>Я люблю гарантии, давайте работать!</a></div>
-        </div><img class="guaranties__image lazy" data-src="img/images-bust4.png">
+        </div>
+        <div class="paroller guaranties__image"><img class="lazy" data-src="img/images-bust4.png" onload="paroller(event)"></div>
       </div>
       <div class="map lines">
         <div class="map__map" data-zoom="16" data-center="[59.944089, 30.284486]"></div>

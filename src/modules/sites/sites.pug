@@ -31,6 +31,6 @@
       svg.icon-pdf: use(xlink:href="#pdf")
       | Или скачайте PDF файл с кейсами
 
-  img.sites__image.lazy(data-src='images/bust7.png')
-  img.sites__image2.lazy(data-src='images/bust8.png')
+  .paroller.sites__image: img.lazy(data-src='images/bust7.png' onload='paroller(event)')
+  .paroller.sites__image2: img.lazy(data-src='images/bust8.png' onload='paroller(event)')
   img.sites__image3.lazy(data-src='images/portfolio.png')

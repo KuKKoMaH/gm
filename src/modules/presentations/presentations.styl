@@ -104,21 +104,22 @@
     bottom: -229px;
     pointer-events: none;
     z-index: 2;
-    transform translateX(-30px) rotate(-15deg)
-    anim(.3s)
-
-    &.lazy--visible
-      transform none
-
-    @media (max-width: $breakpoint-lg - 1)
-      margin-left: -345px;
-      bottom: -160px;
-      transform translateX(-30px) rotate(-15deg) scaleX(-1)
+    img
+      transform translateX(-30px) rotate(-15deg)
+      anim(.3s)
 
       &.lazy--visible
-        transform scaleX(-1)
-    @media (max-width: $breakpoint-lg - 1)
-      margin-left: -245px;
-      bottom: -90px;
-      width: 165px
+        transform none
+
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: -345px;
+        bottom: -160px;
+        transform translateX(-30px) rotate(-15deg) scaleX(-1)
+
+        &.lazy--visible
+          transform scaleX(-1)
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: -245px;
+        bottom: -90px;
+        width: 165px
 

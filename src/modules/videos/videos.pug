@@ -33,4 +33,4 @@
 
   img.videos__image.lazy(data-src='images/cannon.png')
   if(!HIDE_VIDEOS_IMAGE)
-    img.videos__image2.lazy(data-src='images/bust3.png')
+    .paroller.videos__image2: img.lazy(data-src='images/bust3.png' onload='paroller(event)')

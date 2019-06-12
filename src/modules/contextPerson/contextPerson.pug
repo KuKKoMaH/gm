@@ -1,7 +1,7 @@
 .contextPerson.lines
   .c
-    img.lazy.contextPerson__image(data-src='/images/mark.png')
-    img.lazy.contextPerson__image2(data-src='/images/bust2.png')
+    img.lazy.contextPerson__image(data-src='/images/mark.png' width=560 height=763)
+    .paroller.contextPerson__image2: img.lazy(data-src='/images/bust2.png' onload='paroller(event)')
     img.lazy.contextPerson__image3(data-src='/images/mark-sm.png' width=253 height=427)
     h2.title.contextPerson__title: .big Поймите одно..
     .contextPerson__top
