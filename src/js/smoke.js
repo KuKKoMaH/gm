@@ -4,8 +4,6 @@ img.onload = () => {
   const ctx = canvas.getContext('2d');
 
   var tic,
-      sine,
-      sineNormalized,
       start = Date.now();
 
   var params = {
@@ -14,6 +12,9 @@ img.onload = () => {
     SPEED:    4,
     VERTICAL: false
   };
+
+  var X_OFFSET = 130;
+  var Y_OFFSET = 72;
 
   function update() {
     tic = (Date.now() - start) * 0.001;
@@ -26,7 +27,7 @@ img.onload = () => {
         var ofs = params.AMP * (0.5 + (Math.sin(tic * params.SPEED + (i * params.FREQ)) * 0.5));
         ctx.drawImage(img,
           i, j, 1, 1,
-          100 + i + (ofs * 0.2), 100 + j - (ofs * 0.3), 1, 1 );
+          X_OFFSET + x + (ofs * 0.2), Y_OFFSET + y - (ofs * 0.2), 1, 1);
       }
     }
 
