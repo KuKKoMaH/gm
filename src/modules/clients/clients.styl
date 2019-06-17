@@ -15,6 +15,7 @@
     bottom: -125px;
     pointer-events: none;
     z-index: 2;
+
     img
       transform translateX(-30px) rotate(-15deg)
       anim(.3s)
@@ -38,55 +39,63 @@
       margin-bottom: 48px
 
   &__items
+    position: relative
+    z-index: 1
     display: flex
-    flex-wrap wrap
-    margin: 0 -25px
     align-items center
     justify-content center
+    transition-timing-function linear
+
     @media (max-width: $breakpoint-lg - 1)
       margin: 0 -15px
 
-    &--primary ^[0]__item
-      width: 16.6666%
-      height: 138px
-      padding: 0 15px 30px
-      @media (max-width: $breakpoint-lg - 1)
-        width: 25%
-        padding: 0 14px 33px
-        height: 135px
-      @media (max-width: $breakpoint-md - 1)
-        width: 33.3333%
-        padding: 0 5px 10px
-        height: 112px
-
-    &--secondary
-      margin-top: 7px
-      @media (max-width: $breakpoint-lg - 1)
-        position: absolute
-        visibility: hidden
-        opacity: 0
-        transform translateY(50px)
-        anim(.3s)
-
+    &--primary
+      flex-wrap wrap
+      margin: 0 -25px
       & ^[0]__item
-        padding: 0px 15px 26px
-        width: 14.2857%
-        height: 118px
+        width: 16.6666%
+        height: 138px
+        padding: 0 15px 30px
         @media (max-width: $breakpoint-lg - 1)
           width: 25%
           padding: 0 14px 33px
           height: 135px
-
         @media (max-width: $breakpoint-md - 1)
           width: 33.3333%
           padding: 0 5px 10px
           height: 112px
 
-    &--active
-      visibility: visible
-      position: static
-      opacity: 1
-      transform none
+    &--secondary
+      margin-top: 7px
+      //@media (max-width: $breakpoint-lg - 1)
+      //position: absolute
+      //visibility: hidden
+      //opacity: 0
+      //transform translateY(50px)
+      //anim(.3s)
+
+      & ^[0]__item
+        padding: 0px 15px 26px
+        width: 156px
+        height: 118px
+        //@media (max-width: $breakpoint-lg - 1)
+        //  width: 25%
+        //  padding: 0 14px 33px
+        //  height: 135px
+        //
+        //@media (max-width: $breakpoint-md - 1)
+        //  width: 33.3333%
+        //  padding: 0 5px 10px
+        //  height: 112px
+
+    //&--active
+    //  visibility: visible
+    //  position: static
+    //  opacity: 1
+    //  transform none
+
+  &__item
+    flex-shrink 0
 
   &__inner
     background: #ffffff

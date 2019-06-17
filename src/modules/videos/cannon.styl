@@ -1,0 +1,108 @@
+.cannon
+  position: relative
+  opacity: 0
+  transform translateX(50px)
+  anim(.25s)
+
+  &--active
+    transform none
+    opacity: 1
+
+    & ^[0]__image
+      animation: cannonCannon .2s both ease-in-out 2.1s;
+
+    & ^[0]__ball
+      animation: cannonBall .3s both ease-in-out 2s;
+
+    & ^[0]__fire
+      animation: cannonFire .1s both ease-in-out 2s;
+
+    & ^[0]__smoke
+      //overflow: hidden;
+      transform-origin 100% 50%
+      animation: cannonSmoke .3s both ease-in-out 2.02s;
+
+  &__ball,
+  &__fire,
+  &__smoke
+    position: absolute
+    left: 0
+    top: 0
+    opacity: 0
+
+  &__cannon
+    position: relative
+
+  &__ball
+    margin-left: -99px;
+    margin-top: -18px;
+
+  &__fire
+    margin-left: -1px;
+    margin-top: -19px;
+
+
+  &__smoke
+    left: auto
+    right: 516px
+    margin-top: -24px;
+
+    //img
+    //  float: right
+
+  @keyframes cannonCannon {
+    0% {
+    }
+    20% {
+      transform translate(12px, 0px)
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes cannonBall {
+    0% {
+      opacity: 0
+      transform: translate(145px, 28px)
+    }
+    10% {
+      opacity: 1
+    }
+    100% {
+      opacity: 1
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes cannonFire {
+    0% {
+      opacity: 0
+      transform: scale(.1)
+    }
+    30% {
+      opacity: 1
+      transform: scale(.1)
+    }
+    100% {
+      opacity: 1
+      transform scale(1)
+    }
+  }
+
+  @keyframes cannonSmoke {
+    0% {
+      opacity: 0
+      //width: 0
+      //transform: translate(145px, 28px)
+      transform: scale(0)
+    }
+    10% {
+      opacity: 1
+    }
+    100% {
+      //width: 190px
+      opacity: 1
+      transform: scale(1)
+      //transform: translate(0, 0);
+    }
+  }

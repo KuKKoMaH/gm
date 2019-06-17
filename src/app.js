@@ -5,9 +5,8 @@ import 'jquery.maskedinput/src/jquery.maskedinput';
 import SmoothScroll from 'smooth-scroll';
 
 import './js/init';
-import './js/lazyImages';
 import './js/cartsList';
-// import './js/initAbandonPopup';
+import './js/initAbandonPopup';
 import './js/popups';
 import './js/paroller';
 import './js/smoke';
@@ -27,6 +26,8 @@ import './modules/presentations/presentations';
 import './modules/siteTypes/siteTypes';
 import './modules/smmHero/smmHero';
 import './modules/contextHero/contextHero';
+
+import './js/lazyImages';
 
 // $('select').selectize({ maxItems: 1, });
 

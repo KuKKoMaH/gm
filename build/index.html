@@ -259,6 +259,8 @@
           <h2 class="title clients__title">Эти компании уже работают с нами!
             <div class="big">Что останавливает Вас?</div>
           </h2>
+        </div>
+        <div class="c">
           <div class="clients__items clients__items--primary">
             <div class="clients__item">
               <div class="clients__inner"><img src="img/modules-clients-img-14_03.png"></div>
@@ -297,13 +299,8 @@
               <div class="clients__inner"><img src="img/modules-clients-img-14_28.png"></div>
             </div>
           </div>
-          <div class="clients__more">
-            <button class="btn clients__button" href="#">
-              <svg class="icon-lines">
-                <use xlink:href="#2lines"></use>
-              </svg>Смотреть всех клиентов
-            </button>
-          </div>
+        </div>
+        <div class="clients__slider">
           <div class="clients__items clients__items--secondary">
             <div class="clients__item">
               <div class="clients__inner"><img src="img/modules-clients-img-14_03.png"></div>
@@ -356,6 +353,10 @@
             <div class="clients__item">
               <div class="clients__inner"><img src="img/modules-clients-img-14_10.png"></div>
             </div>
+          </div>
+        </div>
+        <div class="clients__slider">
+          <div class="clients__items clients__items--secondary">
             <div class="clients__item">
               <div class="clients__inner"><img src="img/modules-clients-img-14_11.png"></div>
             </div>
@@ -410,6 +411,10 @@
             <div class="clients__item">
               <div class="clients__inner"><img src="img/modules-clients-img-14_10.png"></div>
             </div>
+          </div>
+        </div>
+        <div class="clients__slider">
+          <div class="clients__items clients__items--secondary">
             <div class="clients__item">
               <div class="clients__inner"><img src="img/modules-clients-img-14_11.png"></div>
             </div>
@@ -613,7 +618,13 @@
               </svg>
             </div>
           </div>
-        </div><img class="videos__image lazy" data-src="img/images-cannon.png">
+        </div>
+        <div class="videos__image">
+          <div class="cannon">
+            <div class="cannon__image"><img class="cannon__cannon lazy" data-src="img/images-cannon.png" onload="cannon()"><img class="cannon__fire lazy" data-src="img/images-cannon-fire.png" onload="cannon()"></div>
+            <!--.cannon__smoke: img.lazy(data-src='images/cannon-smoke.png' onload="cannon()")--><img class="cannon__smoke lazy" data-src="img/images-cannon-smoke.png" onload="cannon()"><img class="cannon__ball lazy" data-src="img/images-cannon-ball.png" onload="cannon()">
+          </div>
+        </div>
         <div class="paroller videos__image2"><img class="lazy" data-src="img/images-bust3.png" onload="paroller(event)"></div>
       </div>
       <div class="guaranties lines noise">
@@ -745,7 +756,8 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <div class="c"><a class="footer__link" href="#">Политика конфединциальности</a><a class="footer__link popup__opener" href="#partnership">Партнерская программа</a>
+          <div class="c">
+            <div class="footer__links"><a class="footer__link" href="#">Политика конфединциальности</a><a class="footer__link popup__opener" href="#partnership">Партнерская программа</a></div>
             <div class="footer__socials"><a class="footer__social" href="#">
                 <svg>
                   <use xlink:href="#inst"></use>

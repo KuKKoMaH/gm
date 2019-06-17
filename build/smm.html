@@ -369,7 +369,13 @@
               </svg>
             </div>
           </div>
-        </div><img class="videos__image lazy" data-src="img/images-cannon.png">
+        </div>
+        <div class="videos__image">
+          <div class="cannon">
+            <div class="cannon__image"><img class="cannon__cannon lazy" data-src="img/images-cannon.png" onload="cannon()"><img class="cannon__fire lazy" data-src="img/images-cannon-fire.png" onload="cannon()"></div>
+            <!--.cannon__smoke: img.lazy(data-src='images/cannon-smoke.png' onload="cannon()")--><img class="cannon__smoke lazy" data-src="img/images-cannon-smoke.png" onload="cannon()"><img class="cannon__ball lazy" data-src="img/images-cannon-ball.png" onload="cannon()">
+          </div>
+        </div>
       </div>
       <div class="guaranties lines noise">
         <div class="c">
@@ -457,7 +463,8 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <div class="c"><a class="footer__link" href="#">Политика конфединциальности</a><a class="footer__link popup__opener" href="#partnership">Партнерская программа</a>
+          <div class="c">
+            <div class="footer__links"><a class="footer__link" href="#">Политика конфединциальности</a><a class="footer__link popup__opener" href="#partnership">Партнерская программа</a></div>
             <div class="footer__socials"><a class="footer__social" href="#">
                 <svg>
                   <use xlink:href="#inst"></use>

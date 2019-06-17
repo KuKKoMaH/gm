@@ -1,37 +1,25 @@
-import Swiper      from 'swiper';
-import Breakpoints from 'breakpoints-js';
+import Swiper from 'swiper';
 
 const $wrapper = $('.logotypes__slider');
 if ($wrapper.length) {
-  let slider = null;
-
-  const initSlider = () => {
-    if (slider) return;
-    slider = new Swiper('.logotypes__slider', {
-      slidesPerView: 2,
-      spaceBetween:  16,
-      wrapperClass:  'logotypes__items',
-      slideClass:    'logotypes__item',
-      navigation: {
-        prevEl: '.logotypes__nav--prev',
-        nextEl: '.logotypes__nav--next',
-      },
-    });
-  };
-
-  const destroySlider = () => {
-    if (!slider) return;
-    slider.destroy();
-    slider = null;
-  };
-
-  Breakpoints.on('sm', 'enter', () => {
-    initSlider();
-  });
-  Breakpoints.on('md', 'enter', () => {
-    destroySlider();
-  });
-  Breakpoints.on('lg', 'enter', () => {
-    destroySlider();
+  const slider = new Swiper('.logotypes__slider', {
+    slidesPerView:        'auto',
+    spaceBetween:         16,
+    loop:                 true,
+    loopAdditionalSlides: 5,
+    breakpoints:          {},
+    speed:                10000,
+    centeredSlides:       true,
+    autoplay:             {
+      delay:                0,
+      disableOnInteraction: false,
+      // waitForTransition:    false,
+    },
+    wrapperClass:         'logotypes__items',
+    slideClass:           'logotypes__item',
+    // navigation:           {
+    //   prevEl: '.logotypes__nav--prev',
+    //   nextEl: '.logotypes__nav--next',
+    // },
   });
 }

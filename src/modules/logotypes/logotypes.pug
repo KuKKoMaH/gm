@@ -2,14 +2,14 @@
   .c
     .logotypes__title: h2.title.title--bg(data-bg='Разработка логотипов') Разработка логотипов
   .logotypes__container
-    .c
-      .logotypes__slider: .logotypes__items
-        each val in ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
-          .logotypes__item: .logotypes__inner
-            img.lazy.logotypes__image(data-src='modules/logotypes/img/' + val + '.png')
-            .logotypes__name Разработка логотипа для компании Алилуя
-            //.logotypes__name Разработка #[br]логотипа для #[br]компании Алилуя
+    //.c
+    .logotypes__slider: .logotypes__items
+      each val in ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+        .logotypes__item: .logotypes__inner
+          img.lazy.logotypes__image(data-src='modules/logotypes/img/' + val + '.png')
+          .logotypes__name Разработка логотипа для компании Алилуя
+          //.logotypes__name Разработка #[br]логотипа для #[br]компании Алилуя
 
-  .logotypes__buttons
-    .navBtn.logotypes__nav.logotypes__nav--prev: svg: use(xlink:href="#arrow")
-    .navBtn.logotypes__nav.logotypes__nav--next: svg: use(xlink:href="#arrow")
+  //.logotypes__buttons
+  //  .navBtn.logotypes__nav.logotypes__nav--prev: svg: use(xlink:href="#arrow")
+  //  .navBtn.logotypes__nav.logotypes__nav--next: svg: use(xlink:href="#arrow")

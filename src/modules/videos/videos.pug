@@ -31,6 +31,13 @@
       .navBtn.navBtn--prev.videos__nav.videos__nav--prev: svg: use(xlink:href="#arrow")
       .navBtn.navBtn--next.videos__nav.videos__nav--next: svg: use(xlink:href="#arrow")
 
-  img.videos__image.lazy(data-src='images/cannon.png')
+  .videos__image
+    .cannon
+      .cannon__image
+        img.cannon__cannon.lazy(data-src='images/cannon.png' onload="cannon()")
+        img.cannon__fire.lazy(data-src='images/cannon-fire.png' onload="cannon()")
+      //.cannon__smoke: img.lazy(data-src='images/cannon-smoke.png' onload="cannon()")
+      img.cannon__smoke.lazy(data-src='images/cannon-smoke.png' onload="cannon()")
+      img.cannon__ball.lazy(data-src='images/cannon-ball.png' onload="cannon()")
   if(!HIDE_VIDEOS_IMAGE)
     .paroller.videos__image2: img.lazy(data-src='images/bust3.png' onload='paroller(event)')
