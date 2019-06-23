@@ -23,11 +23,8 @@
   &__items
     display: flex
     align-items center
-    //flex-wrap wrap
+    flex-wrap wrap
     margin: 0 -15px
-    position: relative
-    z-index: 1
-    transition-timing-function linear
     @media (max-width: $breakpoint-lg - 1)
       margin: 0 -8px
     @media (max-width: $breakpoint-md - 1)
@@ -35,16 +32,12 @@
       margin: 0
 
   &__item
-    width: 360px
+    width: 25%
     flex-shrink 0
     padding: 0 15px 36px
     @media (max-width: $breakpoint-lg - 1)
       padding: 0 8px 16px
-      width: 280px
-    @media (max-width: $breakpoint-md - 1)
-      padding: 0
-      width: 220px
-
+      width: 33.3333%
 
   &__inner
     background: #ffffff

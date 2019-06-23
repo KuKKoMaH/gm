@@ -1,30 +1,61 @@
-.sites.lines
+.sites.lines.tabs
   .c
     .sites__title: h2(data-bg='Создание сайтов').title.title--bg Создание сайтов
 
-    .btnGroup
-      .btn Лендинг пейдж
-      .btn Многостраничные сайты
-      .btn Интернет магазины
+    .tabs__headers
+      .tabs__header.tabs__header--active.btn.btn--active Лендинг пейдж
+      .tabs__header.btn Многостраничные сайты
+      .tabs__header.btn Интернет магазины
 
-  .cardsList
-    .c
-      .cardsList__slider: .cardsList__items
-        .navBtn.cardsList__slide.cardsList__arrow: svg: use(xlink:href="#arrow")
-        .cardsList__slide
-          .card
-            img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
-            .card__name Сайт по разработке металоштакетника
+  .tabs__items
+    .tabs__item.tabs__item--active
+      .cardsList
+        .c
+          .cardsList__slider: .cardsList__items
+            .navBtn.cardsList__slide.cardsList__arrow: svg: use(xlink:href="#arrow")
+            .cardsList__slide
+              .card
+                img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+                .card__name Сайт по разработке металоштакетника
 
-        .cardsList__slide
-          .card
-            img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
-            .card__name Сайт по разработке металоштакетника
+            .cardsList__slide
+              .card
+                img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+                .card__name Сайт по разработке металоштакетника
 
-        .cardsList__slide
-          .card
-            img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
-            .card__name Сайт по разработке металоштакетника
+            .cardsList__slide
+              .card
+                img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+                .card__name Сайт по разработке металоштакетника
+
+            .cardsList__slide
+              .card
+                img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+                .card__name Сайт по разработке металоштакетника
+    .tabs__item
+      .cardsList
+        .c
+          .cardsList__slider: .cardsList__items
+            .navBtn.cardsList__slide.cardsList__arrow: svg: use(xlink:href="#arrow")
+            .cardsList__slide
+              .card
+                img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+                .card__name Сайт по разработке металоштакетника
+
+            .cardsList__slide
+              .card
+                img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+                .card__name Сайт по разработке металоштакетника
+
+            .cardsList__slide
+              .card
+                img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+                .card__name Сайт по разработке металоштакетника
+
+            .cardsList__slide
+              .card
+                img.card__image.lazy(data-src='images/case.jpg' width=332 height=295)
+                .card__name Сайт по разработке металоштакетника
 
   .btnSub
     .btn

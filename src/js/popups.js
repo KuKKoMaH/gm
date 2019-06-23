@@ -62,39 +62,45 @@ $('.sitePopup__opener').on('click', (e) => {
   return false;
 });
 
-$('.smmPopup__opener').on('click', (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  if (!Breakpoints.is('lg')) return;
+const popups = [
+  [$('.smmPopup__opener'), $('#smmPopup')],
+  [$('.contextPopup__opener'), $('#contextPopup')],
+];
+popups.forEach(([$opener, $popup]) => {
+  $opener.on('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!Breakpoints.is('lg')) return;
 
-  const $target = $(e.delegateTarget);
-  $('#smmPopup .casePopup__title').html($target.find('.card__name').html());
+    const $target = $(e.delegateTarget);
+    $popup.find('.casePopup__title').html($target.find('.card__name').html());
 
-  const $content = $target.find('.casePopup__content').children().clone();
-  $content.find('img[data-src]').each((i, el) => {
-    el.src = el.dataset.src;
-  });
-  $('#smmPopup .casePopup__content')
-    .html('')
-    .append($content);
+    const $content = $target.find('.casePopup__content').children().clone();
+    $content.find('img[data-src]').each((i, el) => {
+      el.src = el.dataset.src;
+    });
+    $popup.find('.casePopup__content')
+      .html('')
+      .append($content);
 
-  const scroller = baron({
-    root:     $('#smmPopup .casePopup__info')[0],
-    scroller: $('#smmPopup .casePopup__content')[0],
-    bar:      $('#smmPopup .casePopup__bar')[0],
-  });
+    const scroller = baron({
+      root:     $popup.find('.casePopup__info')[0],
+      scroller: $popup.find('.casePopup__content')[0],
+      bar:      $popup.find('.casePopup__bar')[0],
+    });
 
-  openPopup({
-    items:     { src: '#smmPopup' },
-    alignTop:  true,
-    mainClass: 'casePopup__wrapper',
-    callbacks: {
-      close: () => {
-        scroller.dispose();
+    openPopup({
+      items:     { src: '#' + $popup.attr('id') },
+      alignTop:  true,
+      mainClass: 'casePopup__wrapper',
+      callbacks: {
+        close: () => {
+          scroller.dispose();
+        }
       }
-    }
+    });
+    return false;
   });
-  return false;
 });
 
 $('.test__item').on('click', () => {

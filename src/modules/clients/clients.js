@@ -7,7 +7,7 @@ import Swiper from 'swiper';
 
 const $wrapper = $('.clients__slider');
 if ($wrapper.length) {
-  const slider  = new Swiper('.clients__slider', {
+  const slider = new Swiper('.clients__slider', {
     slidesPerView:                  'auto',
     spaceBetween:                   0,
     loop:                           true,
@@ -28,7 +28,7 @@ if ($wrapper.length) {
     //   nextEl: '.logotypes__nav--next',
     // },
   });
-  window.slider = slider;
+  // window.slider = slider;
 
   setInterval(() => {
     for (let i = 0; i < slider.length; i++) {
@@ -37,5 +37,5 @@ if ($wrapper.length) {
       // s.autoplay.start();
       s.autoplay.run();
     }
-  })
+  }, 1000);
 }

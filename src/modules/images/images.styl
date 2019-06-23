@@ -11,8 +11,8 @@
     z-index: 1
 
   &__slider
+    overflow: hidden
     @media (max-width: $breakpoint-lg - 1)
-      overflow: hidden
       margin: 0 -20px
     @media (max-width: $breakpoint-md - 1)
       margin: 0 auto
@@ -20,15 +20,12 @@
 
   &__items
     display: flex
-    flex-wrap wrap
     align-items center
-    justify-content center
-    @media (max-width: $breakpoint-lg - 1)
-      flex-wrap nowrap
-      justify-content flex-start
+    //justify-content center
+    transition-timing-function linear
 
   &__item
-    width: (100 / 6) %
+    //width: (100 / 6) %
     padding: 0 10px
     height: 70px
     display: flex
