@@ -1,18 +1,18 @@
-var gulp = require('gulp');
-var path = require('path');
-var decl = require('postcss').decl;
+var gulp       = require('gulp');
+var path       = require('path');
+var decl       = require('postcss').decl;
 var sourcemaps = require('gulp-sourcemaps');
-var stylus = require('gulp-stylus');
-var postcss = require('gulp-postcss');
-var mqpacker = require('css-mqpacker');
-var cssnano = require('cssnano');
-var cssnext = require('postcss-cssnext');
-var gulpif = require('gulp-if');
-var sprites = require('postcss-sprites');
+var stylus     = require('gulp-stylus');
+var postcss    = require('gulp-postcss');
+var mqpacker   = require('css-mqpacker');
+var cssnano    = require('cssnano');
+var cssnext    = require('postcss-cssnext');
+var gulpif     = require('gulp-if');
+var sprites    = require('postcss-sprites');
 var updateRule = require('postcss-sprites/lib/core').updateRule;
-var copy = require('postcss-copy');
-var watch = require('gulp-watch');
-var atImport = require('postcss-import');
+var copy       = require('postcss-copy');
+var watch      = require('gulp-watch');
+var atImport   = require('postcss-import');
 
 var config = require('../config');
 
@@ -29,6 +29,9 @@ gulp.task('css', function () {
     sprites({
       stylesheetPath: 'build',
       spritePath:     'build/img',
+      groupBy:        function (info) {
+        return Promise.resolve(path.parse(info.styleFilePath).name);
+      },
       filterBy:       function (info) {
         return new Promise(function (resolve, reject) {
           if (info.url.indexOf(path.sep + 'sprite-') !== -1) {

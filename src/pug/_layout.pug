@@ -8,7 +8,9 @@ html
     meta#viewport(name="viewport" content="width=device-width, user-scalable=no")
     script.
       if (screen.width <= 520) document.getElementById('viewport').setAttribute('content', 'width=520, user-scalable=no')
-    link(rel="stylesheet" media="all" href="style.css")
+    link(rel="stylesheet" media="all" href="common.css")
+    block style
+    //link(rel="stylesheet" media="all" href="style.css")
     //link(rel="shortcut icon" href="/favicon.ico")
 
   body(onunload="")

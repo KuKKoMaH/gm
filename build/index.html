@@ -6,7 +6,9 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <script>if (screen.width <= 520) document.getElementById('viewport').setAttribute('content', 'width=520, user-scalable=no')</script>
-    <link rel="stylesheet" media="all" href="style.css">
+    <link rel="stylesheet" media="all" href="common.css">
+    <link rel="stylesheet" media="all" href="front.css">
+    <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
   </head>
   <body onunload="">
@@ -976,7 +978,15 @@
       </div>
       <div class="casePopup" id="sitePopup">
         <div class="casePopup__inner">
-          <div class="casePopup__preview"></div>
+          <div class="casePopup__preview casePopup__preview--iframe"></div>
+          <div class="casePopup__preview casePopup__preview--image">
+            <div class="casePopup__info">
+              <div class="casePopup__content"></div>
+            </div>
+            <div class="casePopup__track">
+              <div class="casePopup__bar"></div>
+            </div>
+          </div>
           <div class="casePopup__aside">
             <div class="casePopup__title"></div>
             <div class="popup popup--underline noise">

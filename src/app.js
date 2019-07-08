@@ -1,8 +1,8 @@
 import 'jquery';
 import 'magnific-popup/dist/jquery.magnific-popup.js';
 import 'jquery.maskedinput/src/jquery.maskedinput';
-// import 'selectize';
 import SmoothScroll from 'smooth-scroll';
+// import 'selectize';
 
 import './js/init';
 import './js/cartsList';
@@ -11,6 +11,7 @@ import './js/popups';
 import './js/paroller';
 // import './js/smoke';
 import './js/tabs';
+import './js/saveUTM';
 import './modules/header/header';
 import './modules/team/team';
 import './modules/problems/problems';

@@ -27,38 +27,74 @@ $('.sitePopup__opener').on('click', (e) => {
   e.stopPropagation();
   if (!Breakpoints.is('lg')) return;
 
-  const $target = $(e.delegateTarget);
-  $('#sitePopup .casePopup__title').html($target.find('.card__name').html());
-  const $iframe = $('<iframe>');
-  $iframe.attr('src', $target.data('url'));
-  const $previewWrapper = $('#sitePopup .casePopup__preview');
+  const $popup = $('#sitePopup');
 
-  const resize = () => {
-    const { width, height } = $previewWrapper[0].getBoundingClientRect();
-    const previewWidth      = 1200;
-    const scale             = width / previewWidth;
-    $iframe.css({
-      'transform': `scale(${scale})`,
-      height:      height / scale,
-      width:       previewWidth,
-    });
-  };
-  openPopup({
-    items:     { src: '#sitePopup' },
-    alignTop:  true,
-    mainClass: 'casePopup__wrapper',
-    callbacks: {
-      open:  () => {
-        $previewWrapper.append($iframe);
-        $(window).on('resize', resize);
-        resize();
-      },
-      close: () => {
-        $(window).off('resize', resize);
-        $iframe.remove();
+  const $target = $(e.delegateTarget);
+  $popup.find('.casePopup__title').html($target.find('.card__name').html());
+  $popup.find('.casePopup__preview').hide();
+
+  const iframeUrl = $target.data('url');
+  if (iframeUrl) {
+    const $iframe = $('<iframe>');
+    $iframe.attr('src', iframeUrl);
+    const $previewWrapper = $popup.find('.casePopup__preview--iframe');
+    $previewWrapper.show();
+
+    const resize = () => {
+      const { width, height } = $previewWrapper[0].getBoundingClientRect();
+      const previewWidth      = 1200;
+      const scale             = width / previewWidth;
+      $iframe.css({
+        'transform': `scale(${scale})`,
+        height:      height / scale,
+        width:       previewWidth,
+      });
+    };
+    openPopup({
+      items:     { src: '#sitePopup' },
+      alignTop:  true,
+      mainClass: 'casePopup__wrapper',
+      callbacks: {
+        open:  () => {
+          $previewWrapper.append($iframe);
+          $(window).on('resize', resize);
+          resize();
+        },
+        close: () => {
+          $(window).off('resize', resize);
+          $iframe.remove();
+        }
       }
-    }
-  });
+    });
+  }
+
+  const imageUrl = $target.data('image');
+  if (imageUrl) {
+    const $image = $('<img>');
+    $image.attr('src', imageUrl);
+    const $previewWrapper = $popup.find('.casePopup__preview--image');
+    $previewWrapper.show();
+    $previewWrapper.find('.casePopup__content').append($image);
+
+    const scroller = baron({
+      root:     $popup.find('.casePopup__info')[0],
+      scroller: $popup.find('.casePopup__content')[0],
+      bar:      $popup.find('.casePopup__bar')[0],
+    });
+
+    openPopup({
+      items:     { src: '#sitePopup' },
+      alignTop:  true,
+      mainClass: 'casePopup__wrapper',
+      callbacks: {
+        close: () => {
+          $image.remove();
+          scroller.dispose();
+        }
+      }
+    });
+  }
+
   return false;
 });
 
