@@ -42,10 +42,20 @@ $(window)
 updateWindowSizes();
 
 window.paroller = (e) => {
+  // console.log(e);
+  // const el                      = e.target.parentElement;
+  // const { height, top, bottom } = el.getBoundingClientRect();
+  // parollerItems.push({ el, top: windowScroll + top, bottom: windowScroll + bottom, height });
+  // req(() => {
+  //   updateParoller();
+  // })
+};
+
+$('.paroller').find('img').on('load', (e) => {
   const el                      = e.target.parentElement;
   const { height, top, bottom } = el.getBoundingClientRect();
   parollerItems.push({ el, top: windowScroll + top, bottom: windowScroll + bottom, height });
   req(() => {
     updateParoller();
   })
-};
+})

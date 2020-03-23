@@ -1,0 +1,143 @@
+.instruments
+  padding: 66px 0 49px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 70px 0 40px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 59px 0 47px
+
+  &__title
+    margin-bottom: 79px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 93px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 36px
+      margin-bottom: 52px
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 100%
+      left: 50%
+      z-index: 1
+      @media (max-width: $breakpoint-md - 1)
+        display: none;
+
+    &:before
+      width: 11px
+      height: 11px
+      background: $blue
+      margin-top: 30px
+      margin-left: -6px
+
+    &:after
+      width: 1px
+      height: 23px
+      background: $black
+      margin-top: 7px
+      margin-left: -1px
+
+  &__slider
+    position: relative;
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    align-items stretch
+    justify-content space-between
+    @media (max-width: $breakpoint-md - 1)
+      flex-wrap nowrap
+
+  &__item
+    //margin: 0 17px 29px
+    margin-bottom: 29px
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 26px
+    @media (max-width: $breakpoint-md - 1)
+      flex-shrink 0
+      margin-bottom: 0
+
+  &__card
+    position: relative;
+    border: 10px solid $blue
+    width: 362px
+    height: 100%
+    padding: 42px 125px 0px 47px
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 auto
+
+    &:before, &:after
+      content ''
+      position: absolute;
+      height: 10px
+      width: 24px
+      background: #000000
+
+    &:before
+      top: -10px
+      left: 21px
+
+    &:after
+      bottom: -10px
+      right: 25px
+
+  &__header
+    font-size: 30px
+    line-height: 24px
+    font-weight: bold;
+    height: 48px
+    display: flex;
+    align-items center
+    margin-bottom: 18px
+
+  &__info
+    li
+      position: relative;
+      margin-bottom: 12px
+      padding-left: 20px
+
+      &:before
+        content: ''
+        position: absolute;
+        top: 3px
+        left: 1px
+        width: 7px
+        height: 7px
+        background: $blue
+
+  &__icon
+    position: absolute;
+    left: 240px
+    top: 70px
+    transform translateY(-50%)
+    anim(.2s)
+
+  &__nav
+    position: absolute
+    top: 50%
+    margin-top: -31px
+    z-index: 2
+    display: none;
+    @media (max-width: $breakpoint-md - 1)
+      display: flex;
+
+    &--prev
+      left: -5px
+
+    &--next
+      right: -5px
+
+  &__image
+    position: absolute
+    left: 50%
+    margin-left: 336px;
+    bottom: -166px;
+    z-index: 1
+    img
+      transform translateX(-50px) rotate(-15deg)
+      anim(.3s)
+      &.lazy--visible
+        transform none
+    @media (max-width: $breakpoint-lg - 1)
+      display: none

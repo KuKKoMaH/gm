@@ -1,0 +1,9 @@
+extends pug/_layout
+block style
+  link(rel="stylesheet" media="all" href="blog.css")
+
+block body
+  include modules/blogHero/blogHero
+  include modules/blog/blog
+
+  //include modules/map/map

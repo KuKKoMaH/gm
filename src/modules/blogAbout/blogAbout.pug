@@ -1,0 +1,27 @@
+.blogAbout.lines
+  .c
+    .blogAbout__title Автор статьи:
+    .blogAbout__row
+      .blogAbout__avatar(style='background-image:url(modules/blogAbout/blogAbout-avatar.jpg)')
+      .blogAbout__info
+        .blogAbout__author МАРК#[br] ВЫСОТИН
+        .blogAbout__label Дериктолог
+        .blogAbout__metriks
+          .blogAbout__metrik
+            svg: use(xlink:href="#eye")
+            | 12
+          .blogAbout__metrik
+            svg: use(xlink:href="#comment")
+            | 123
+          .blogAbout__metrik
+            svg: use(xlink:href="#share")
+            | 10
+
+        button.blogAbout__share
+          | Поделится
+          svg: use(xlink:href="#share")
+
+      a.blogAbout__link(href='#')
+        | СМОТРЕТЬ ВСЕ
+        | СТАТЬИ ДАННОГО
+        | АВТОРА

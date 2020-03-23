@@ -1,0 +1,131 @@
+.coursesResults
+  padding: 69px 0 72px
+  background: #f7f7f7 url('data:image/gif;base64,R0lGODlhFAAUAPABANTU1AAAACH5BAUAAAEALAAAAAAUABQAAAIVjI95AOrJnpy02ouz3rz7D4biSE4FADs=') 50% 50%;
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 65px 0 64px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 39px 0 57px
+
+  &__title
+    margin-bottom: 70px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 104px;
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 44px;
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 100%
+      left: 50%
+      @media (max-width: $breakpoint-md - 1)
+        display: none;
+
+    &:before
+      width: 14px;
+      height: 14px;
+      background: #006dfe;
+      margin-top: 36px;
+      margin-left: -7px;
+
+    &:after
+      width: 1px;
+      height: 21px;
+      background: #1d1d1d;
+      margin-top: 15px;
+      margin-left: -1px
+
+  &__item
+    display: flex;
+    margin-bottom: 53px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 66px
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
+      margin-bottom: 40px
+
+    &:nth-child(2n)
+      flex-direction row-reverse
+      @media (max-width: $breakpoint-md - 1)
+        flex-direction column
+
+      .coursesResults
+        &__image
+          margin-right: 0
+          margin-left: 40px
+          @media (max-width: $breakpoint-lg - 1)
+            margin-left: 30px
+          @media (max-width: $breakpoint-md - 1)
+            margin: 0 auto 36px
+
+          &:after
+            left: auto;
+            right: -10px
+            border-left: 0
+            border-right: 10px solid $black
+
+        &__content
+          padding-left: 74px
+          padding-right: 0
+          @media (max-width: $breakpoint-lg - 1)
+            padding-left: 0
+
+  &__image
+    width: 269px
+    height: 188px
+    border: 10px solid $blue
+    flex-shrink 0
+    margin-right: 44px
+    position: relative;
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 auto 36px
+
+    &:after
+      content: ''
+      position: absolute;
+      width: 169px
+      border: 10px solid $black
+      border-right: 0
+      left: -10px
+      top: -10px
+      bottom: -10px
+
+    img
+      position: absolute;
+      //top: 50%
+      //left: 50%
+      //transform translate(-50%, -50%)
+      z-index: 1
+      anim(.2s)
+      opacity: 0
+      pointer-events none
+
+      &.lazy--visible
+        opacity: 1
+
+  &__content
+    padding-top: 24px
+    padding-right: 80px
+    flex: 1
+    @media (max-width: $breakpoint-lg - 1)
+      padding-top: 9px
+      padding-right: 0
+    @media (max-width: $breakpoint-md - 1)
+      text-align: center;
+
+  &__head
+    font-size: 36px
+    line-height: 1
+    margin-bottom: 20px
+    color: $blue
+
+  &__text
+    font-size: 18px
+    line-height: 30px
+
+  &__button
+    display: flex;
+    width: 430px
+    margin: 0 auto
+    font-size: 24px

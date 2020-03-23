@@ -8,12 +8,16 @@ initSlider('.videos__slider', {
     prevEl: '.videos__nav--prev',
     nextEl: '.videos__nav--next',
   },
-
 });
 
-const totalImages = $('.cannon img').length;
-let loaded        = false;
-window.cannon     = () => {
-  loaded++;
-  if (loaded === totalImages) $('.cannon').addClass('cannon--active');
-};
+
+$('.cannon').each(( i, el ) => {
+  const $img = $(el).find('img');
+  const totalImages = $img.length;
+  let loaded = 0;
+
+  $(el).find('img').on('load', () => {
+    loaded++;
+    if (loaded === totalImages) $(el).addClass('cannon--active');
+  });
+});

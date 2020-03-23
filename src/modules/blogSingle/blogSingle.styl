@@ -1,0 +1,50 @@
+.blogSingle
+  @media (max-width: $breakpoint-lg - 1)
+    padding-top: 34px
+  @media (max-width: $breakpoint-md - 1)
+    padding-top: 46px
+
+
+  &__content
+    line-height: 2.25
+
+    p
+      margin-bottom: 2em
+
+    img
+      border: 10px solid #006dfe
+
+  &__tags
+    display: flex;
+    font-weight: bold;
+    margin-top: 30px
+    align-items flex-start
+    @media (max-width: $breakpoint-lg - 1)
+      margin-top: 36px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 30px
+  &__tagsLabel
+    padding-top: 26px
+
+
+  &__tagsItems
+    display: flex;
+    margin-left: 21px
+    flex-wrap wrap
+
+  &__tag
+    border: 2px solid #006dfe
+    height: 59px
+    padding: 0 22px
+    margin: 6px
+    display: flex;
+    align-items center
+    justify-content center
+    text-align: center;
+    anim()
+
+    &:hover
+      background: #006dfe
+      color: #ffffff
+
+

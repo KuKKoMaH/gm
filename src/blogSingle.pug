@@ -1,0 +1,10 @@
+extends pug/_layout
+block style
+  link(rel="stylesheet" media="all" href="blogSingle.css")
+
+block body
+  include modules/blogSingleHero/blogSingleHero
+  include modules/blogSingle/blogSingle
+  include modules/blogAbout/blogAbout
+  include modules/related/related
+  include modules/map/map

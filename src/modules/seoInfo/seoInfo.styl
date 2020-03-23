@@ -1,0 +1,154 @@
+.seoInfo
+  padding: 70px 0 51px
+  position: relative;
+  overflow: hidden;
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 60px 0 28px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 61px 0 32px
+
+  &__title
+    margin-bottom: 58px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 97px
+    @media (max-width: $breakpoint-md - 1)
+      line-height: 30px
+      margin-bottom: 54px
+
+    &:before, &:after
+      content: ''
+      display: none
+      position: absolute
+      top: 100%
+      left: 50%
+      @media (max-width: $breakpoint-lg - 1)
+        display: block;
+      @media (max-width: $breakpoint-md - 1)
+        display: none;
+
+    &:before
+      width: 14px
+      height: 14px
+      background: $blue
+      margin-top: 15px
+      margin-left: -6px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-top: 24px
+
+    &:after
+      width: 1px
+      height: 26px
+      background: $black
+      margin-top: 29px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-top: 38px
+
+  &__container
+    @media (max-width: $breakpoint-md - 1)
+      display: flex;
+      flex-direction column
+      align-items center
+
+  &__items
+    counter-reset: seoInfo
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      flex-wrap wrap
+      justify-content center
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
+
+  &__item
+    position: absolute;
+    @media (max-width: $breakpoint-lg - 1)
+      position: static;
+      width: 50%
+      padding-left: 15px
+      margin-bottom: 35px
+    @media (max-width: $breakpoint-md - 1)
+      padding-left: 0
+      margin-bottom: 23px
+      width: auto
+
+    &:nth-child(1)
+      left: 20px;
+      top: 88px;
+
+    &:nth-child(2)
+      left: 57px;
+      top: 281px;
+
+    &:nth-child(3)
+      left: 839px;
+      top: 88px;
+
+    &:nth-child(4)
+      left: 801px;
+      top: 292px;
+
+
+  //for i in '01' '02' '03' '04'
+  //  &--{i} .seoInfo__text:before
+  //    background: url('./img/sprite-seoInfo-' + i + '.png')
+
+  &__header
+    font-size: 30px
+    line-height: 1
+    margin-bottom: 5px
+    height: 60px
+
+  &__text
+    line-height: 1.875
+    position: relative;
+
+    &:before
+      counter-increment: seoInfo
+      content: '0' counter(seoInfo)
+      position: absolute;
+      font-family: "Arial", sans-serif;
+      font-weight: 900
+      font-size: 72px
+      line-height: 1
+      pointer-events none
+      left: -14px;
+      top: -20px;
+      color: $blue
+      z-index: -1
+
+  &__image
+    border: 10px solid $blue;
+    width: 303px
+    height: 367px
+    margin: 0 auto
+    position: relative;
+    z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      background: #000000
+      top: -10px
+      right: -10px
+
+    &:before
+      height: 10px
+      width: 94px
+
+    &:after
+      width: 10px
+      height: 86px
+
+    img
+      z-index: 1
+      position: absolute;
+      bottom: -61px
+      left: 50%
+      transform translate(-50%, 30px)
+      anim(.3s)
+      opacity: 0
+
+      &.lazy--visible
+        transform translateX(-50%)
+

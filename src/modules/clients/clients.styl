@@ -38,6 +38,14 @@
     @media (max-width: $breakpoint-md - 1)
       margin-bottom: 48px
 
+    .big
+      display: block;
+
+  &__slider
+    &:nth-child(2n)
+      & ^[0]__items
+        padding-left: 60px
+
   &__items
     position: relative
     z-index: 1
@@ -52,6 +60,7 @@
     &--primary
       flex-wrap wrap
       margin: 0 -25px
+
       & ^[0]__item
         width: 16.6666%
         height: 138px
@@ -73,26 +82,28 @@
       //opacity: 0
       //transform translateY(50px)
       //anim(.3s)
+      justify-content flex-start
 
       & ^[0]__item
         padding: 0px 15px 26px
         width: 156px
         height: 118px
-        //@media (max-width: $breakpoint-lg - 1)
-        //  width: 25%
-        //  padding: 0 14px 33px
-        //  height: 135px
-        //
-        //@media (max-width: $breakpoint-md - 1)
-        //  width: 33.3333%
-        //  padding: 0 5px 10px
-        //  height: 112px
 
-    //&--active
-    //  visibility: visible
-    //  position: static
-    //  opacity: 1
-    //  transform none
+  //@media (max-width: $breakpoint-lg - 1)
+  //  width: 25%
+  //  padding: 0 14px 33px
+  //  height: 135px
+  //
+  //@media (max-width: $breakpoint-md - 1)
+  //  width: 33.3333%
+  //  padding: 0 5px 10px
+  //  height: 112px
+
+  //&--active
+  //  visibility: visible
+  //  position: static
+  //  opacity: 1
+  //  transform none
 
   &__item
     flex-shrink 0

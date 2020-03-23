@@ -28,6 +28,20 @@ import './modules/presentations/presentations';
 import './modules/siteTypes/siteTypes';
 import './modules/smmHero/smmHero';
 import './modules/contextHero/contextHero';
+import './modules/related/related';
+import './modules/instruments/instruments';
+import './modules/seoPrice/seoPrice';
+import './modules/coursesTarget/coursesTarget';
+import './modules/coursesChannels/coursesChannels';
+import './modules/coursesReasons/coursesReasons';
+import './modules/coursesPrices/coursesPrices';
+import './modules/coursesProgram/coursesProgram';
+import './modules/coursesTeachers/coursesTeachers';
+import './modules/coursesTestimonials/coursesTestimonials';
+import './modules/coursesFaq/coursesFaq';
+import './modules/blogSingle/blogSingle';
+import './modules/case/case';
+import './modules/smmProcess/smmProcess';
 
 import './js/lazyImages';
 
@@ -37,3 +51,11 @@ $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
 window.smoothscroll = new SmoothScroll('a[href*="#"]', { header: '.header__container', });
 
+
+const $viewport = document.getElementById('viewport');
+$(window).on('resize', () => {
+  $viewport.setAttribute('content', screen.width <= 520
+    ? 'width=520, user-scalable=no'
+    : 'width=device-width, user-scalable=no',
+  );
+});

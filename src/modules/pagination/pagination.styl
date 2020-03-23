@@ -1,0 +1,70 @@
+.pagination
+  background: #ffffff
+  padding: 0 180px
+  display: flex
+  align-items center
+  justify-content center
+  position: relative;
+  flex-wrap wrap
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 0 110px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 0 70px
+
+  .page-numbers
+    display: block
+    line-height: 1
+    text-align: center
+    margin: 0 14px
+    padding: 28px 3px 23px 3px
+    font-size: 18px
+
+    color: #2a2a2a
+    background: #ffffff
+    border-bottom: 3px solid transparent;
+    anim()
+
+    &:hover, &.current
+      //background: #e43641
+      border-color: #006dfe
+      text-decoration: none;
+
+  .prev, .next
+    position: absolute;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%
+    transform translateY(-50%)
+
+    border: 0
+
+    svg
+      fill: #006dfe
+      width: 50px
+      height: 14px
+      anim()
+
+    &:hover
+      background: #ffffff
+
+      svg
+        fill #000
+
+  .prev
+    left: 40px
+    @media (max-width: $breakpoint-lg - 1)
+      left: 20px
+    @media (max-width: $breakpoint-md - 1)
+      left: 10px
+
+  .next
+    right: 40px
+    @media (max-width: $breakpoint-lg - 1)
+      right: 42px
+    @media (max-width: $breakpoint-md - 1)
+      right: 10px
+
+    svg
+      transform: rotate(180deg)

@@ -11,6 +11,7 @@
     z-index: 1
     anim(.3s)
     transform translateX(30px)
+
     &.lazy--visible
       transform none
 
@@ -53,12 +54,12 @@
 
     &:before
       counter-increment: problems
-      content:'0' counter(problems)
-      font-family: "Arial Black", sans-serif;
+      content: '0' counter(problems)
+      font-family: "Arial", sans-serif;
+      font-weight: 900
       font-size: 72px
       color: $blue
       pointer-events none
-      font-weight: bold
       position: absolute
       z-index: -1
       left: -27px

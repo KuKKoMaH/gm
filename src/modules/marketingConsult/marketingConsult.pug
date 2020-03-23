@@ -1,0 +1,23 @@
+.marketingConsult.noise.lines
+  .c
+    .marketingConsult__text
+      | Получите консультацию специалиста, который поможет Вам, #[br]
+      | подобрать оптимальный вариант, для Вашего бизнеса #[br]
+      | и снимет задачу по интернет маркетингу
+    .marketingConsult__name Комплексный интернет маркетинг
+    .marketingConsult__price
+      | от 150 000 руб
+      .marketingConsult__info i
+        .marketingConsult__popup
+          p анализ рынка - 10 000 руб
+          p разработка стратегии - 25 000 руб и тд
+
+    .marketingConsult__form.noise
+      .marketingConsult__inner
+        .input.form__input: input.input__input(placeholder='Ваш номер телефона:' type='tel')
+        .input.form__input: input.input__input(placeholder='Ссылка на имеющийся ресурс:' type='tel')
+        button.btn.btn--lineIcon ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+  .marketingConsult__images
+    img.lazy.marketingConsult__image(data-src='modules/marketingConsult/img/marketingConsult-gm.png' width=537 height=694)
+    img.lazy.marketingConsult__image2(data-src='modules/marketingConsult/img/marketingConsult-image.png' width=429 height=837)
+  .paroller.marketingConsult__image3: img.lazy(data-src='images/bust.png' onload='paroller(event)' width=278 height=348)

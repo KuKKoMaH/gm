@@ -1,0 +1,188 @@
+.coursesTarget
+  position: relative;
+  padding: 71px 0 65px
+  background: url(./img/coursesTarget-bg.jpg) 50% 50% no-repeat
+  background-size: cover;
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 68px 0 44px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 59px 0 47px
+
+  &__title
+    margin-bottom: 115px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 96px;
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 92px;
+      font-size: 30px
+      line-height: 36px
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 100%
+      left: 50%
+
+    &:before
+      width: 14px;
+      height: 14px;
+      background: #006dfe;
+      margin-top: 36px;
+      margin-left: -7px;
+
+    &:after
+      width: 1px;
+      height: 21px;
+      background: #1d1d1d;
+      margin-top: 15px;
+      margin-left: -1px
+
+  &__slider
+    overflow: hidden;
+    margin-bottom: 61px
+    position: relative;
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 36px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 12px
+
+  &__items
+    display: flex;
+    margin: 0 -16px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0
+
+  &__item, &__card
+    &:before, &:after
+      content: ''
+      position: absolute;
+      background: #000000
+      z-index: 1
+
+    &:before
+      height: 10px
+      width: 47px
+
+    &:after
+      width: 10px
+      height: 149px
+
+  &__item
+    flex: 1
+    margin: 0 16px
+    position: relative;
+    min-height 477px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0
+      flex 1 0 auto
+      min-height 403px
+    @media (max-width: $breakpoint-md - 1)
+      min-height 477px
+
+
+    &:before, &:after
+      top: 0
+      right: 0
+      @media (max-width: $breakpoint-md - 1)
+        right: 63px
+
+  &__card
+    border: 10px solid $blue
+    height: 100%
+    text-align: center;
+    background: #ffffff
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 63px
+
+    &:before, &:after
+      bottom 0px
+      left: 0px
+      @media (max-width: $breakpoint-md - 1)
+        left: 63px
+
+
+  &__head
+    font-size: 24px
+    height: 80px
+    display: flex;
+    justify-content center
+    align-items center
+    position: relative;
+    margin-bottom: 60px
+
+    &:after
+      content: ''
+      position: absolute;
+      left: 50%
+      margin-left: -73px
+      top: 100%
+      width: 146px
+      height: 12px
+      background: $blue
+      display: block;
+
+  &__icon
+    height: 60px
+    position: relative;
+    margin-bottom: 37px
+
+    img
+      position: absolute;
+      top: 50%
+      left: 50%
+      transform translate(-50%, -50%)
+
+  &__text
+    font-size: 18px
+    line-height: 2
+    padding: 0 30px
+
+  &__sub
+    font-size: 48px
+    font-weight: bold;
+    @media (max-width: $breakpoint-lg - 1)
+      font-size: 36px
+      text-align: center;
+      margin: 0 20px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 24px
+
+  &__image
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    margin-left: -636px;
+    pointer-events none
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__image2
+    position: absolute;
+    bottom: -63px;
+    left: 50%;
+    margin-left: 556px;
+    pointer-events none
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__buttons
+    margin-top: 31px
+    justify-content center
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+
+  &__nav
+    display: flex;
+    margin: 0 7px
+    @media (max-width: $breakpoint-md - 1)
+      position: absolute;
+      top: 196px
+      &--prev
+        left: -7px
+
+      &--next
+        right: -7px
+
+

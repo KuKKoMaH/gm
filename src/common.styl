@@ -29,6 +29,18 @@ b
   @media (max-width: $breakpoint-md - 1)
     max-width: 100%
 
+.blockTitle
+  font-size: 36px
+  line-height: 1
+  text-align: center;
+  position: relative
+  max-width 770px
+  margin: 0 auto 0
+  @media (max-width: $breakpoint-lg - 1)
+    max-width 630px
+  @media (max-width: $breakpoint-md - 1)
+    max-width 380px
+
 .page
   //anim(.2s)
   min-height 100vh
@@ -39,7 +51,6 @@ b
   &.mfp-body-open
     filter: blur(10px)
     overflow: hidden
-
 
 .noise
   background: url(images/noise.jpg);
@@ -72,6 +83,10 @@ img[data-srcset]
 .icon-lines
   width: 28px
   height: 13px
+
+.icon-3lines
+  width: 25px
+  height: 24px
 
 .icon-pdf
   width: 40px

@@ -1,0 +1,96 @@
+.related
+  padding-bottom: 63px
+  @media (max-width: $breakpoint-lg - 1)
+    padding-bottom: 31px
+
+  &__header
+    border-top: 1px solid #000
+    font-size: 36px
+    text-align: center;
+    padding: 57px 0 53px
+    @media (max-width: $breakpoint-lg - 1)
+      border: 0
+      padding: 61px 0 49px
+    @media (max-width: $breakpoint-md - 1)
+      padding: 51px 0 30px
+
+  &__slider
+    overflow: hidden;
+    padding: 15px
+    margin: 0 -15px
+
+  &__items
+    display: flex;
+    margin: 0 -15px
+    justify-content center
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0
+      justify-content flex-start
+
+  &__item
+    width: 33.333%
+    @media (max-width: $breakpoint-lg - 1)
+      width: auto;
+      flex-shrink 0
+
+  &__card
+    margin: 0 15px
+    box-shadow 0 0 25px 0 rgba(29, 29, 29, .1)
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 auto
+      max-width: 347px
+
+    &:hover
+      box-shadow 0 0 25px 0 rgba(29, 29, 29, .3)
+
+  &__image
+    width: 100%
+    height: auto;
+
+  &__content
+    background: #ffffff
+    padding: 30px 20px 49px
+    @media (max-width: $breakpoint-lg - 1)
+      padding 27px 18px 49px
+
+  &__title
+    font-size: 30px
+    line-height: 1
+    margin-bottom: 20px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 16px
+
+  &__text
+    margin-bottom: 27px
+    line-height: 1.4
+    max-height 70px
+    overflow: hidden;
+
+  &__link
+    font-size: 18px
+
+    &:before
+      content: ''
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px
+      width: 7px
+      height: 7px
+      margin-left: 4px
+      background: #006dfe
+
+  &__buttons
+    display: none;
+    margin-top: 40px
+    justify-content center
+    //left: 50%
+    //top: 50%
+    z-index: 2
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+
+  &__nav
+    display: flex;
+    margin: 0 7px
+

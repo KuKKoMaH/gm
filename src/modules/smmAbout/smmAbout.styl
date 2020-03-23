@@ -1,0 +1,105 @@
+.smmAbout
+  padding: 87px 0 85px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 71px 0 26px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 59px 0 28px
+
+  &__title
+    margin-bottom: 113px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 109px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 36px
+      line-height: 30px
+      margin-bottom: 42px
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 100%
+      left: 50%;
+      @media (max-width: $breakpoint-md - 1)
+        display: none;
+
+    &:before
+      width: 14px
+      height: 14px
+      background: $blue
+      margin-top: 28px
+      margin-left: -7px
+
+    &:after
+      width: 1px
+      height: 21px
+      background: $black
+      margin-top: 42px
+      margin-left: -1px
+
+  &__items
+    display: flex;
+    justify-content space-between
+    counter-reset: smmAbout
+    @media (max-width: $breakpoint-lg - 1)
+      flex-wrap wrap
+      justify-content center
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 -40px
+
+  &__item
+    counter-increment: smmAbout
+    position: relative;
+    width: 192px
+    height: 291px
+    border: 10px solid $blue;
+    //margin-left: 18px
+    margin: 0 20px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 62px 39px
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 32px 33px
+
+    &:before, &:after
+      content ''
+      position: absolute;
+      background: #ffffff
+      width: 12px
+
+    &:before
+      height: 224px
+      top: 26px
+      left: -11px
+
+    &:after
+      height: 118px
+      bottom: 34px
+      right: -11px
+
+  &__text
+    z-index: 1
+    position: absolute;
+    font-size: 18px
+    line-height: 1.65
+    top: 148px
+    left: -10px
+    right: -60px
+
+    &:before
+      content: '0' counter(smmAbout)
+      position: absolute;
+      font-family: "Arial", sans-serif;
+      font-weight: 900
+      font-size: 72px
+      line-height: 1
+      pointer-events none
+      left: 16px;
+      top: -75px;
+      color: $blue
+
+  &__img
+    position: absolute;
+    top: 44px
+    left: -20px
+    z-index: 2
+

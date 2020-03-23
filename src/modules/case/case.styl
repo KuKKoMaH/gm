@@ -1,0 +1,171 @@
+.case
+  background: #f7f7f7
+  @media (max-width: $breakpoint-lg - 1)
+    padding-bottom: 58px
+  @media (max-width: $breakpoint-md - 1)
+    padding-bottom: 94px
+
+
+  img
+    max-width 100%
+    height: auto;
+
+  &__items
+    margin-top: 20px
+    margin-bottom: 46px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 26px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 49px
+
+  &__item
+    background: #ffffff
+    margin-bottom: 35px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 20px
+
+    &:after
+      content ''
+      display table
+      clear both
+
+  &__label
+    float: left
+    width: 217px
+    flex-shrink 0
+    position: relative;
+    display: flex;
+    justify-content flex-end
+    align-items flex-end
+    height: 180px
+    border-bottom: 6px solid $blue
+    font-size: 30px
+    padding-bottom: 14px
+    margin-bottom: 22px
+    @media (max-width: $breakpoint-lg - 1)
+      height: 172px
+      margin-right: 34px
+
+    &:after
+      content ''
+      position: absolute;
+      width: 141px
+      height: 6px
+      background: $black
+      bottom: -6px
+      left: 0
+      z-index: 1
+
+  &__icon
+    position: absolute;
+    left: 89px;
+    top: 67px;
+    transform translate(-50%, -50%)
+    anim(.2s)
+
+  &__text
+    padding: 44px 30px 28px 258px
+    font-size: 18px
+    line-height: 2
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 27px 25px 28px 20px
+    @media (max-width: $breakpoint-lg - 1)
+      padding-bottom: 18px
+
+    p
+      margin-bottom: 1em
+
+  &__images
+    margin: 0 -6px
+    display: flex;
+    flex-wrap wrap
+
+  &__image
+    width: 33.333%
+    padding: 6px
+    @media (max-width: $breakpoint-lg - 1)
+      width: 50%
+      &:nth-child(n + 3)
+        display: none;
+    @media (max-width: $breakpoint-md - 1)
+      width: 100%;
+      &:nth-child(n + 2)
+        display: none;
+
+    img
+      max-width 100%
+      height: auto;
+
+  &__img
+    clear both
+    height: 530px
+    background-position: 50% 50%;
+    background-size: cover;
+    anim(.3s)
+    @media (max-width: $breakpoint-lg - 1)
+      height: 248px
+
+  &__block
+    padding: 62px 0 94px
+    position: relative;
+    text-align: center;
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 45px 0 34px
+      margin: 0 -20px
+
+    &:after
+      content: ''
+      position: absolute;
+      top: 100%
+      left: 50%
+      width: 460px
+      transform translateX(-50%)
+      height: 15px
+      background: $black
+
+  &__header
+    font-size: 30px
+    font-weight: bold;
+    line-height: 1.2
+    color: $blue
+    margin-bottom: 59px
+    @media (max-width: $breakpoint-lg - 1)
+      max-width 600px
+      margin: 0 auto 40px
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 24px
+      line-height: 1.25
+      margin-bottom: 58px
+
+  &__form
+    max-width 770px
+    margin: 0 auto 38px
+    @media (max-width: $breakpoint-lg - 1)
+      max-width 625px
+      margin-bottom: 53px
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 20px 30px
+      max-width none
+
+
+    .input
+      margin-bottom: 21px
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      top: 67px
+      bottom: 73px
+      width: 40px
+      border: 20px solid $blue
+      @media (max-width: $breakpoint-md - 1)
+        display: none;
+
+    &:before
+      left: 0
+      border-right: 0
+
+    &:after
+      right: 0
+      border-left: 0
+

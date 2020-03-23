@@ -1,0 +1,55 @@
+.case.lines
+  .c
+    include ../blogHeader/blogHeader
+
+    .case__items
+      .case__item
+        .case__label
+          | О проекте
+          img.case__icon.lazy(data-src='modules/case/img/case-01.png')
+        .case__text
+          p Lorem ipsum dolor sit amet,
+
+      .case__item
+        .case__label
+          | Задача
+          img.case__icon.lazy(data-src='modules/case/img/case-02.png')
+        .case__text
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet.
+
+      .case__item
+        .case__label
+          | Проблематика
+          img.case__icon.lazy(data-src='modules/case/img/case-03.png')
+        .case__text
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet.
+
+      .case__item
+        .case__label
+          | Решение
+          img.case__icon.lazy(data-src='modules/case/img/case-04.png')
+        .case__text
+          .case__images
+            .case__image: img.lazy(data-src='modules/case/img/case-img1.jpg')
+            .case__image: img.lazy(data-src='modules/case/img/case-img1.jpg')
+            .case__image: img.lazy(data-src='modules/case/img/case-img1.jpg')
+            .case__image: img.lazy(data-src='modules/case/img/case-img1.jpg'
+            )
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus.
+
+      .case__item
+        .case__label
+          | Результаты
+          img.case__icon.lazy(data-src='modules/case/img/case-05.png')
+        .case__text
+          p Lorem ipsum dolor sit amet, consectetur adipiscing
+        .case__img.lazyBg(data-src='modules/case/img/case-img2.jpg')
+
+    .case__block.noise
+      form
+        .case__header Похожая задача?#[br]Заполните форму и получите консультацию нашего менеджера
+        .case__form
+          .input: input.input__input(placeholder='Ваш номер телефона:' type='tel')
+          .input: input.input__input(placeholder='Ваша задача:' type='text')
+        button.btn.btn--lineIcon ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ

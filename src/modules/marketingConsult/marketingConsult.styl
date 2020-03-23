@@ -1,0 +1,194 @@
+.marketingConsult
+  padding: 87px 0 147px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 72px 0 159px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 63px 0 109px
+
+  .c
+    z-index: 2
+
+  &__text
+    display: block;
+    font-size: 24px
+    line-height: 1.25
+    font-weight: bold;
+    margin-bottom: 60px
+    @media (max-width: $breakpoint-md - 1)
+      max-width 500px
+      margin-bottom: 31px
+      br
+        display: none;
+
+  &__name
+    font-size: 24px
+    padding-left: 14px
+    margin-bottom: 10px
+    position: relative;
+
+    &:before
+      content: ''
+      position: absolute;
+      background: $blue
+      width: 9px;
+      height: 9px;
+      top: 8px;
+      left: -2px;
+
+  &__price
+    font-size: 36px
+    padding-left: 13px
+
+  &__form
+    position: relative;
+    text-align: center;
+    margin-top: 112px
+    padding-bottom: 60px
+    max-width 460px
+    border: 20px solid $blue
+    border-top: 0
+    border-bottom: 0
+    padding-top: 44px
+    @media (max-width: $breakpoint-md - 1)
+      margin 169px auto 0
+
+    &:before, &:after
+      top: 0
+
+    .btn
+      margin-top: 20px
+
+  &__inner
+    &:before, &:after
+      bottom: 0
+
+  &__form, &__inner
+    &:before, &:after
+      content: ''
+      position: absolute;
+      width: 20px
+      height: 20px
+      background: $blue
+
+    &:before
+      left: 0
+
+    &:after
+      right: 0
+
+  &__images
+    position: absolute;
+    overflow: hidden;
+    top: 0
+    height: 100%
+    left: 50%
+    width: 50%
+    pointer-events none
+
+
+  &__image
+    position: absolute
+    margin-left: 39px;
+    bottom: 4px;
+    transform translateX(30px)
+    anim(.25s)
+    z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+    &.lazy--visible
+      transform none
+
+  &__image2
+    position: absolute
+    margin-left: 72px
+    bottom: 0
+    transform translateX(70px)
+    transform-origin 50% 100%
+    anim(.25s)
+    z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 62px
+      bottom: -110px
+    @media (max-width: $breakpoint-md - 1)
+      margin-left: -9px
+
+    &.lazy--visible
+      transform none
+
+  &__image3
+    position: absolute
+    left: 50%
+    margin-left: 430px;
+    bottom: -176px;
+    z-index: 2
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: -409px
+      bottom: -185px
+    @media (max-width: $breakpoint-md - 1)
+      margin-left: -339px;
+      bottom: -180px;
+
+    img
+      transform translateX(30px) rotate(15deg)
+      anim(.25s)
+
+      &.lazy--visible
+        transform none
+
+  &__info
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 30px
+    line-height: 1
+    width: 39px
+    height: 39px
+    border: 2px solid $blue
+    margin-left: 19px
+    padding-top: 4px
+
+    &:hover
+      background: $blue
+      color: #ffffff
+
+      .marketingConsult
+        &__popup
+          color: #000000
+          pointer-events all
+          opacity: 1
+          transform none
+
+  &__popup
+    position: absolute;
+    background: #ffffff
+    border: 2px solid $blue
+    box-shadow 0px 0px 35px 0px rgba(29, 29, 29, 0.35)
+    width: 400px
+    padding: 12px 14px
+    z-index: 2
+    left: 50%
+    margin-left -200px
+    top: 100%
+    margin-top: 12px
+    font-size: 18px
+    line-height: 1.45
+    text-align: left;
+    pointer-events none
+    opacity: 0
+    transform translateY(-15px)
+    anim(.2s)
+    &:before
+      content: ''
+      position: absolute;
+      bottom: 100%
+      left: 50%
+      transform translateX(-50%)
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent $blue transparent;
+
+
+

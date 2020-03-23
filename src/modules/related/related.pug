@@ -1,0 +1,17 @@
+.related.noise.lines
+  .c
+    h2.related__header Вам Может быть интересно
+    .related__slider
+      .related__items
+        each i in [1,2,3]
+          a.related__item(href='#')
+            .related__card
+              img.related__image.lazy(data-src='modules/related/related-img.jpg')
+              .related__content
+                .related__title Сайт рыбатекст поможет дизайнеру.
+                .related__text По своей сути рыбатекст является альтернативой традиционному lorem ipsum
+                .related__link Подробнее
+
+      .related__buttons
+        .navBtn.navBtn--prev.related__nav.related__nav--prev: svg: use(xlink:href="#arrow")
+        .navBtn.navBtn--next.related__nav.related__nav--next: svg: use(xlink:href="#arrow")

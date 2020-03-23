@@ -1,5 +1,5 @@
 .certificates
-  padding: 74px 0 92px
+  padding: 74px 0 53px
   position: relative
   @media (max-width: $breakpoint-lg - 1)
     text-align: center
@@ -96,6 +96,7 @@
     margin-left: 34px;
     top: 177px;
     z-index: 1
+
     img
       transform translateX(40px) rotate(15deg)
       anim(.25s)
@@ -105,3 +106,57 @@
 
     @media (max-width: $breakpoint-lg - 1)
       display: none
+
+  &__eng
+    @media (max-width: $breakpoint-lg - 1)
+      padding-right: 200px
+      text-align: left;
+    @media (max-width: $breakpoint-md - 1)
+      padding-right: 0
+      text-align: center;
+
+  &__engTitle
+    font-size: 36px
+    font-weight: bold;
+    line-height: 1
+    color: $blue
+    margin-top: 26px
+    position: relative;
+    margin-bottom: 43px
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      top: 100%
+      left: 100%
+
+    &:before
+      width: 233px;
+      height: 8px;
+      background: $black
+      margin-top: 7px;
+      margin-left: -302px
+
+    &:after
+      width: 65px;
+      height: 5px;
+      background: $blue
+      margin-top: 15px;
+      margin-left: -302px;
+
+  &__engLabel
+    font-size: 24px
+    line-height: 30px
+    font-weight: bold;
+
+  &__engImg
+    position: absolute;
+    bottom: 0
+    left: 50%
+    margin-left: -114px
+    z-index: 1
+    anim(.2s)
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: 126px
+    @media (max-width: $breakpoint-md - 1)
+      display: none;

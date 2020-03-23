@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20170731 at Sun Jan 26 23:49:02 2020
+ By Aleksey,,,
+Digitized data copyright The Monotype Corporation 1991-1995. All rights reserved. Arial is a trademark of The Monotype Corporation which may be registered in certain jurisdictions.
+</metadata>
+<defs>
+<font id="Arial-Black" horiz-adv-x="1366" >
+  <font-face 
+    font-family="Arial Black"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="2048"
+    panose-1="2 11 10 4 2 1 2 2 2 4"
+    ascent="1638"
+    descent="-410"
+    bbox="0 -25 1323 1491"
+    underline-thickness="123"
+    underline-position="-439"
+    unicode-range="U+0020-0039"
+  />
+<missing-glyph horiz-adv-x="1536" 
+d="M0 0v1280h1024v-1280h-1024zM32 32h960v1216h-960v-1216z" />
+    <glyph glyph-name=".notdef" horiz-adv-x="1536" 
+d="M0 0v1280h1024v-1280h-1024zM32 32h960v1216h-960v-1216z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="683" 
+ />
+    <glyph glyph-name="space" unicode=" " horiz-adv-x="683" 
+ />
+    <glyph glyph-name="zero" unicode="0" 
+d="M84 739q0 418 150.5 585t458.5 167q148 0 243 -36.5t155 -95t94.5 -123t55.5 -150.5q41 -164 41 -342q0 -399 -135 -584t-465 -185q-185 0 -299 59t-187 173q-53 81 -82.5 221.5t-29.5 310.5zM488 738q0 -280 49.5 -382.5t143.5 -102.5q62 0 107.5 43.5t67 137.5
+t21.5 293q0 292 -49.5 392.5t-148.5 100.5q-101 0 -146 -102.5t-45 -379.5z" />
+    <glyph glyph-name="one" unicode="1" 
+d="M1007 1491v-1491h-412v977q-100 -76 -193.5 -123t-234.5 -90v334q208 67 323 161t180 232h337z" />
+    <glyph glyph-name="two" unicode="2" 
+d="M1276 0h-1222q21 181 127.5 340.5t399.5 376.5q179 133 229 202t50 131q0 67 -49.5 114.5t-124.5 47.5q-78 0 -127.5 -49t-66.5 -173l-408 33q24 172 88 268.5t180.5 148t322.5 51.5q215 0 334.5 -49t188 -150.5t68.5 -227.5q0 -134 -78.5 -256t-285.5 -268
+q-123 -85 -164.5 -119t-97.5 -89h636v-332z" />
+    <glyph glyph-name="three" unicode="3" 
+d="M479 1042l-385 69q48 184 184.5 282t386.5 98q287 0 415 -107t128 -269q0 -95 -52 -172t-157 -135q85 -21 130 -49q73 -45 113.5 -118.5t40.5 -175.5q0 -128 -67 -245.5t-193 -181t-331 -63.5q-200 0 -315.5 47t-190 137.5t-114.5 227.5l407 54q24 -123 74.5 -170.5
+t128.5 -47.5q82 0 136.5 60t54.5 160q0 102 -52.5 158t-142.5 56q-48 0 -132 -24l21 291q34 -5 53 -5q80 0 133.5 51t53.5 121q0 67 -40 107t-110 40q-72 0 -117 -43.5t-61 -152.5z" />
+    <glyph glyph-name="four" unicode="4" 
+d="M784 274h-742v335l742 882h355v-901h184v-316h-184v-274h-355v274zM784 590v461l-392 -461h392z" />
+    <glyph glyph-name="five" unicode="5" 
+d="M249 1466h967v-325h-655l-35 -220q68 32 134.5 48t131.5 16q220 0 357 -133t137 -335q0 -142 -70.5 -273t-200 -200t-331.5 -69q-145 0 -248.5 27.5t-176 82t-117.5 123.5t-75 172l412 45q15 -99 70 -150.5t131 -51.5q85 0 140.5 64.5t55.5 192.5q0 131 -56 192t-149 61
+q-59 0 -114 -29q-41 -21 -90 -76l-347 50z" />
+    <glyph glyph-name="six" unicode="6" 
+d="M1263 1136l-405 -50q-16 85 -53.5 120t-92.5 35q-99 0 -154 -100q-40 -72 -59 -308q73 74 150 109.5t178 35.5q196 0 331.5 -140t135.5 -355q0 -145 -68.5 -265t-190 -181.5t-304.5 -61.5q-220 0 -353 75t-212.5 239.5t-79.5 435.5q0 397 167 581.5t463 184.5
+q175 0 276.5 -40.5t168.5 -118.5t102 -196zM513 483q0 -119 60 -186.5t147 -67.5q80 0 134 61t54 182q0 124 -56 189t-139 65q-85 0 -142.5 -63t-57.5 -180z" />
+    <glyph glyph-name="seven" unicode="7" 
+d="M91 1466h1189v-275q-155 -140 -259 -303q-126 -198 -199 -441q-58 -189 -78 -447h-406q48 359 151 602t326 520h-724v344z" />
+    <glyph glyph-name="eight" unicode="8" 
+d="M329 788q-96 51 -140 114q-60 86 -60 198q0 184 173 301q135 90 357 90q294 0 434.5 -112t140.5 -282q0 -99 -56 -185q-42 -64 -132 -124q119 -57 177.5 -151t58.5 -208q0 -110 -50.5 -205.5t-124 -147.5t-183 -76.5t-233.5 -24.5q-233 0 -356 55t-187 162t-64 239
+q0 129 60 218.5t185 138.5zM512 1076q0 -76 47.5 -122.5t126.5 -46.5q70 0 115 46t45 119q0 76 -47 123.5t-120 47.5q-74 0 -120.5 -46.5t-46.5 -120.5zM490 445q0 -97 59 -158.5t135 -61.5q73 0 131 62.5t58 158.5q0 97 -58.5 159t-135.5 62q-76 0 -132.5 -60t-56.5 -162z
+" />
+    <glyph glyph-name="nine" unicode="9" 
+d="M102 329l405 51q16 -85 54 -120t93 -35q98 0 153 99q40 73 60 309q-73 -75 -150 -110t-178 -35q-197 0 -332.5 140t-135.5 354q0 146 69 266t190 181.5t304 61.5q220 0 353 -75.5t212.5 -240t79.5 -434.5q0 -397 -167 -581.5t-463 -184.5q-175 0 -276 40.5t-168 118.5
+t-103 195zM852 983q0 119 -60 186.5t-146 67.5q-81 0 -134.5 -61t-53.5 -183q0 -123 55.5 -188t138.5 -65q86 0 143 63t57 180z" />
+    <glyph glyph-name=".ttfautohint" 
+d="M0 0z" />
+  </font>
+</defs></svg>

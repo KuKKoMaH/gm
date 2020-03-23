@@ -1,0 +1,141 @@
+.blogAbout
+  padding: 19px 0 42px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 35px 0 59px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 5px 0 58px
+
+  &__title
+    border-top: 1px solid #000000
+    padding-top: 17px
+    font-size: 30px
+    margin-bottom: 26px
+    @media (max-width: $breakpoint-lg - 1)
+      padding-top: 28px
+      margin-bottom: 22px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 16px
+      padding-left: 4px
+      border: 0
+
+  &__row
+    display: flex;
+    @media (max-width: $breakpoint-lg - 1)
+      flex-wrap wrap
+
+  &__avatar
+    border: 15px solid #006dfe
+    width: 290px
+    height: 367px
+    background-size: cover
+    background-position: 50% 50%;
+    flex-shrink 0
+    @media (max-width: $breakpoint-md - 1)
+      display: none;
+
+  &__info
+    padding: 0 42px 0 46px
+    align-self center
+    @media (max-width: $breakpoint-lg - 1)
+      padding-left: 53px
+      flex: 0
+    @media (max-width: $breakpoint-md - 1)
+      padding: 0
+      flex: auto
+
+  &__author
+    margin-bottom: -2px
+    font-size: 48px
+    line-height: 1;
+    @media (max-width: $breakpoint-md - 1)
+      br
+        display: none;
+
+  &__label
+    font-size: 20px
+
+  &__metriks
+    margin-top: 38px
+    display: flex;
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 15px
+
+  &__metrik
+    position: relative;
+    margin-right: 25px
+    padding-left: 31px
+
+    &:last-child
+      margin-right: 0
+
+    svg
+      position: absolute;
+      fill: #006dfe
+      stroke: #006dfe
+      width: 20px
+      height: 20px
+      left: 14px
+      top: 50%
+      transform translate(-50%, -50%)
+
+  &__share
+    margin-top: 36px
+
+  //&__share
+  //  position: relative;
+  //  border: 2px solid #006dfe
+  //  padding: 11px 76px 12px 19px
+  //  margin-top: 36px
+  //  anim()
+  //
+  //  &:hover
+  //    background: #006dfe
+  //    color: #ffffff
+  //
+  //    svg
+  //      fill: #ffffff
+  //      stroke: #fff
+  //
+  //  svg
+  //    position: absolute;
+  //    width: 12px
+  //    height: 12px
+  //    right: 18px
+  //    top: 50%
+  //    fill: #006dfe
+  //    stroke: #006dfe
+  //    transform translateY(-50%)
+  //    anim()
+
+  &__link
+    position: relative;
+    border: 15px solid #006dfe
+    font-size: 48px
+    line-height: 1
+    display: flex;
+    align-items center
+    justify-content center
+    padding: 0 0 0 74px
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      width: 100%
+      margin-top: 40px
+      padding: 51px 0 51px 41px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 34px
+      padding: 38px 0 32px 36px
+
+    &:hover
+      background: #006dfe
+      color: #ffffff
+
+    &:after
+      content: ''
+      position: absolute;
+      width: 72px
+      height: 7px
+      background: #000
+      top: 100%
+      right: 0
+      margin-top: 15px
+      margin-right: -15px

@@ -1,0 +1,211 @@
+.seoPrice
+  background: url(./img/seoPrice-bg.jpg) 50% 0%
+  background-size: cover
+  padding: 60px 0 63px
+  position: relative
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 63px 0 66px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 103px 0 65px
+
+  &__title
+    margin-bottom: 76px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 81px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 71px
+
+  &__content
+    display: flex;
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+
+  &__bullets
+    width 389px
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      flex-wrap wrap
+      justify-content center
+      width: 100%
+      margin-bottom: 65px
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
+      margin-bottom: 81px
+
+  &__bullet
+    padding-left: 40px
+    margin-bottom: 52px
+    padding-right: 20px
+    @media (max-width: $breakpoint-lg - 1)
+      width: 50%
+      padding-right: 0
+      margin-bottom: 21px
+    @media (max-width: $breakpoint-md - 1)
+      width: 100%
+      margin-bottom: 59px
+
+    &:last-child
+      margin-bottom: 0
+
+    &--03
+      @media (max-width: $breakpoint-lg - 1)
+        margin-right: 72px
+        width: 380px
+      @media (max-width: $breakpoint-md - 1)
+        margin-right: 0
+        width: 100%;
+
+    for i in '01' '02' '03'
+      &--{i} .seoPrice__header:before
+        background: url('./img/sprite-seoPrice-' + i + '.png')
+
+  &__header
+    font-size: 24px
+    line-height: 1
+    font-weight: bold;
+    margin-bottom: 14px
+    position: relative;
+
+    &:before
+      content ''
+      position: absolute;
+      top: -24px
+      left: -41px
+      z-index: -1
+
+  &__text
+    line-height: 1.5
+
+  &__cards
+    flex: 1
+    position: relative;
+
+  &__items
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+
+  &__item
+    position: absolute;
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      position: relative;
+      left: auto !important
+      top: auto !important
+
+    &--1
+      left: 0px
+      top: 60px
+
+    &--2
+      left: 391px
+      top: 200px
+
+  &__inner
+    position: relative;
+    width: 370px
+    border: 20px solid $blue
+    padding: 0 15px 10px
+    background: #ffffff
+    text-align: center;
+    margin: 0 auto
+
+    &:after
+      content: ''
+      position: absolute;
+      left: 15px
+      right: 15px
+      bottom: -20px
+      height: 22px
+      background: #ffffff
+
+  &__name
+    margin-top: -46px
+    background: #ffffff
+    height: 154px
+    font-size: 24px
+    line-height: 1.35
+    display: flex;
+    align-items center
+    justify-content center
+    box-shadow 0 7px 25px -6px rgba(0, 0, 0, 0.15)
+    margin-bottom: 42px
+
+  &__price
+    margin-bottom: 36px
+    font-size: 36px
+
+    span
+      font-weight: bold
+      color: $blue
+
+  &__button
+    //position: absolute
+    //bottom: 0
+    width: 266px
+    margin: 0 auto
+    height: 62px
+    border: 2px solid $blue;
+    display: flex
+    align-items center
+    justify-content center
+    font-size: 18px
+    font-weight: bold
+    anim()
+
+    &:hover
+      background: $blue
+      color: #fff
+
+  &__image1, &__image2
+    display: block
+    position: absolute
+    left: 50%
+    pointer-events: none;
+    z-index: 2;
+
+  &__image1
+    top: 91px;
+    margin-left: 335px;
+
+    img
+      transform translateX(30px) rotate(15deg)
+      anim(.3s)
+
+      &.lazy--visible
+        transform none
+
+    @media (max-width: $breakpoint-lg - 1)
+      display: none
+
+  &__image2
+    bottom: -198px;
+    margin-left: -178px;
+
+    img
+      transform translateX(-30px) rotate(-15deg)
+      anim(.3s)
+
+      &.lazy--visible
+        transform none
+
+    @media (max-width: $breakpoint-lg - 1)
+      bottom: auto;
+      top: 371px;
+      margin-left: 188px;
+    @media (max-width: $breakpoint-md - 1)
+      display: none
+
+  &__nav
+    display: none;
+    position: absolute
+    top: 131px
+    z-index: 2
+    @media (max-width: $breakpoint-md - 1)
+      display: flex
+
+    &--prev
+      left: -5px
+
+    &--next
+      right: -5px
