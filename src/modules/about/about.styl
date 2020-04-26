@@ -1,0 +1,130 @@
+.about
+  background: url(../../images/mountains.jpg) 50% 100% no-repeat;
+
+  &__container
+    position: relative;
+    padding: 246px 0 222px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 126px 0 122px
+    @media (max-width: $breakpoint-md - 1)
+      padding: 50px 0 55px
+
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      z-index: 2
+      width: 274px
+      height: 10px
+      background: #000
+
+    &:before
+      top: 0
+      right: 50%
+      margin-right: 303px
+
+    &:after
+      bottom: 0
+      left: 50%
+      margin-left: 302px
+
+  &__title
+    position: relative;
+    font-size: 48px;
+    line-height: 1.25
+    //font-weight: 900
+    font-family: 'Museo Sans Cyrl 900', sans-serif;
+    margin-bottom: 64px
+    margin-left: -3px
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      background: #006dfe
+
+    &:before
+      width: 17px
+      height: 17px
+      top: -76px
+      left: 1px
+      @media (max-width: $breakpoint-md - 1)
+        display: none;
+
+    &:after
+      width: 42px
+      height: 8px
+      bottom: -17px
+      left: 1px
+
+  &__text
+    max-width 770px
+    font-size: 16px
+    line-height: 1.875
+    margin-left: -3px
+    max-height 210px
+    overflow: hidden;
+    anim(.2s)
+
+    &--full
+      max-height: auto !important;
+
+  &__button
+    margin-left: -2px
+    margin-top: 62px
+    font-size: 24px
+    width: 320px
+    opacity: 0
+    visibility: hidden;
+    anim()
+
+    &--active
+      opacity: 1
+      visibility: visible;
+
+    svg
+      width: 24px
+      height: 24px
+
+  &__decor
+    position: absolute;
+    width: 240px
+    height: 584px
+    border: 6px solid #006dfe
+    right: 97px;
+    top: 229px;
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+    &:before
+      content: ''
+      position: absolute;
+      width: 13px
+      height: 193px
+      background: #000000
+      right: 100%
+      bottom: 65px
+
+  &__image
+    position: absolute;
+    top: 98px;
+    left: 78px;
+
+    img
+      anim(.2s)
+      transform translateX(30px)
+
+      &.lazy--visible
+        transform none
+
+  &__image2
+    position: absolute;
+    right: 50%
+    bottom: -20px;
+    margin-right: 85px;
+    z-index: 2
+    pointer-events none
+    @media (max-width: $breakpoint-lg - 1)
+      margin-right: -200px
+      bottom: -60px
+    @media (max-width: $breakpoint-md - 1)
+      display: none;

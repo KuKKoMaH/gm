@@ -42,6 +42,7 @@ import './modules/coursesFaq/coursesFaq';
 import './modules/blogSingle/blogSingle';
 import './modules/case/case';
 import './modules/smmProcess/smmProcess';
+import './modules/about/about';
 
 import './js/lazyImages';
 
