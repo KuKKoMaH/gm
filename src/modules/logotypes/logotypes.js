@@ -1,4 +1,4 @@
-import Swiper      from 'swiper';
+import { Swiper } from 'swiper/dist/js/swiper.esm.js';
 import Breakpoints from 'breakpoints-js';
 
 const $wrapper = $('.logotypes__slider');

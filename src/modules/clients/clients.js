@@ -3,7 +3,7 @@
 //   $('.clients__items--secondary').addClass('clients__items--active');
 // });
 
-import Swiper from 'swiper';
+import { Swiper } from 'swiper/dist/js/swiper.esm.js';
 
 const $wrapper = $('.clients__slider');
 if ($wrapper.length) {
@@ -16,18 +16,14 @@ if ($wrapper.length) {
     breakpoints:                    {},
     speed:                          10000,
     preventInteractionOnTransition: true,
-    // centeredSlides:                 true,
     autoplay:                       {
       delay:                0,
       disableOnInteraction: false,
-      // waitForTransition:    false,
     },
     wrapperClass:                   'clients__items',
     slideClass:                     'clients__item',
-    // navigation:           {
-    //   prevEl: '.logotypes__nav--prev',
-    //   nextEl: '.logotypes__nav--next',
-    // },
+    lazy:                           true,
+    watchSlidesVisibility:          true,
   });
   // window.slider = slider;
 

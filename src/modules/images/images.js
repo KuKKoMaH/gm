@@ -1,4 +1,5 @@
-import Swiper from 'swiper';
+import { Swiper } from 'swiper/dist/js/swiper.esm.js';
+
 
 const $wrapper = $('.images__slider');
 if ($wrapper.length) {
@@ -18,7 +19,7 @@ if ($wrapper.length) {
       },
       767:  {
         slidesPerView: 2,
-      }
+      },
     },
 
     wrapperClass: 'images__items',

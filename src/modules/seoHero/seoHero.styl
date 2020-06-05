@@ -1,91 +1,92 @@
-.seoHero
-  .c
-    z-index: 3
-    @media (max-width: $breakpoint-lg - 1)
-      max-height 755px
-      padding-top: 25px
-    @media (max-width: $breakpoint-md - 1)
-      max-height 702px
-      padding-top: 0
-      padding-bottom: 35px
-
-  &__title
-    display: block;
-    font-size: 120px
-    line-height: 120px
-    font-weight: bold
-    margin-left: -8px
-    @media (max-width: $breakpoint-lg - 1)
-      margin-left: 0
-      font-size: 100px
-    @media (max-width: $breakpoint-md - 1)
-      font-size: 48px
-      line-height: 60px
-
-  &__bg
-    display: block
-    background: url(./img/seoHero-textBg.jpg) 50% 50%;
-    background-size: cover
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
-
-  &__sub
-    font-size: 48px
-    line-height: 1
-    font-weight: bold
-    color: $blue
-    margin-left: -6px
-    margin-top: 5px
-    @media (max-width: $breakpoint-lg - 1)
-      margin-left: 0
-      margin-top: 27px
-    @media (max-width: $breakpoint-md - 1)
-      font-size: 30px
-      line-height: 36px
-      margin-top: 18px
-
-  &__image
-    position: absolute;
-    overflow: hidden;
-    top: 0
-    height: 100%
-    left: 50%
-    width: 50%
-    pointer-events none
-    @media (max-width: $breakpoint-lg - 1)
-      opacity: .5
-
-    img
-      left: 0
-      margin-left: 83px;
-      transform: translateX(50px)
+@critical critical-seo.css
+  .seoHero
+    .c
+      z-index: 3
       @media (max-width: $breakpoint-lg - 1)
-        display: block;
-        margin-bottom: -61px
-        margin-left: -36px
+        max-height 755px
+        padding-top: 25px
       @media (max-width: $breakpoint-md - 1)
-        margin-left: 20px
+        max-height 702px
+        padding-top: 0
+        padding-bottom: 35px
+
+    &__title
+      display: block;
+      font-size: 120px
+      line-height: 120px
+      font-weight: bold
+      margin-left: -8px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: 0
+        font-size: 100px
+      @media (max-width: $breakpoint-md - 1)
+        font-size: 48px
+        line-height: 60px
+
+    &__bg
+      display: block
+      background: url(./img/seoHero-textBg.jpg) 50% 50%;
+      background-size: cover
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+
+    &__sub
+      font-size: 48px
+      line-height: 1
+      font-weight: bold
+      color: $blue
+      margin-left: -6px
+      margin-top: 5px
+      @media (max-width: $breakpoint-lg - 1)
+        margin-left: 0
+        margin-top: 27px
+      @media (max-width: $breakpoint-md - 1)
+        font-size: 30px
+        line-height: 36px
+        margin-top: 18px
+
+    &__image
+      position: absolute;
+      overflow: hidden;
+      top: 0
+      height: 100%
+      left: 50%
+      width: 50%
+      pointer-events none
+      @media (max-width: $breakpoint-lg - 1)
+        opacity: .5
+
+      img
+        left: 0
+        margin-left: 83px;
+        transform: translateX(50px)
+        @media (max-width: $breakpoint-lg - 1)
+          display: block;
+          margin-bottom: -61px
+          margin-left: -36px
+        @media (max-width: $breakpoint-md - 1)
+          margin-left: 20px
 
 
-  //&__image
-  //  margin-left: 84px;
-  //  transform: translateX(50px)
-  //  transform-origin 50% 100%
-  //  @media (max-width: $breakpoint-lg - 1)
-  //    display: block;
-  //    margin-left: -10px
-  //    &.lazy--visible
-  //      transform: scale(.93)
+    //&__image
+    //  margin-left: 84px;
+    //  transform: translateX(50px)
+    //  transform-origin 50% 100%
+    //  @media (max-width: $breakpoint-lg - 1)
+    //    display: block;
+    //    margin-left: -10px
+    //    &.lazy--visible
+    //      transform: scale(.93)
 
-  &__image2
-    margin-left: 90px;
-    margin-bottom: -137px;
-    z-index: 4
+    &__image2
+      margin-left: 90px;
+      margin-bottom: -137px;
+      z-index: 4
 
-    img
-      transform: translateX(30px) rotate(15deg)
-    @media (max-width: $breakpoint-md - 1)
-      width: 205px;
-      margin-left: 18px;
-      margin-bottom: -103px;
+      img
+        transform: translateX(30px) rotate(15deg)
+      @media (max-width: $breakpoint-md - 1)
+        width: 205px;
+        margin-left: 18px;
+        margin-bottom: -103px;
 

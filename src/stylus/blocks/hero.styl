@@ -1,87 +1,105 @@
-.hero
-  background: url(../../images/mountains.jpg) 50% 100% repeat-x;
-  @media (max-width: $breakpoint-lg - 1)
-    text-align: center
-
-  .c
-    display: flex
-    flex-direction column
-    justify-content center
-    align-items flex-start
-    height 868px
-    position: relative
-    z-index: 2
+@critical
+  .hero
+    position: relative;
+    background: url(../../images/mountains.jpg) 50% 100% repeat-x;
     @media (max-width: $breakpoint-lg - 1)
-      height: 95vh
-      max-height 750px
-      padding-top: 120px
-      align-items center
+      text-align: center
 
-  // ========================================================
-  // BACKGROUND TEXT
-  // ========================================================
-
-  &__bgText
-    position: absolute
-    font-size: 392px
-    font-weight: bold
-    left: 50%
-    margin-left: -790px
-    top: 50%
-    margin-top: -215px
-    color: #f3f3f3
-    z-index: 1
-    pointer-events none
-    @media (max-width: $breakpoint-lg - 1)
-      font-size: 151px
-      margin-left: -290px
-      margin-top: 11px
-    @media (max-width: $breakpoint-md - 1)
-      margin-left: -245px
-      font-size: 120px
-
-    span
-      color: $blue
+    .c
+      position: relative;
+      display: flex
+      flex-direction column
+      justify-content center
+      align-items flex-start
+      height 868px
+      z-index: 2
       @media (max-width: $breakpoint-lg - 1)
-        color: #f3f3f3
+        height: 95vh
+        max-height 750px
+        padding-top: 120px
+        align-items center
 
-    &--small
-      font-size: 80px
-      margin-left: -530px;
-      margin-top: 143px;
+    // ========================================================
+    // BACKGROUND TEXT
+    // ========================================================
+
+    &__bgText
+      position: absolute
+      font-size: 392px
+      font-weight: bold
+      left: 50%
+      margin-left: -790px
+      top: 50%
+      margin-top: -215px
+      color: #f3f3f3
+      z-index: 1
+      pointer-events none
       @media (max-width: $breakpoint-lg - 1)
-        font-size: 31px
-        margin-left: -190px
-        margin-top: 155px
+        font-size: 151px
+        margin-left: -290px
+        margin-top: 11px
       @media (max-width: $breakpoint-md - 1)
-        font-size: 24px
-        margin-left: -160px
-        margin-top: 125px
+        margin-left: -245px
+        font-size: 120px
 
-  // ========================================================
-  // IMAGE
-  // ========================================================
+      span
+        color: $blue
+        @media (max-width: $breakpoint-lg - 1)
+          color: #f3f3f3
 
-  &__image,
-  &__image2,
-  &__image img,
-  &__image2 img
-    position: absolute
-    pointer-events none
-    z-index: 2
-    left: 50%
-    bottom: 0
-    anim(.3s)
+      &--small
+        font-size: 80px
+        margin-left: -530px;
+        margin-top: 143px;
+        @media (max-width: $breakpoint-lg - 1)
+          font-size: 31px
+          margin-left: -190px
+          margin-top: 155px
+        @media (max-width: $breakpoint-md - 1)
+          font-size: 24px
+          margin-left: -160px
+          margin-top: 125px
 
-    &.lazy--visible
-      transform: none
 
-  &__image
-    @media (max-width: $breakpoint-lg - 1)
+    &__breadcrumbs
+      position: absolute;
+      top: 110px
+      left: 10px;
+      @media (max-width: $breakpoint-lg - 1)
+        width: 100%
+        text-align: center;
+
+      .sep
+        margin: 0 4px
+
+      a
+        color: #006dfe
+        &:hover
+          text-decoration: underline;
+
+    // ========================================================
+    // IMAGE
+    // ========================================================
+
+    &__image,
+    &__image2,
+    &__image img,
+    &__image2 img
+      position: absolute
+      pointer-events none
+      z-index: 2
+      left: 50%
+      bottom: 0
+      anim(.3s)
+
+      &.lazy--visible
+        transform: none
+
+    &__image
+      @media (max-width: $breakpoint-lg - 1)
+        display: none
+
+    &__image2
       display: none
-
-  &__image2
-    display: none
-    @media (max-width: $breakpoint-lg - 1)
-      display: block
-
+      @media (max-width: $breakpoint-lg - 1)
+        display: block

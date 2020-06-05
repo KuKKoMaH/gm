@@ -6,8 +6,10 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <script>if (screen.width <= 520) document.getElementById('viewport').setAttribute('content', 'width=520, user-scalable=no')</script>
-    <link rel="stylesheet" media="all" href="common.css">
-    <link rel="stylesheet" media="all" href="front.css">
+    <!--link(rel="stylesheet" media="all" href="critical.css")-->
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <!--link(rel="stylesheet" media="all" href="critical-front.css")-->
+    <link rel="stylesheet" media="all" href="css/front.css">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
   </head>
@@ -24,10 +26,10 @@
         <use xlink:href="#2lines"></use>
       </svg>контакты</a>
     <div class="menu lines">
+      <button class="menu__close">ЗАКРЫТЬ
+        <div class="menu__close-icon"></div>
+      </button><img class="menu__image lazy" data-src="img/images-horse.png">
       <div class="menu__inner">
-        <button class="menu__close">ЗАКРЫТЬ
-          <div class="menu__close-icon"></div>
-        </button>
         <div class="menu__title">
           <div class="menu__title-inner"><span>М</span>ЕНЮ</div>
         </div>
@@ -51,11 +53,29 @@
           </div>
         </div>
         <div class="menu__items">
+          <button class="menu__back">
+            <svg>
+              <use xlink:href="#arrow"></use>
+            </svg>
+          </button>
           <ul>
             <li><a href="#">Главная</a></li>
             <li><a href="#">Создание сайтов и SEO</a></li>
-            <li><a href="#">Контекстная реклама</a></li>
-            <li><a href="#">SMM</a></li>
+            <li class="menu-item-has-children"><a href="#">Контекстная реклама</a>
+              <ul>
+                <li><a href="#">Контекстная реклама 1</a></li>
+                <li><a href="#">Контекстная реклама 2</a></li>
+                <li><a href="#">Контекстная реклама 3</a></li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="#">SMM</a>
+              <ul>
+                <li><a href="#">SMM 1</a></li>
+                <li><a href="#">SMM 2</a></li>
+                <li><a href="#">SMM 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Наши кейсы</a></li>
             <li><a href="#">Наши кейсы</a></li>
             <li><a href="#">Наши кейсы</a></li>
             <li><a href="#">Наши кейсы</a></li>
@@ -63,7 +83,7 @@
             <li><a href="#">Партнерская программа</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
-        </div><img class="menu__image lazy" data-src="img/images-horse.png">
+        </div>
       </div>
     </div>
     <div class="page">
@@ -94,6 +114,13 @@
       <div class="hero lines"><img class="hero__image frontHero__image lazy" data-src="img/images-horse.png">
         <div class="paroller hero__image2 frontHero__image2"><img class="lazy" data-src="img/images-bust.png" onload="paroller(event)"></div>
         <div class="c">
+          <!--.hero__breadcrumbs-->
+          <!--  .breadcrumbs-->
+          <!--    span: a.home(href="#"): span Главная-->
+          <!--    span.sep --->
+          <!--    span: a.post.post-page(href="#"): span Создание сайтов-->
+          <!--    span.sep --->
+          <!--    span.post.post-page.current-item: span Создание сайтов-->
           <div class="frontHero__sup">Первое агентство<br>
             интернет маркетинга Санкт-Петербурга
           </div>
@@ -308,174 +335,174 @@
         <div class="clients__slider">
           <div class="clients__items clients__items--secondary">
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_03.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_03.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_05.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_05.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_06.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_06.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_08.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_08.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_10.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_10.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_11.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_11.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_03.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_03.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_05.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_05.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_06.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_06.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_08.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_08.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_10.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_10.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_11.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_11.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_03.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_03.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_05.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_05.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_06.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_06.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_08.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_08.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_10.png"></div>
-            </div>
-          </div>
-        </div>
-        <div class="clients__slider">
-          <div class="clients__items clients__items--secondary">
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_11.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_03.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_05.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_06.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_08.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_10.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_11.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_17.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_19.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_22.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_23.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_25.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_28.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_03.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_05.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_06.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_08.png"></div>
-            </div>
-            <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_10.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_10.png"></div>
             </div>
           </div>
         </div>
         <div class="clients__slider">
           <div class="clients__items clients__items--secondary">
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_11.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_11.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_17.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_03.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_19.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_05.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_22.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_06.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_23.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_08.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_25.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_10.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_28.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_11.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_03.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_17.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_05.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_19.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_06.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_22.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_08.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_23.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_10.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_25.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_11.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_28.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_17.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_03.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_19.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_05.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_22.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_06.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_23.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_08.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_25.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_10.png"></div>
+            </div>
+          </div>
+        </div>
+        <div class="clients__slider">
+          <div class="clients__items clients__items--secondary">
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_11.png"></div>
             </div>
             <div class="clients__item">
-              <div class="clients__inner"><img src="img/modules-clients-img-14_28.png"></div>
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_17.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_19.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_22.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_23.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_25.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_28.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_03.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_05.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_06.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_08.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_10.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_11.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_17.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_19.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_22.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_23.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_25.png"></div>
+            </div>
+            <div class="clients__item">
+              <div class="clients__inner"><img class="swiper-lazy" data-src="img/modules-clients-img-14_28.png"></div>
             </div>
           </div>
         </div>
@@ -521,8 +548,8 @@
                   </div>
                   <div class="services__footer">
                     <div>
-                      <div class="services__price">от 39 990 рублей</div>
-                      <div class="services__oldprice">от 39 990 рублей</div>
+                      <div class="services__price">от 39 990 <span class="r">р</span></div>
+                      <div class="services__oldprice">от 39 990 <span class="r">р</span></div>
                     </div>
                   </div><a class="services__button popup__opener" href="#callback">УЗНАТЬ ПОДРОБНЕЕ</a>
                 </div>
@@ -805,12 +832,26 @@
           </div>
           <div class="footer__menu">
             <ul>
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Создание сайтов</a></li>
-              <li><a href="#">Контекстная реклама</a></li>
-              <li><a href="#">SMM</a></li>
-              <li><a href="#">Наши кейсы</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#"></a>
+                <ul>
+                  <li><a href="#">Главная</a></li>
+                  <li><a href="#">Создание сайтов</a></li>
+                  <li><a href="#">Контекстная реклама</a></li>
+                  <li><a href="#">SMM</a></li>
+                  <li><a href="#">Наши кейсы</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </li>
+              <li><a href="#"></a>
+                <ul>
+                  <li><a href="#">Главная</a></li>
+                  <li><a href="#">Создание сайтов</a></li>
+                  <li><a href="#">Контекстная реклама</a></li>
+                  <li><a href="#">SMM</a></li>
+                  <li><a href="#">Наши кейсы</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <div class="footer__contacts">
@@ -1080,6 +1121,23 @@
     var MAP_API_KEY = "AIzaSyAKCWqbAVy8AsekfYEuddPMtdb5xMpC9pk";
     var MAP_CENTER = [53.189798, 45.039265];
     var MAP_ZOOM = 16;
+    var CSS = [];
+    // var CSS = ['common.css'];
+    
+  </script>
+  <script>
+    // CSS.push('front.css')
+    
+  </script>
+  <script>
+    const $head = document.querySelector('head');
+    for (let i = 0; i < CSS.length; i++) {
+      var link = document.createElement('link');
+      link.href = CSS[i];
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      $head.appendChild(link);
+    }
   </script>
   <script src="js/app.js"></script>
   <svg id="sprites" xmlns="http://www.w3.org/2000/svg">
@@ -1100,7 +1158,7 @@
         </g>
     </symbol>
     <symbol id="arrow" viewBox="0 0 29.34 11.68">
-        <path d="m29.2 5.34v1h-28v-1zm-29.2.5.7-.7 5.86 5.86-.71.7zm5.85-5.84.71.7-5.86 5.84-.7-.7z" fill="#006dfe"></path>
+        <path d="m29.2 5.34v1h-28v-1zm-29.2.5.7-.7 5.86 5.86-.71.7zm5.85-5.84.71.7-5.86 5.84-.7-.7z"></path>
     </symbol>
     <symbol id="check" viewBox="0 0 61 59">
         <path d="m17.28 27.23 8.14 15.63s13.22-31.77 34.06-42.36c-.51 7.56-2.54 14.12 1 22.19-9.15 2-28 24.71-34.07 35.81-8.62-10.59-18.79-18.66-25.91-21.18z"></path>

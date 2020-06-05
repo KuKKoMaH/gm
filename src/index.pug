@@ -1,6 +1,10 @@
 extends pug/_layout
 block style
-  link(rel="stylesheet" media="all" href="front.css")
+  //link(rel="stylesheet" media="all" href="critical-front.css")
+  link(rel="stylesheet" media="all" href="css/front.css")
+block script
+  script.
+    // CSS.push('front.css')
 
 block body
   - var GUARANTIES_NOISE = true

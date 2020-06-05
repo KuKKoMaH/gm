@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-function createConfig (env) {
+function createConfig( env ) {
   var isProduction, webpackConfig;
 
   if (env === undefined) {
@@ -14,7 +15,7 @@ function createConfig (env) {
     entry:   { app: './src/app.js' },
     output:  {
       // path:       path.join(__dirname, '../../build/js'),
-      filename:   'app.js',
+      filename: 'app.js',
       // publicPath: '/'
     },
     devtool: isProduction ? '#source-map' : '#cheap-module-eval-source-map',
@@ -25,22 +26,22 @@ function createConfig (env) {
           use:  [
             {
               loader:  'expose-loader',
-              options: 'jQuery'
+              options: 'jQuery',
             }, {
               loader:  'expose-loader',
-              options: '$'
+              options: '$',
             },
-          ]
+          ],
         },
         {
           test:    /\.js$/,
           // exclude: /node_modules/,
           loader:  'babel-loader',
           options: {
-            presets: ["@babel/preset-env"]
-          }
-        }
-      ]
+            presets: ["@babel/preset-env"],
+          },
+        },
+      ],
     },
     plugins: [
       // new webpack.optimize.CommonsChunkPlugin({
@@ -56,7 +57,7 @@ function createConfig (env) {
       new webpack.ProvidePlugin({
         $:               'jquery',
         jQuery:          'jquery',
-        'window.jQuery': 'jquery'
+        'window.jQuery': 'jquery',
       }),
       new webpack.NoEmitOnErrorsPlugin(),
     ],
@@ -65,8 +66,9 @@ function createConfig (env) {
   if (isProduction) {
     webpackConfig.plugins.push(
       new webpack.LoaderOptionsPlugin({
-        minimize: true
+        minimize: true,
       }),
+      // new BundleAnalyzerPlugin(),
       // new webpack.optimize.UglifyJsPlugin({
       //   compress: {
       //     warnings: false

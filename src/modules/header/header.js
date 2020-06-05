@@ -1,10 +1,10 @@
 /* ================================================ */
 /* Меню */
 /* ================================================ */
-const $menu        = $('.menu');
+const $menu = $('.menu');
 const $menuTrigger = $('.header__button--menu, .menu__close');
 // const $menuContent = $('.menu__content');
-let menuVisible    = false;
+let menuVisible = false;
 
 $menuTrigger.on('click', () => toggleMenu());
 
@@ -24,22 +24,34 @@ function showMenu() {
   //
   // setTimeout(() => {
   //   $menu.addClass('menu--visible');
-    menuVisible = true;
+  menuVisible = true;
   // }, 0);
 }
 
 function hideMenu() {
   if (!menuVisible) return;
   $menu.removeClass('menu--active');
-
-  // $menu.removeClass('menu--visible');
-  // $menu.one('transitionend', () => {
-  //   $menu.removeClass('menu--active');
-  // });
-  // $menuTrigger.removeClass('menu__trigger--active');
   menuVisible = false;
 }
 
-$menu.find('a[href*="#"]').on('click', () => hideMenu());
+// $menu.find('a[href*="#"]').on('click', () => hideMenu());
 
 /* ================================================ */
+
+$('.menu__items a').on('click', ( e ) => {
+  const $el = $(e.delegateTarget);
+  const $sub = $el.parent().find('ul');
+  if (!$sub.length) {
+    hideMenu();
+    return;
+  }
+  e.preventDefault();
+  $menu.find('ul').removeClass('menu__submenu--active');
+  $sub.addClass('menu__submenu--active');
+  setTimeout(() => $menu.addClass('menu--level2'));
+});
+
+$('.menu__back').on('click', ( e ) => {
+  e.preventDefault();
+  $menu.removeClass('menu--level2');
+});

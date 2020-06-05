@@ -13,12 +13,13 @@ var updateRule = require('postcss-sprites/lib/core').updateRule;
 var copy = require('postcss-copy');
 var watch = require('gulp-watch');
 var atImport = require('postcss-import');
+var postcssCriticalCSS = require('postcss-critical-css');
 
 var config = require('../config');
 
 var extensions = {
   images: ['.jpg', '.jpeg', '.gif', '.png', '.svg'],
-  fonts:  ['.eot', '.woff', '.woff2'],
+  fonts:  ['.eot', '.ttf', '.woff', '.woff2'],
 };
 
 // stylus.stylus.define('url', stylus.stylus.url({ paths: [__dirname + '/public'] }))
@@ -27,7 +28,7 @@ gulp.task('css', function () {
   var plugins = [
     atImport(),
     sprites({
-      stylesheetPath: 'build',
+      stylesheetPath: 'build/css',
       spritePath:     'build/img',
       groupBy:        function ( info ) {
         return Promise.resolve(path.parse(info.styleFilePath).name);
@@ -56,15 +57,16 @@ gulp.task('css', function () {
       },
     }),
     copy({
-      dest:     'build',
-      template: 'fonts/[name].[ext][query]',
-      ignore:   ['img/sprite.svg', '!fonts/*'],
+      dest:     'build/css',
+      template: '../fonts/[name].[ext][query]',
+      ignore:   ( fileMeta ) => fileMeta.filename.includes('sprite.svg') || extensions.fonts.every(ext => !fileMeta.filename.includes(ext)),
     }),
     copy({
-      dest:     'build',
-      template: 'img/[name].[ext][query]',
-      ignore:   ['img/sprite.svg', 'fonts/*'],
+      dest:     'build/css',
+      template: '../img/[name].[ext][query]',
+      ignore:   ( fileMeta ) => fileMeta.filename.includes('sprite.svg') || extensions.fonts.some(ext => fileMeta.filename.includes(ext)),
     }),
+    postcssCriticalCSS({ outputPath: 'build/css' }),
   ];
 
   if (config.production) {
@@ -82,5 +84,5 @@ gulp.task('css', function () {
     .on('error', require('../assets/errorHandler'))
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build/css'));
 });

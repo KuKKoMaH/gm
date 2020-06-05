@@ -1,41 +1,42 @@
-.blogSingleHero
-  height: 460px
-  @media (max-width: $breakpoint-lg - 1)
-    min-height: 532px
-  @media (max-width: $breakpoint-md - 1)
-    min-height: 537px
-
-  .c
-    height: 100%
-    justify-content flex-end
-    padding-bottom: 140px
+@critical critical-blogSingle.css
+  .blogSingleHero
+    height: 460px
     @media (max-width: $breakpoint-lg - 1)
-      justify-content center
-      padding-bottom: 0
-      padding-left: 60px
-      padding-right: 60px
+      min-height: 532px
     @media (max-width: $breakpoint-md - 1)
-      max-width 490px
-      margin: 0 auto
-      padding 0
+      min-height: 537px
 
-  &__title
-    text-align: center;
-    font-size: 36px
-    line-height: 1
-    max-width 880px
-    margin: 0 auto
-    @media (max-width: $breakpoint-lg - 1)
-      font-size: 48px
-    @media (max-width: $breakpoint-md - 1)
+    .c
+      height: 100%
+      justify-content flex-end
+      padding-bottom: 140px
+      @media (max-width: $breakpoint-lg - 1)
+        justify-content center
+        padding-bottom: 0
+        padding-left: 60px
+        padding-right: 60px
+      @media (max-width: $breakpoint-md - 1)
+        max-width 490px
+        margin: 0 auto
+        padding 0
+
+    &__title
+      text-align: center;
       font-size: 36px
+      line-height: 1
+      max-width 880px
+      margin: 0 auto
+      @media (max-width: $breakpoint-lg - 1)
+        font-size: 48px
+      @media (max-width: $breakpoint-md - 1)
+        font-size: 36px
 
-  &__bgText
-    font-size: 255px;
-    margin-left: -521px;
-    margin-top: -148px;
+    &__bgText
+      font-size: 255px;
+      margin-left: -521px;
+      margin-top: -148px;
 
-    &--small
-      font-size: 54px;
-      margin-left: -352px;
-      margin-top: 88px;
+      &--small
+        font-size: 54px;
+        margin-left: -352px;
+        margin-top: 88px;

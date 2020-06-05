@@ -1,10 +1,12 @@
-import Swiper      from 'swiper';
-import Breakpoints from 'breakpoints-js';
+import { Swiper, Navigation, Autoplay, Scrollbar, Lazy } from 'swiper/dist/js/swiper.esm.js';
+import Breakpoints                                       from 'breakpoints-js';
 
-export default (selector, props, initOptions) => {
+Swiper.use([Navigation, Autoplay, Scrollbar, Lazy]);
+
+export default ( selector, props, initOptions ) => {
   const $wrapper = $(selector);
   if ($wrapper.length) {
-    $wrapper.each((i, el) => {
+    $wrapper.each(( i, el ) => {
       let slider = null;
 
       const initSlider = () => {
@@ -33,6 +35,6 @@ export default (selector, props, initOptions) => {
       Breakpoints.on('lg', 'enter', () => {
         initOptions.lg ? initSlider() : destroySlider();
       });
-    })
+    });
   }
 }

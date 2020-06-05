@@ -22,29 +22,30 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'PT Sans';
-  font-display: swap;
-  src: url('../fonts/hinted-subset-PTSans-Regular.eot');
-  src: url('../fonts/hinted-subset-PTSans-Regular.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/hinted-subset-PTSans-Regular.woff2') format('woff2'),
-          url('../fonts/hinted-subset-PTSans-Regular.woff') format('woff'),
-          url('../fonts/hinted-subset-PTSans-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PT Sans';
-  font-display: swap;
-  src: url('../fonts/hinted-subset-PTSans-Bold.eot');
-  src: url('../fonts/hinted-subset-PTSans-Bold.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/hinted-subset-PTSans-Bold.woff2') format('woff2'),
-          url('../fonts/hinted-subset-PTSans-Bold.woff') format('woff'),
-          url('../fonts/hinted-subset-PTSans-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
+@critical
+  @font-face {
+    font-family: 'PT Sans';
+    font-display: swap;
+    src: url('../fonts/hinted-subset-PTSans-Regular.eot');
+    src: url('../fonts/hinted-subset-PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/hinted-subset-PTSans-Regular.woff2') format('woff2'),
+            url('../fonts/hinted-subset-PTSans-Regular.woff') format('woff'),
+            url('../fonts/hinted-subset-PTSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@critical
+  @font-face {
+    font-family: 'PT Sans';
+    font-display: swap;
+    src: url('../fonts/hinted-subset-PTSans-Bold.eot');
+    src: url('../fonts/hinted-subset-PTSans-Bold.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/hinted-subset-PTSans-Bold.woff2') format('woff2'),
+            url('../fonts/hinted-subset-PTSans-Bold.woff') format('woff'),
+            url('../fonts/hinted-subset-PTSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
 
 @font-face {
   font-family: 'PT Sans';
@@ -142,17 +143,18 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: 'Museo Sans Cyrl 700';
-  font-display: swap;
-  src: url('../fonts/hinted-subset-MuseoSansCyrl-700.eot');
-  src: url('../fonts/hinted-subset-MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/hinted-subset-MuseoSansCyrl-700.woff2') format('woff2'),
-          url('../fonts/hinted-subset-MuseoSansCyrl-700.woff') format('woff'),
-          url('../fonts/hinted-subset-MuseoSansCyrl-700.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@critical
+  @font-face {
+    font-family: 'Museo Sans Cyrl 700';
+    font-display: swap;
+    src: url('../fonts/hinted-subset-MuseoSansCyrl-700.eot');
+    src: url('../fonts/hinted-subset-MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/hinted-subset-MuseoSansCyrl-700.woff2') format('woff2'),
+            url('../fonts/hinted-subset-MuseoSansCyrl-700.woff') format('woff'),
+            url('../fonts/hinted-subset-MuseoSansCyrl-700.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 @font-face {
   font-family: 'Museo Sans Cyrl 700';
@@ -219,6 +221,7 @@
 
 @font-face {
   font-family: 'Arial';
+  font-display: swap;
   src: url('../fonts/hinted-subset-Arial-Black.eot');
   src: url('../fonts/hinted-subset-Arial-Black.eot?#iefix') format('embedded-opentype'),
           url('../fonts/hinted-subset-Arial-Black.woff2') format('woff2'),
@@ -229,3 +232,12 @@
   font-style: normal;
 }
 
+@font-face
+  font-family: 'Rouble';
+  font-display: swap;
+  src: url('../fonts/Rouble-Regular.eot')
+  src: url('../fonts/Rouble-Regular.eot') format('embedded-opentype'),
+          url('../fonts/Rouble-Regular.woff2') format('woff2'),
+          url('../fonts/Rouble-Regular.woff') format('woff')
+  font-weight: normal
+  font-style: normal

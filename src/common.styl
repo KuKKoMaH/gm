@@ -6,28 +6,52 @@
 @import "stylus/_vars.styl";
 @import "stylus/_mixins.styl";
 
-html
-  font-family: 'PT Sans', sans-serif;
-  color: $black
-  font-size: 16px
+@critical
+  *
+    box-sizing border-box
+  h1
+    margin: 0
 
-html, body
-  overflow-x: hidden
+  button
+    vertical-align: middle;
+    color: inherit;
+    font: inherit;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+
+  a
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+
+  html
+    font-family: 'PT Sans', sans-serif;
+    color: $black
+    font-size: 16px
+
+  html, body
+    margin: 0
+    padding: 0
+    overflow-x: hidden
 
 b
   font-weight: bold
 
-.c
-  padding: 0 10px
-  margin-left: auto
-  margin-right: auto
-  max-width: $container-lg
-  width: 100%
-  @media (max-width: $breakpoint-lg - 1)
-    max-width: $container-md
-    padding: 0 20px
-  @media (max-width: $breakpoint-md - 1)
-    max-width: 100%
+@critical
+  .c
+    padding: 0 10px
+    margin-left: auto
+    margin-right: auto
+    max-width: $container-lg
+    width: 100%
+    @media (max-width: $breakpoint-lg - 1)
+      max-width: $container-md
+      padding: 0 20px
+    @media (max-width: $breakpoint-md - 1)
+      max-width: 100%
 
 .blockTitle
   font-size: 36px
@@ -52,16 +76,32 @@ b
     filter: blur(10px)
     overflow: hidden
 
+  @critical
+    & > *
+      opacity: 0
+      transition: opacity .4s ease-out
+
+    & > .hero, & > .header
+      opacity: 1
+
+  & > *
+    opacity: 1
+
+
 .noise
   background: url(images/noise.jpg);
 
-.lazy
-  visibility: hidden
-  opacity: 0
+@critical
+  .lazy
+    visibility: hidden
+    opacity: 0
 
-  &.lazy--visible
-    visibility: visible
-    opacity: 1
+    &.lazy--visible
+      visibility: visible
+      opacity: 1
+
+.r
+  font-family: 'Rouble';
 
 //transform none
 
@@ -70,19 +110,22 @@ img[data-srcset]
   //display: block;
   min-height: 1px;
 
-.hidden
-  display: none
+@critical
+  .hidden
+    display: none
 
-#sprites
-  position: absolute
-  width: 0
-  height: 0
-  top: 0
-  left: 0
+@critical
+  #sprites
+    position: absolute
+    width: 0
+    height: 0
+    top: 0
+    left: 0
 
-.icon-lines
-  width: 28px
-  height: 13px
+@critical
+  .icon-lines
+    width: 28px
+    height: 13px
 
 .icon-3lines
   width: 25px
@@ -106,11 +149,11 @@ img[data-srcset]
   width: 100%
   height: 100%
 
+@import "stylus/blocks/lines.styl";
 @import "stylus/blocks/hero.styl"
 @import "stylus/blocks/btn.styl";
 //@import "stylus/blocks/btnGroup.styl";
 @import "stylus/blocks/btnSub.styl";
-@import "stylus/blocks/lines.styl";
 @import "stylus/blocks/navBtn.styl";
 @import "stylus/blocks/videoFrame.styl";
 @import "stylus/blocks/title.styl";

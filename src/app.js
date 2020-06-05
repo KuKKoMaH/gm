@@ -1,62 +1,48 @@
 import 'jquery';
 import 'magnific-popup/dist/jquery.magnific-popup.js';
 import 'jquery.maskedinput/src/jquery.maskedinput';
-import SmoothScroll from 'smooth-scroll';
+import scriptLoader from './js/scriptLoader';
 // import 'selectize';
 
-import './js/init';
-import './js/cartsList';
-import './js/initAbandonPopup';
-import './js/popups';
-import './js/paroller';
-// import './js/smoke';
-import './js/tabs';
-import './js/saveUTM';
-import './modules/header/header';
-import './modules/team/team';
-import './modules/problems/problems';
-import './modules/progress/progress';
-import './modules/clients/clients';
-import './modules/services/services';
-import './modules/videos/videos';
-import './modules/test/test';
-import './modules/map/map';
-import './modules/contacts/contacts';
-import './modules/images/images';
-import './modules/logotypes/logotypes';
-import './modules/presentations/presentations';
-import './modules/siteTypes/siteTypes';
-import './modules/smmHero/smmHero';
-import './modules/contextHero/contextHero';
-import './modules/related/related';
-import './modules/instruments/instruments';
-import './modules/seoPrice/seoPrice';
-import './modules/coursesTarget/coursesTarget';
-import './modules/coursesChannels/coursesChannels';
-import './modules/coursesReasons/coursesReasons';
-import './modules/coursesPrices/coursesPrices';
-import './modules/coursesProgram/coursesProgram';
-import './modules/coursesTeachers/coursesTeachers';
-import './modules/coursesTestimonials/coursesTestimonials';
-import './modules/coursesFaq/coursesFaq';
-import './modules/blogSingle/blogSingle';
-import './modules/case/case';
-import './modules/smmProcess/smmProcess';
-import './modules/about/about';
-
-import './js/lazyImages';
-
-// $('select').selectize({ maxItems: 1, });
-
-$('input[type="tel"]').mask("+7 (999) 999-99-99");
-
-window.smoothscroll = new SmoothScroll('a[href*="#"]', { header: '.header__container', });
-
-
-const $viewport = document.getElementById('viewport');
-$(window).on('resize', () => {
-  $viewport.setAttribute('content', screen.width <= 520
-    ? 'width=520, user-scalable=no'
-    : 'width=device-width, user-scalable=no',
-  );
+scriptLoader('https://polyfill.io/v3/polyfill.min.js?features=Promise%2CIntersectionObserver', () => {
+  require('./js/init');
+  require('./js/cartsList');
+  require('./js/initAbandonPopup');
+  require('./js/popups');
+  require('./js/paroller');
+  require('./js/tabs');
+  require('./js/saveUTM');
+  require('./modules/header/header');
+  require('./modules/team/team');
+  require('./modules/problems/problems');
+  require('./modules/progress/progress');
+  require('./modules/clients/clients');
+  require('./modules/services/services');
+  require('./modules/videos/videos');
+  require('./modules/test/test');
+  require('./modules/map/map');
+  require('./modules/contacts/contacts');
+  require('./modules/images/images');
+  require('./modules/logotypes/logotypes');
+  require('./modules/presentations/presentations');
+  require('./modules/siteTypes/siteTypes');
+  require('./modules/smmHero/smmHero');
+  require('./modules/contextHero/contextHero');
+  require('./modules/related/related');
+  require('./modules/instruments/instruments');
+  require('./modules/seoPrice/seoPrice');
+  require('./modules/coursesTarget/coursesTarget');
+  require('./modules/coursesChannels/coursesChannels');
+  require('./modules/coursesReasons/coursesReasons');
+  require('./modules/coursesPrices/coursesPrices');
+  require('./modules/coursesProgram/coursesProgram');
+  require('./modules/coursesTeachers/coursesTeachers');
+  require('./modules/coursesTestimonials/coursesTestimonials');
+  require('./modules/coursesFaq/coursesFaq');
+  require('./modules/blogSingle/blogSingle');
+  require('./modules/case/case');
+  require('./modules/smmProcess/smmProcess');
+  require('./modules/about/about');
+  require('./js/lazyImages');
+  if (window.ON_READY) setTimeout(window.ON_READY);
 });
