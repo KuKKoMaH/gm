@@ -43,12 +43,14 @@
           padding-left: 17px
 
       &--bottom
+        @supports (-webkit-background-clip: text)
+          background-image: url(../../images/textbg.jpg);
+          background-size: cover
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent
+
         line-height: 171px
         display: inline-block
-        background-image: url(../../images/textbg.jpg);
-        background-size: cover
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent
         margin-left: -34px
         @media (max-width: $breakpoint-lg - 1)
           margin: 0

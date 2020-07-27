@@ -1,30 +1,42 @@
 .footer
   margin-top: auto
-  padding-top: 21px
 
   &__container
     display: flex
     justify-content space-between
     align-items center
-    //padding-top: 21px
-    //padding-bottom: 21px
+    padding-top: 21px
+    padding-bottom: 21px
 
   &__copyright
     margin-top: 20px
 
   &__menu
 
+    a
+      border: 0
+      color: $black
+
+    ul
+      margin: 0
+
+    li
+      &:before
+        display: none;
+
     & > ul
       display: flex;
       @media (max-width: $breakpoint-lg - 1)
         flex-direction column
 
-    & > ul > li
-      width: 200px
+    //& > ul > li
+    //  width: 200px
 
     & > ul > li > a
       display: none;
 
+    & > ul > li > ul > li > ul
+      margin-top: 4px
 
     li
       margin-bottom: 12px
@@ -53,6 +65,7 @@
     position: relative
     line-height: 30px
     padding-left: 26px
+    margin-top: 30px
     @media (max-width: $breakpoint-md - 1)
       display: none
 
@@ -78,7 +91,6 @@
 
   &__bottom
     background: #000000
-    color: #ffffff
     height: 74px
     @media (max-width: $breakpoint-md - 1)
       height: auto
@@ -99,6 +111,8 @@
 
   &__link
     margin-right: 38px
+    color: #fff
+    border: 0
     @media (max-width: $breakpoint-md - 1)
       margin: 0 8px 17px
 
@@ -114,6 +128,7 @@
   &__social
     display: inline-block
     margin-left: 11px
+    border: 0
 
     svg
       width: 38px

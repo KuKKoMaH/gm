@@ -1,23 +1,17 @@
 footer.footer
   .c.footer__container
-    .footer__left
-      img(src='images/logo.png')
-      .footer__copyright
-        | © 2017-2018 General Marketing.#[br]
-        | Все права защищены.
-      .footer__contacts.footer__contacts--sm
-        svg.footer__phone-icon: use(xlink:href="#phone")
-        svg.footer__mail-icon: use(xlink:href="#mail")
-        | 8 (999) 999-99-99#[br]
-        | mail@gen-marketing.ru#[br]
-        | ежедневно с 8:00 до 22:0
     .footer__menu
       ul
         li
           a(href='#')
           ul
             li: a(href='#') Главная
-            li: a(href='#') Создание сайтов
+            li
+              a(href='#') Создание сайтов
+              ul
+                li: a(href='#') Контекстная реклама
+                li: a(href='#') Контекстная реклама
+                li: a(href='#') Контекстная реклама
             li: a(href='#') Контекстная реклама
             li: a(href='#') SMM
             li: a(href='#') Наши кейсы
@@ -32,12 +26,25 @@ footer.footer
             li: a(href='#') Наши кейсы
             li: a(href='#') Контакты
 
-    .footer__contacts
-      svg.footer__phone-icon: use(xlink:href="#phone")
-      svg.footer__mail-icon: use(xlink:href="#mail")
-      | 8 (999) 999-99-99#[br]
-      | mail@gen-marketing.ru#[br]
-      | ежедневно с 8:00 до 22:0
+    .footer__aside
+      .footer__left
+        img(src='images/logo.png')
+        .footer__copyright
+          | © 2017-2018 General Marketing.#[br]
+          | Все права защищены.
+        .footer__contacts.footer__contacts--sm
+          svg.footer__phone-icon: use(xlink:href="#phone")
+          svg.footer__mail-icon: use(xlink:href="#mail")
+          | 8 (999) 999-99-99#[br]
+          | mail@gen-marketing.ru#[br]
+          | ежедневно с 8:00 до 22:0
+
+      .footer__contacts
+        svg.footer__phone-icon: use(xlink:href="#phone")
+        svg.footer__mail-icon: use(xlink:href="#mail")
+        | 8 (999) 999-99-99#[br]
+        | mail@gen-marketing.ru#[br]
+        | ежедневно с 8:00 до 22:0
 
   .footer__bottom
     .c

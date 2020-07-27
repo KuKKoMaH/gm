@@ -27,13 +27,16 @@
         margin-bottom: 17px
         margin-top: -170px
 
+      @supports (-webkit-background-clip: text)
+        span
+          background-image: url(./marketingHero-text.jpg);
+          background-size: cover
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent
+
       span
         display: inline-block
         overflow: hidden
-        background-image: url(./marketingHero-text.jpg);
-        background-size: cover
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent
         @media (max-width: $breakpoint-lg - 1)
           font-size: 72px
         @media (max-width: $breakpoint-md - 1)

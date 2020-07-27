@@ -25,10 +25,11 @@
 
     &__bg
       display: block
-      background: url(./img/seoHero-textBg.jpg) 50% 50%;
-      background-size: cover
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent
+      @supports (-webkit-background-clip: text)
+        background: url(./img/seoHero-textBg.jpg) 50% 50%;
+        background-size: cover
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent
 
     &__sub
       font-size: 48px

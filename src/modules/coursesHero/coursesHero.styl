@@ -34,12 +34,15 @@
         @media (max-width: $breakpoint-lg - 1)
           color: inherit
 
+    @supports (-webkit-background-clip: text)
+      &__bg
+        background-image: url(./img/coursesHero-textBg.jpg);
+        background-size: cover
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent
+
     &__bg
       overflow: hidden
-      background-image: url(./img/coursesHero-textBg.jpg);
-      background-size: cover
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent
 
     &__top
       display: block;

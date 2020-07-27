@@ -1,10 +1,11 @@
-import 'jquery';
-import 'magnific-popup/dist/jquery.magnific-popup.js';
-import 'jquery.maskedinput/src/jquery.maskedinput';
 import scriptLoader from './js/scriptLoader';
+
+const init = () => {
+  require('jquery');
+  require('magnific-popup/dist/jquery.magnific-popup.js');
+  require('jquery.maskedinput/src/jquery.maskedinput');
 // import 'selectize';
 
-scriptLoader('https://polyfill.io/v3/polyfill.min.js?features=Promise%2CIntersectionObserver', () => {
   require('./js/init');
   require('./js/cartsList');
   require('./js/initAbandonPopup');
@@ -43,6 +44,21 @@ scriptLoader('https://polyfill.io/v3/polyfill.min.js?features=Promise%2CIntersec
   require('./modules/case/case');
   require('./modules/smmProcess/smmProcess');
   require('./modules/about/about');
+  require('./modules/aboutTabs/aboutTabs');
   require('./js/lazyImages');
   if (window.ON_READY) setTimeout(window.ON_READY);
-});
+};
+
+const el = document.getElementById('app-js');
+if (el) {
+  const polyfillUrl = el.getAttribute('data-polyfill');
+  if (polyfillUrl) {
+    scriptLoader(polyfillUrl, init);
+  } else {
+    init();
+  }
+} else {
+  init();
+}
+
+
